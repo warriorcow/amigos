@@ -1,11 +1,10 @@
-body {
-  margin: 0;
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-}
+/* Variables */
+@import "variables";
+@import "fonts";
 
-.main {
-  height: 80vh;
-  background: gray;
-}
+/* Global Styles */
+@import "global";
+
+/* Components Styles */
+@import "../components/header/component";
+@import "../components/footer/component";
