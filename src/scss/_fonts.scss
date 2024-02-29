@@ -1,0 +1,27 @@
+@font-face {
+  font-family: 'TT Neoris Trial';
+  src: url('./assets/fonts/tt-neoris/TT-Neoris-Trial-Black.ttf') format('truetype');
+  font-weight: 900;
+  font-style: normal;
+}
+
+@mixin fontTTNeoris40() {
+  font-family: "TT Neoris Trial", sans-serif;
+  font-weight: 900;
+  font-size: 40px;
+  line-height: 48px;
+}
+
+@mixin fontTTNeoris30() {
+  font-family: "TT Neoris Trial", sans-serif;
+  font-weight: 900;
+  font-size: 30px;
+  line-height: 36px;
+}
+
+@mixin fontTTNeoris16() {
+  font-family: "TT Neoris Trial", sans-serif;
+  font-weight: 900;
+  font-size: 16px;
+  line-height: 20px;
+}
