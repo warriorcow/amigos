@@ -1,12 +1,24 @@
 <div class="banner">
-  <div class="banner__container">
-    <h1 class="banner__title">
-      Hola! Bienvenidos, Amigos!
-    </h1>
-    <p class="banner__descriptio">
-      Рады видеть тебя здесь, среди друзей и единомышленников, на странице лицея турнирного покера, созданного нами, профессиональными игроками с богатым опытом!
-      Мы — настоящие друзья, которые живут в Мексике, нас объединяет страсть и любовь к покеру, и именно отсюда возникло наше дружественное название – AmigosBacking.
-    </p>
+  <div class="banner__container container">
+    <div class="banner__info">
+      <h1 class="banner__title">
+        Hola! Bienvenidos, Amigos!
+      </h1>
+      <p class="banner__description">
+      Рады видеть тебя здесь, среди друзей и единомышленников, на странице лицея турнирного покера, созданного нами,
+      профессиональными игроками с богатым опытом!
+      <br><br>
+      Мы — настоящие друзья, которые живут в Мексике, нас объединяет страсть и любовь к покеру, и именно отсюда возникло
+      наше дружественное название – AmigosBacking.
+      </p>
+      @@include('button/component.html', {
+      text: 'Подать заявку'
+      })
+    </div>
+    <div class="banner__picture">
+      <img class="banner__image" src="./assets/images/cactus2.svg">
+      <img class="banner__image" src="./assets/images/karta1.svg">
+      <img class="banner__image" src="./assets/images/karta2.svg">
+    </div>
   </div>
-
 </div>
