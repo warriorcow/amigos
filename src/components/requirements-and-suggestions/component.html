@@ -4,10 +4,26 @@
     <div class="requirements-and-suggestions__left">
       <div class="requirements-and-suggestions__left-inner">
         <div class="requirements-and-suggestions__quote">
-          Мы ищем игроков, которые хотят стать настоящими профи в покере! Главное для нас – честность и преданность делу! Поэтому мы будем рады принять в лицей игроков, которые имеют хорошую репутацию в мире покера.
+          Мы ищем игроков, которые хотят стать настоящими профи в покере! Главное для нас – честность и преданность делу! Поэтому мы будем рады принять в&nbsp;лицей игроков, которые имеют хорошую репутацию в мире покера.
         </div>
+        @@loop('requirements-and-suggestions/item/component.html', [
+          { text: 'Играемый АБИ более 5$', imageUrl: './assets/images/chip-5.svg' },
+          { text: 'Готовность играть<br> от 400 турниров в месяц', imageUrl: './assets/images/chip-400.svg' },
+          { text: 'Дистанция сопоставимая 1000+<br> турнирам за последние 3 месяца', imageUrl: './assets/images/chip-1000.svg' },
+          { text: 'База не менее 100 000 «рук»,<br> сыгранных в последнее время', imageUrl: './assets/images/chip-case.svg' }
+        ])
       </div>
     </div>
-    <div class="requirements-and-suggestions__right"></div>
+    <div class="requirements-and-suggestions__right">
+      @@loop('requirements-and-suggestions/item/component.html', [
+        { text: 'Тестовый период 2 недели', imageUrl: './assets/images/chip-calendar.svg', type: 'small-offset' },
+        { text: 'Прибыль распределяется 55/45 в пользу ученика (откат, %)', imageUrl: './assets/images/chip-profit.svg', type: 'small-offset' },
+        { text: 'Рейкбек до 100% (при выполнении условий)', imageUrl: './assets/images/chip-percent.svg', type: 'small-offset' },
+        { text: 'Финансовая помощь при игре в минус', imageUrl: './assets/images/chip-dollar.svg', type: 'small-offset' },
+        { text: 'Доп. тренировки с основателями Amigos Backing<br> (для игроков пришедших на 1-3 ранги)', imageUrl: './assets/images/chip-gift.svg', type: 'small-offset' },
+        { text: 'Возможность выкупить долю до 20% (с 4 ранга)', imageUrl: './assets/images/chip-buyback.svg', type: 'small-offset' },
+        { text: 'При вступлении в нашу команду игроки получают<br> доступ к AmigosHUD для H2N', imageUrl: './assets/images/chip-access.svg', type: 'small-offset' },
+      ])
+    </div>
   </div>
 </section>
