@@ -74,7 +74,7 @@ function serve(done) {
 }
 
 const watcher = () => {
-  watch([mainStylePath, componentsStylesPath], series(styles, reload))
+  watch(['src/scss/*.scss', componentsStylesPath], series(styles, reload))
   watch([pagesPath, componentsFilesPath], series(includeFiles, reload))
 }
 
