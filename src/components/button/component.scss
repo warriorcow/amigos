@@ -1,0 +1,13 @@
+.button {
+  @include fontUbuntu14;
+
+  background-color: $lightBeige;
+  border: 2px solid $deepBlack;
+  border-radius: 30px;
+  padding: 13px 50px;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $coralOrange;
+  }
+}
