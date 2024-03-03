@@ -1,0 +1,43 @@
+.card {
+  $self: &;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: $lightBeige;
+  text-align: center;
+
+  &__name {
+    @include fontTTNeoris30;
+
+    margin-top: 36px;
+    white-space: nowrap;
+  }
+
+  &__description {
+    margin-top: 16px;
+  }
+
+  &__link {
+    color: inherit;
+    margin-top: 18px;
+    text-decoration: underline;
+    margin-bottom: 19px;
+  }
+
+  &--small {
+    width: 230px;
+
+    #{$self}__name {
+      @include fontTTNeoris16;
+    }
+
+    #{$self}__description {
+      margin-top: 6px;
+    }
+
+    &__link {
+      margin-bottom: 17px;
+    }
+  }
+}

@@ -1,1 +1,23 @@
-<button class="button">@@text</button>
+@@if (type === 'default') {
+  <a
+    href="@@link"
+    class="button @@addClass"
+  >
+    @@text
+  </a>
+}
+
+@@if (type === 'youtube') {
+  <div class="button-yt @@addClass">
+    <a
+      href="@@ytLink"
+      class="button-yt__icon">
+    </a>
+    <a
+      href="@@textLink"
+      class="button-yt__text"
+    >
+      @@text
+    </a>
+  </div>
+}

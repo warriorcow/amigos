@@ -1,0 +1,150 @@
+$circle-size-default: 280px; // Размер круга
+$circle-size-small: 200px; // Размер круга
+$section-count: 12; // Количество секций
+$section-color-default: $skyBlue; // Цвет секций
+$section-color-small: $coralOrange; // Цвет секций
+
+.chip-photo {
+  $self: &;
+
+  rotate: 10deg;
+  position: relative;
+  width: $circle-size-default;
+  height: $circle-size-default;
+  background-color: transparent;
+  border-radius: 50%; // Создаем круг
+  overflow: hidden; // Скрыть вертикальные линии, которые выходят за пределы круга
+
+  &::after {
+    content: '';
+    position: absolute;
+    width: 74%;
+    height: 74%;
+    border-radius: 50%;
+    border: 3px solid $deepBlack;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    width: 74%;
+    height: 74%;
+    border-radius: 50%;
+    border: 35px solid $section-color-default;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+  }
+
+  &__fill {
+    content: '';
+    position: absolute;
+    width: 74%;
+    height: 74%;
+    border-radius: 50%;
+    background-color: $lightBeige;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    rotate: -10deg;
+    overflow: hidden;
+
+    &::before {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      background-image: url('./assets/images/pattern-sky-blue.svg');
+      top: 50%;
+      left: 50%;
+      translate: -50% -50%;
+      overflow: hidden;
+      background-size: 286px 305px;
+      background-repeat: no-repeat;
+      background-position: center 70px;
+    }
+
+    img {
+      position: relative;
+      width: 100%;
+      object-fit: cover;
+      z-index: 1;
+      margin-top: 12px;
+    }
+  }
+
+  &__border {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 3px solid $deepBlack;
+  }
+
+  &__section {
+    @for $i from 1 through $section-count {
+      $angle: 360deg / $section-count * $i;
+      $rotate: $angle * $i;
+
+      &:nth-child(#{$i}) {
+        position: absolute;
+        background-color: $deepBlack;
+        width: 100%;
+        height: 3px;
+        top: 50%;
+        left: 50%;
+        translate: -50% -50%;
+        rotate: $angle;
+      }
+    }
+  }
+
+  &--small {
+    width: $circle-size-small;
+    height: $circle-size-small;
+
+    &::after {
+      border-width: 2px;
+      width: 75%;
+      height: 75%;
+    }
+
+    &::before {
+      border-width: 24px;
+      border-color: $section-color-small;
+      width: 75%;
+      height: 75%;
+    }
+
+    #{$self}__section {
+      height: 2px;
+    }
+
+    #{$self}__border {
+      border-width: 2px;
+    }
+
+    #{$self}__fill {
+      width: 75%;
+      height: 75%;
+
+      &::before {
+        background-image: url('./assets/images/pattern-pumpkin-orange.svg');
+        background-size: 203px 217px;
+        background-position-y: 40px;
+      }
+    }
+
+    &-yellow {
+      &::before {
+        border-color: $goldenYellow;
+      }
+    }
+  }
+}

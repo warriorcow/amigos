@@ -1,0 +1,41 @@
+.staff {
+  background-color: $darkGray;
+  padding-top: 107px;
+  color: $lightBeige;
+
+  &__wrapper {
+
+  }
+
+  &__item {
+    display: flex;
+    justify-content: space-between;
+
+    &:not(:first-child) {
+      margin-top: 60px;
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    gap: 60px;
+  }
+
+  &__title {
+    @include fontTTNeoris30;
+
+    width: 310px;
+    margin-top: 15px;
+  }
+
+  &__button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 172px;
+    padding: 0;
+    height: 42px;
+  }
+}

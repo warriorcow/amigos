@@ -1,0 +1,34 @@
+.founders {
+  position: relative;
+  background-color: $darkGray;
+  padding-top: 97px;
+  padding-bottom: 46px;
+  overflow: hidden;
+
+  &::before {
+    position: absolute;
+    content: '';
+    width: 533px;
+    height: 568px;
+    background-image: url('./assets/images/pattern-deep-black.svg');
+    background-repeat: no-repeat;
+    top: -427px;
+    right: -18px;
+  }
+
+  &__title {
+    @include fontTTNeoris30;
+
+    color: $lightBeige;
+  }
+
+  &__list {
+    display: flex;
+    gap: 39px;
+    margin-top: 24px;
+  }
+
+  &__button {
+    margin-top: auto;
+  }
+}
