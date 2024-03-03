@@ -1,0 +1,36 @@
+@@if (type === 'small') {
+  <div class="card card--small">
+}
+
+@@if (type === 'small-yellow') {
+  <div class="card card--small card--small-yellow">
+}
+
+@@if (type === 'default') {
+  <div class="card">
+}
+
+  @@include('chip-photo/component.html', {
+    photo: '@@photo',
+    type: '@@type'
+  })
+  <div class="card__name">
+    @@name
+  </div>
+  <div class="card__description">
+    @@description
+  </div>
+  <a href="@@linkInterview" class="card__link">
+    Ссылка на интервью
+  </a>
+  @@if (button === true) {
+    @@include('button/component.html', {
+      type: '@@buttonType',
+      text: '@@buttonText',
+      addClass: '@@addButtonClass',
+      textLink: '@@textLink',
+      ytLink: '@@ytLink',
+      link: '@@link'
+    })
+  }
+</div>
