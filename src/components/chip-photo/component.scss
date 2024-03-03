@@ -89,7 +89,7 @@ $section-color-small: $coralOrange; // Цвет секций
 
   &__section {
     @for $i from 1 through $section-count {
-      $angle: 360deg / $section-count * $i;
+      $angle: calc(360deg / $section-count) * $i;
       $rotate: $angle * $i;
 
       &:nth-child(#{$i}) {
