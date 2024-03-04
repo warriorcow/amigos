@@ -1,0 +1,25 @@
+.advantages {
+    margin-top: 105px;
+
+  &__title {
+    @include fontTTNeoris30;
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    margin-top: 28px;
+    gap: 35px 60px;
+  }
+
+  &__list-item {
+    display: flex;
+    align-items: center;
+    width: calc(100% / 3 - 40px);
+  }
+
+  &__icon {
+    padding-right: 20px;
+  }
+}
