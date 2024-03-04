@@ -1,29 +1,76 @@
-// .results {
-//   display: flex;
-//   margin-top: 83px;
+.statistics {
+  margin-top: 44px;
 
-//   &__container1 {
-//     display: flex;
-//     flex-direction: column;
-//     align-items: center;
-//   }
+  &__conteiner {
+    display: flex;
+    background-color: $skyBlue;
+    padding: 31px 35px 24px 33px;
+    border-radius: 25px;
+  }
 
-//   &__image1 {
-//     padding-bottom: 18px;
-//   }
+  &__title {
+    flex: 1;
+  }
 
+  &__boxes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 18px 17px;
+    width: 647px;
+    margin-left: 28px;
+  }
 
-//   &__title {
-//     @include fontTTNeoris30;
+  &__box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    background-color: $lightBeige;
+    border: 2px solid $deepBlack;
+    border-radius: 40px;
+    width: calc(50% - 8.5px);
+    gap: 0 28px;
+    padding: 16px 20px;
+    max-height: 70px;
+  }
 
-//     &--offset {
-//       padding-left: 26px;
-//     }
-//   }
+  &__box-expanded {
+    box-sizing: border-box;
+    background-color: $lightBeige;
+    border: 2px solid $deepBlack;
+    border-radius: 40px;
+    width: calc(50% - 8.5px);
+    position: relative;
 
-//   &__image2 {
-//     padding-top: 42px;
-//   }
-// }
+    &-item {
+      display: flex;
+      box-sizing: border-box;
+      align-items: center;
+      height: 100%;
+      padding-left: 22px;
+      max-width: calc(100% - 148px);
+      gap: 3px;
 
+      &--top {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-sizing: border-box;
+        position: absolute;
+        right: -2px;
+        top: -1px;
+        max-width: 148px;
+        width: 100%;
+        border: 2px solid #141414;
+        border-radius: 40px;
+        height: calc(100% + 2px);
+        padding: 10px 15px;
+        gap: 8px;
+      }
+    }
+  }
 
+  &__box-value {
+    @include fontTTNeoris30
+  }
+}
