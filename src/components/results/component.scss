@@ -1,0 +1,27 @@
+.results {
+  display: flex;
+  margin-top: 83px;
+
+  &__container1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__image1 {
+    padding-bottom: 18px;
+  }
+
+
+  &__title {
+    @include fontTTNeoris30;
+
+    &--offset {
+      padding-left: 26px;
+    }
+  }
+
+  &__image2 {
+    padding-top: 42px;
+  }
+}

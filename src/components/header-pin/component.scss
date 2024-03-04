@@ -1,13 +1,18 @@
-.header {
-  position: absolute;
+.header-pin {
+  position: fixed;
   z-index: 2000;
   top: 0;
   width: 100%;
+  border: 2px solid $deepBlack;
+  border-radius: 40px;
+  background-color: $skyBlue;
 
   &__container {
     display: flex;
     align-items: center;
-    padding: 33px 0;
+    padding: 6px 0 9px;
+    max-width: 1140px;
+    margin: 0 auto;
   }
 
   &__menu {
@@ -16,7 +21,7 @@
     display: flex;
     gap: 38px;
     list-style: none;
-    margin-left: 195px;
+    margin-left: 68px;
     margin-right: auto;
 
     &-link {
