@@ -9,12 +9,12 @@
   }
 
   &__title {
-    flex: 1;
+    flex: 1 0 400px;
   }
 
   &__boxes {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     gap: 18px 17px;
     width: 647px;
     margin-left: 28px;
@@ -28,7 +28,7 @@
     background-color: $lightBeige;
     border: 2px solid $deepBlack;
     border-radius: 40px;
-    width: calc(50% - 8.5px);
+    //width: calc(50% - 8.5px);
     gap: 0 28px;
     padding: 16px 20px;
     max-height: 70px;
@@ -39,7 +39,7 @@
     background-color: $lightBeige;
     border: 2px solid $deepBlack;
     border-radius: 40px;
-    width: calc(50% - 8.5px);
+    //width: calc(50% - 8.5px);
     position: relative;
 
     &-item {

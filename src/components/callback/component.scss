@@ -1,0 +1,29 @@
+.callback {
+  position: relative;
+  height: 377px;
+  margin-top: 95px;
+
+  &__text {
+    @include fontTTNeoris30;
+  }
+
+  &__bubble {
+    position: relative;
+    top: 60px;
+    padding: 30px 0 30px 80px;
+    border-radius: 90px 90px 0 90px;
+    background-color: $coralOrange;
+    width: 100%;
+    max-width: 850px;
+  }
+
+  &__image {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+
+  &__button {
+    margin-top: 20px;
+  }
+}

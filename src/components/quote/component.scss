@@ -1,0 +1,32 @@
+.quote {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+
+  &__image {
+    margin-right: 35px;
+
+    img {
+      display: block;
+    }
+  }
+
+  &__block {
+    padding: 38px 68px 28px 72px;
+    border-radius: 86px 86px 86px 0;
+    border: 2px solid $deepBlack;
+    background-color: $coralOrange;
+    margin-top: 15px;
+    max-width: 500px;
+  }
+
+  &__text {
+
+  }
+
+  &__name {
+    @include fontTTNeoris16;
+
+    margin-top: 15px;
+  }
+}

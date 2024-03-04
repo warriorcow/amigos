@@ -4,15 +4,19 @@
 
   &__container {
     display: flex;
-    padding: 133px 0 80px;
+    justify-content: space-between;
+    padding-top: 133px;
+    padding-bottom: 80px;
   }
 
   &__info {
-    min-width: 564px;
+    max-width: 564px;
+    width: 100%;
   }
 
   &__title {
     @include fontTTNeoris40;
+
     margin-bottom: 10px;
   }
 
@@ -21,13 +25,13 @@
   }
 
   &__picture {
-    margin-left: 67px;
+    display: flex;
+    margin-left: 10px;
     position: relative;
-    width: 100%;
   }
 
   &__image {
-    position: absolute;
+    position: relative;
 
     &:nth-child(1) {
       left: 0;
@@ -35,13 +39,13 @@
     }
 
     &:nth-child(2) {
-      left: 175px;
+      margin-left: -50px;
       top: 25px;
       z-index: 2;
     }
 
     &:nth-child(3) {
-      left: 276px;
+      margin-left: -130px;
       top: 13px;
       z-index: 1;
     }
