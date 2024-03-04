@@ -1,0 +1,74 @@
+.footer {
+  $self: &;
+
+  background-color: $lightBeige;
+  padding: 45px 0;
+  border: 1px solid $deepBlack;
+  border-radius: 25px;
+  margin-top: -25px;
+
+  &__wrapper {
+    display: flex;
+    gap: 0 100px;
+  }
+
+  &__logo {
+
+  }
+
+  &__column {
+
+  }
+
+  &__title {
+    @include fontTTNeoris30;
+  }
+
+  &__text {
+    margin-top: 27px;
+  }
+
+  &__social {
+    display: flex;
+    gap: 0 25px;
+    margin-top: 25px;
+  }
+
+  &__social-item {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 33px;
+    height: 33px;
+
+    img {
+      object-fit: contain;
+    }
+  }
+
+  &__contacts {
+    display: flex;
+    flex-direction: column;
+    gap: 40px 0;
+    margin-top: 25px;
+  }
+
+  &__contact {
+    display: flex;
+    align-items: center;
+    gap: 38px 0;
+  }
+
+  &__contact-icon {
+    margin-right: 25px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 33px;
+    height: 33px;
+
+    img {
+      object-fit: contain;
+    }
+  }
+}

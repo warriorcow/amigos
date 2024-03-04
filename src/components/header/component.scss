@@ -1,4 +1,6 @@
 .header {
+  $self: &;
+
   position: absolute;
   z-index: 2000;
   top: 0;
@@ -7,7 +9,16 @@
   &__container {
     display: flex;
     align-items: center;
-    padding: 33px 0;
+    justify-content: space-between;
+    padding-top: 33px;
+    padding-bottom: 33px;
+  }
+
+  &__logo {
+    min-width: 137px;
+    max-width: 137px;
+    height: 45px;
+    background-image: url('./assets/images/logo.svg');
   }
 
   &__menu {
@@ -16,16 +27,60 @@
     display: flex;
     gap: 38px;
     list-style: none;
-    margin-left: 195px;
-    margin-right: auto;
+    padding-left: 0;
+    margin: 0 10px;
 
     &-link {
       text-decoration: none;
       color: $deepBlack;
+      white-space: nowrap;
 
       &:hover {
         border-bottom: 2px solid $lightBeige;
       }
+    }
+  }
+
+  &--fixed {
+    position: fixed;
+    border: 2px solid $deepBlack;
+    border-radius: 40px;
+    background-color: $skyBlue;
+    animation: slideInDown 100ms forwards ease-in-out;
+    overflow: hidden;
+
+    &.header--slide-up {
+      animation: slideInUp 100ms forwards ease-in-out;
+    }
+
+    @keyframes slideInDown {
+      0% {
+        transform: translateY(-100%);
+      }
+      100% {
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes slideInUp {
+      0% {
+        transform: translateY(0);
+      }
+      100% {
+        transform: translateY(-100%);
+      }
+    }
+
+    #{$self}__container {
+      padding-top: 8px;
+      padding-bottom: 8px;
+    }
+
+    #{$self}__logo {
+      max-width: 264px;
+      min-width: 264px;
+      height: 56px;
+      background-image: url('./assets/images/logo-pin.svg');
     }
   }
 }

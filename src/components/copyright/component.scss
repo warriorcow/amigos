@@ -1,0 +1,22 @@
+.copyright {
+  border: 1px solid $deepBlack;
+  border-radius: 25px 25px 0 0;
+  background-color: $lightBeige;
+  padding: 20px 0;
+  margin-top: -3px;
+
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+
+    img {
+      margin-left: 23px;
+    }
+  }
+}

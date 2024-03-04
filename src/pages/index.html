@@ -3,6 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.css"/>
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.css"/>
   <link rel="stylesheet" href="style.css">
   <title>Title</title>
 </head>
@@ -13,8 +15,54 @@
   @@include('results/component.html')
   @@include('statistics/component.html')
   @@include('advantages/component.html')
+  @@include('callback/component.html')
   @@include('requirements-and-suggestions/component.html')
   @@include('founders/component.html')
   @@include('staff/component.html')
+  @@include('videos/component.html')
+  <section class="section-reviews bg-skyblue">
+    @@include('reviews/component.html')
+    @@include('quote/component.html')
+  </section>
+  @@include('footer/component.html')
+  @@include('copyright/component.html')
+
+  <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+  <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+
+<script>
+  $(document).ready(function(){
+    $('.reviews__slider').slick({
+      slidesToShow: 3,
+      slidesToScroll: 1
+    });
+  });
+
+  const bannerElement = document.querySelector('.banner');
+  const headerElement = document.querySelector('.header');
+
+  let options = {
+    root: document.querySelector("#scrollArea"),
+    rootMargin: "0px",
+    threshold: 0,
+  };
+
+  let observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        headerElement.classList.add('header--slide-up');
+        setTimeout(() => {
+          headerElement.classList.remove('header--slide-up');
+          headerElement.classList.remove('header--fixed');
+        }, 100)
+      } else {
+        headerElement.classList.add('header--fixed');
+      }
+    })
+  }, options);
+
+  observer.observe(bannerElement)
+</script>
 </body>
 </html>

@@ -9,6 +9,7 @@
   cursor: pointer;
   text-decoration: none;
   color: $deepBlack;
+  white-space: nowrap;
 
   &:hover {
     background-color: $coralOrange;
@@ -54,6 +55,7 @@
     margin-left: 55px;
     text-decoration: none;
     color: $deepBlack;
+    white-space: nowrap;
 
     &:hover {
       background-color: $coralOrange;
