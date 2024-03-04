@@ -1,14 +1,14 @@
 .banner {
   background-color: $skyBlue;
-  border-radius: 0 0 30px 30px;
+  border-radius: 30px;
 
   &__container {
     display: flex;
-    padding: 133px 69px;
+    padding: 133px 69px 80px;
   }
 
   &__info {
-    width: 564px;
+    min-width: 564px;
   }
 
   &__title {
@@ -23,6 +23,7 @@
   &__picture {
     margin-left: 67px;
     position: relative;
+    width: 100%;
   }
 
   &__image {

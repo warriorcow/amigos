@@ -1,12 +1,9 @@
 body {
   @include fontUbuntu14;
+  background-color: $lightBeige;
 
   margin: 0;
   padding: 0;
-
-  * {
-    box-sizing: border-box;
-  }
 }
 
 h1, h2, h3, h4, h5, p {
@@ -15,6 +12,12 @@ h1, h2, h3, h4, h5, p {
 
 .container {
   max-width: 1280px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.content {
+  max-width: 1140px;
   width: 100%;
   margin: 0 auto;
 }
