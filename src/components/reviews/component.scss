@@ -19,8 +19,11 @@
   }
 
   &__slider {
-    margin: 60px auto 0;
-    max-width: 1025px;
+
+    .slick-list {
+      margin: 60px auto 0;
+      max-width: 1025px;
+    }
 
     .slick-slide {
       margin: 0 30px;
@@ -29,6 +32,7 @@
     .slick-arrow {
       width: 43px;
       height: 43px;
+      z-index: 1;
 
       &::before {
         position: absolute;
@@ -45,12 +49,12 @@
     }
 
     .slick-prev {
-      left: -45px;
+      left: 10px;
       transform: rotate(45deg);
     }
 
     .slick-next {
-      right: -45px;
+      right: 10px;
       transform: rotate(-135deg);
     }
   }

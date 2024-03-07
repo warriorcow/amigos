@@ -1,0 +1,29 @@
+<div class="select">
+  <input
+    class="select__input"
+    name="@@name"
+    id="@@name"
+    type="text"
+  >
+  <div class="select__btn">
+    <span class="select__btn-text">@@placeholder</span>
+    <i class="select__arrow"></i>
+  </div>
+
+  <ul class="select__options">
+    @@loop('select/option/component.html', [
+      {
+        value: "option 1"
+      },
+      {
+        value: "option 2"
+      },
+      {
+        value: "option 3"
+      },
+      {
+        value: "option 4"
+      }
+    ])
+  </ul>
+</div>

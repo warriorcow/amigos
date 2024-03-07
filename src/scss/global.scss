@@ -1,12 +1,22 @@
+@mixin mobile() {
+  @media (max-width: 960px) {
+    @content;
+  }
+}
+
 body {
   @include fontUbuntu14;
-  background-color: $lightBeige;
 
+  background-color: $lightBeige;
   margin: 0;
   padding: 0;
 
   * {
     box-sizing: border-box;
+  }
+
+  @include mobile {
+    @include fontUbuntu13;
   }
 }
 
@@ -30,6 +40,11 @@ a {
   width: 100%;
   margin: 0 auto;
   padding: 0 20px;
+
+  @include mobile {
+    padding: 0 15px;
+    max-width: 375px;
+  }
 }
 
 section {
@@ -41,9 +56,15 @@ section {
   padding: 85px 0 55px;
   border-radius: 25px 25px 0 0;
   margin-top: -25px;
+  margin-bottom: -25px;
   gap: 55px 0;
 }
 
 .bg-skyblue {
   background-color: $skyBlue;
+}
+
+
+#__bs_notify__ {
+  display: none !important;
 }

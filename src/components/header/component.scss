@@ -12,6 +12,11 @@
     justify-content: space-between;
     padding-top: 33px;
     padding-bottom: 33px;
+
+    @include mobile {
+      padding-top: 26px;
+      padding-bottom: 26px;
+    }
   }
 
   &__logo {
@@ -19,16 +24,34 @@
     max-width: 137px;
     height: 45px;
     background-image: url('./assets/images/logo.svg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-right: 5%;
+    z-index: 1;
+
+    @include mobile {
+      min-width: 110px;
+      max-width: 110px;
+      height: 36px;
+    }
   }
 
   &__menu {
     @include fontUbuntu14;
 
     display: flex;
+    align-items: center;
     gap: 38px;
     list-style: none;
     padding-left: 0;
-    margin: 0 10px;
+    margin: 0 auto;
+
+    @include mobile {
+      @include fontTTNeoris24;
+
+      flex-direction: column;
+      margin-top: auto;
+    }
 
     &-link {
       text-decoration: none;
@@ -37,6 +60,90 @@
 
       &:hover {
         border-bottom: 2px solid $lightBeige;
+      }
+    }
+  }
+
+  &__nav {
+    width: 100%;
+    display: flex;
+
+    @include mobile {
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100dvh;
+      background-color: $skyBlue;
+      padding-bottom: 50px;
+      transform: translateX(-100%);
+      transition: 100ms ease-in-out;
+    }
+  }
+
+  &__button {
+    min-width: 200px;
+
+    @include mobile {
+      margin-top: auto;
+    }
+  }
+
+  &__hamburger {
+    display: none;
+    align-items: center;
+    width: 30px;
+    height: 20px;
+    cursor: pointer;
+    z-index: 20;
+    margin-right: 7px;
+
+    @include mobile {
+      display: flex;
+    }
+
+    span {
+      width: 100%;
+      height: 3px;
+      background-color: black;
+      border-radius: 12px;
+      display: block;
+      transition: background-color 0.5s ease-in-out;
+
+      &::after,
+      &::before {
+        content: "";
+        width: 100%;
+        background-color: black;
+        display: block;
+        transition: all 0.5s ease-in-out;
+        border-radius: 12px;
+        height: 3px;
+      }
+
+      &::before {
+        transform: translateY(-8px);
+      }
+
+      &::after {
+        transform: translateY(8px);
+        margin-top: -3px;
+      }
+    }
+
+    &.header__hamburger--active {
+      span {
+        background-color: transparent;
+
+        &::before {
+          transform: rotateZ(45deg) translateY(0);
+        }
+
+        &::after {
+          transform: rotateZ(-45deg) translateY(0);
+        }
       }
     }
   }
@@ -74,6 +181,10 @@
     #{$self}__container {
       padding-top: 8px;
       padding-bottom: 8px;
+
+      @include mobile {
+        padding: 4px 22px;
+      }
     }
 
     #{$self}__logo {
@@ -81,6 +192,27 @@
       min-width: 264px;
       height: 56px;
       background-image: url('./assets/images/logo-pin.svg');
+
+      @include mobile {
+        max-width: 202px;
+        min-width: 202px;
+        height: 43px;
+      }
+    }
+  }
+
+  &.header--open-menu {
+    #{$self}__nav {
+      display: flex;
+      transform: translateX(0);
+    }
+
+    #{$self}__logo {
+      display: flex;
+      background-image: url('./assets/images/logo-pin.svg');
+      max-width: 202px;
+      min-width: 202px;
+      height: 43px;
     }
   }
 }

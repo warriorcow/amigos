@@ -10,6 +10,7 @@ import fileInclude from 'gulp-file-include';
 import concat from 'gulp-concat';
 import browserSync from 'browser-sync';
 import clean from 'gulp-clean';
+import htmlbeautify from 'gulp-html-beautify';
 import * as fs from "fs";
 
 const server = browserSync.create();
@@ -38,6 +39,7 @@ function includeFiles() {
     .pipe(fileInclude({
       basepath: componentsFolderPath
     }))
+    .pipe(htmlbeautify({ indentSize: 2 }))
     .pipe(dest(distFolder))
     .pipe(server.stream())
 }
@@ -48,6 +50,10 @@ function fonts() {
 
 function images() {
   return src(imagesPath).pipe(dest(`${distAssetsFolder}/images`))
+}
+
+function scripts() {
+  return src('src/js/*.js').pipe(concat('script.js')).pipe(dest(distFolder))
 }
 
 function styles() {
@@ -75,8 +81,9 @@ function serve(done) {
 
 const watcher = () => {
   watch(['src/scss/*.scss', componentsStylesPath], series(styles, reload))
+  watch('src/js/*.js', series(scripts, reload))
   watch('src/assets/**/*', series(images, fonts, reload))
   watch([pagesPath, componentsFilesPath], series(includeFiles, reload))
 }
 
-task('dev', series(cleanDist, fonts, images, styles, includeFiles, serve, watcher))
+task('dev', series(cleanDist, fonts, images, styles, scripts, includeFiles, serve, watcher))

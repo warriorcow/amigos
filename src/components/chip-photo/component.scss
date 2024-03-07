@@ -1,150 +1,84 @@
-$circle-size-default: 280px; // Размер круга
-$circle-size-small: 200px; // Размер круга
-$section-count: 12; // Количество секций
-$section-color-default: $skyBlue; // Цвет секций
-$section-color-small: $coralOrange; // Цвет секций
-
 .chip-photo {
   $self: &;
 
-  rotate: 10deg;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   position: relative;
-  width: $circle-size-default;
-  height: $circle-size-default;
-  background-color: transparent;
-  border-radius: 50%; // Создаем круг
-  overflow: hidden; // Скрыть вертикальные линии, которые выходят за пределы круга
-
-  &::after {
-    content: '';
-    position: absolute;
-    width: 74%;
-    height: 74%;
-    border-radius: 50%;
-    border: 3px solid $deepBlack;
-    top: 50%;
-    left: 50%;
-    translate: -50% -50%;
-  }
+  width: 280px;
+  height: 280px;
 
   &::before {
-    content: '';
     position: absolute;
-    width: 74%;
-    height: 74%;
-    border-radius: 50%;
-    border: 35px solid $section-color-default;
-    top: 50%;
-    left: 50%;
-    translate: -50% -50%;
-  }
-
-  &__fill {
     content: '';
-    position: absolute;
-    width: 74%;
-    height: 74%;
-    border-radius: 50%;
-    background-color: $lightBeige;
-    top: 50%;
-    left: 50%;
-    translate: -50% -50%;
-    rotate: -10deg;
-    overflow: hidden;
-
-    &::before {
-      content: '';
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      border-radius: 50%;
-      background-image: url('./assets/images/pattern-sky-blue.svg');
-      top: 50%;
-      left: 50%;
-      translate: -50% -50%;
-      overflow: hidden;
-      background-size: 286px 305px;
-      background-repeat: no-repeat;
-      background-position: center 70px;
-    }
-
-    img {
-      position: relative;
-      width: 100%;
-      object-fit: cover;
-      z-index: 1;
-      margin-top: 12px;
-    }
-  }
-
-  &__border {
-    content: '';
-    position: absolute;
+    top: 0;
+    left: 0;
+    object-fit: contain;
     width: 100%;
     height: 100%;
-    border-radius: 50%;
-    overflow: hidden;
-    border: 3px solid $deepBlack;
+    background-image: url('./assets/images/chip-blue.svg');
+    background-size: contain;
+    z-index: 4;
   }
 
-  &__section {
-    @for $i from 1 through $section-count {
-      $angle: calc(360deg / $section-count) * $i;
-      $rotate: $angle * $i;
+  &::after {
+    position: absolute;
+    content: '';
+    top: 50%;
+    left: 50%;
+    object-fit: contain;
+    transform: translate(-50%, -50%);
+    width: 98%;
+    height: 98%;
+    background-color: $lightBeige;
+    z-index: 1;
+    border-radius: 100%;
+  }
 
-      &:nth-child(#{$i}) {
-        position: absolute;
-        background-color: $deepBlack;
-        width: 100%;
-        height: 3px;
-        top: 50%;
-        left: 50%;
-        translate: -50% -50%;
-        rotate: $angle;
-      }
-    }
+  &__image {
+    object-fit: contain;
+    width: 98%;
+    height: 98%;
+    z-index: 3;
+    border-radius: 100%;
+    padding-top: 42px;
+  }
+
+  &__pattern {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 98%;
+    height: 98%;
+    background-image: url('./assets/images/pattern-sky-blue.svg');
+    background-size: 100%;
+    background-position-y: -500%;
+    background-repeat: no-repeat;
+    border-radius: 100%;
+    z-index: 2;
   }
 
   &--small {
-    width: $circle-size-small;
-    height: $circle-size-small;
-
-    &::after {
-      border-width: 2px;
-      width: 75%;
-      height: 75%;
-    }
+    width: 200px;
+    height: 200px;
 
     &::before {
-      border-width: 24px;
-      border-color: $section-color-small;
-      width: 75%;
-      height: 75%;
+      background-image: url('./assets/images/chip-orange.svg');
     }
 
-    #{$self}__section {
-      height: 2px;
+    #{$self}__pattern {
+      background-image: url('./assets/images/pattern-pumpkin-orange.svg');
+    }
+  }
+
+  &--small-yellow {
+    &::before {
+      background-image: url('./assets/images/chip-yellow.svg');
     }
 
-    #{$self}__border {
-      border-width: 2px;
-    }
-
-    #{$self}__fill {
-      width: 75%;
-      height: 75%;
-
-      &::before {
-        background-image: url('./assets/images/pattern-pumpkin-orange.svg');
-        background-size: 203px 217px;
-        background-position-y: 40px;
-      }
-    }
-
-    &-yellow {
-      &::before {
-        border-color: $goldenYellow;
-      }
+    #{$self}__pattern {
+      background-image: url('./assets/images/pattern-saffron-yellow.svg');
     }
   }
 }
