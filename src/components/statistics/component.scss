@@ -3,21 +3,22 @@
 
   &__conteiner {
     display: flex;
+    flex-wrap: wrap;
     background-color: $skyBlue;
     padding: 31px 35px 24px 33px;
     border-radius: 25px;
+    gap: 25px;
   }
 
   &__title {
-    flex: 1 0 400px;
+    flex: 1 0 300px;
   }
 
   &__boxes {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, minmax(310px, 1fr));
     gap: 18px 17px;
-    width: 647px;
-    margin-left: 28px;
+    flex: 1;
   }
 
   &__box {
@@ -28,7 +29,6 @@
     background-color: $lightBeige;
     border: 2px solid $deepBlack;
     border-radius: 40px;
-    //width: calc(50% - 8.5px);
     gap: 0 28px;
     padding: 16px 20px;
     max-height: 70px;
@@ -39,7 +39,6 @@
     background-color: $lightBeige;
     border: 2px solid $deepBlack;
     border-radius: 40px;
-    //width: calc(50% - 8.5px);
     position: relative;
 
     &-item {

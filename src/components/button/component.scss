@@ -5,11 +5,14 @@
   background-color: $lightBeige;
   border: 2px solid $deepBlack;
   border-radius: 30px;
-  padding: 13px 50px;
+  padding: 11px 10px;
   cursor: pointer;
   text-decoration: none;
   color: $deepBlack;
   white-space: nowrap;
+  width: 100%;
+  max-width: 200px;
+  text-align: center;
 
   &:hover {
     background-color: $coralOrange;

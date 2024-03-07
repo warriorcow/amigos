@@ -1,15 +1,23 @@
 .results {
   display: flex;
   margin-top: 83px;
+  flex-wrap: wrap;
+  gap: 20px;
 
   &__container1 {
     display: flex;
     flex-direction: column;
     align-items: center;
+    flex: 1 0 250px;
   }
 
   &__image1 {
+    height: 310px;
     padding-bottom: 18px;
+
+    img {
+      height: 100%;
+    }
   }
 
 

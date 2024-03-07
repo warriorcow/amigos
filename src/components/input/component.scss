@@ -1,0 +1,53 @@
+.input-field {
+  @include fontUbuntu14;
+
+  position: relative;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: none;
+
+  &__label {
+    position: absolute;
+    top: 50%;
+    left: 22px;
+    display: block;
+    color: $steelBlue;
+    user-select: none;
+    cursor: text;
+    transform: translateY(-50%);
+
+    &::after {
+      position: relative;
+      top: -3px;
+      left: 3px;
+      display: inline-block;
+      content: "*";
+      color: #d0011b;
+    }
+  }
+
+  &__input {
+    @include fontUbuntu14;
+
+    width: 100%;
+    padding: 12px 22px;
+    border-radius: 25px;
+    border: 2px solid $deepBlack;
+    background-color: $lightBeige;
+
+    &:focus {
+      outline: none;
+    }
+
+    &::placeholder {
+      color: transparent;
+    }
+  }
+
+  &__input:focus + &__label,
+  &__input:valid + &__label,
+  &__input:disabled + &__label {
+    display: none;
+  }
+}

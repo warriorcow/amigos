@@ -13,11 +13,14 @@
       </p>
       @@include('button/component.html', {
         text: 'Подать заявку',
-        type: 'default'
+        type: 'default',
+        addClass: 'banner__button'
       })
     </div>
     <div class="banner__picture">
-      <img class="banner__image" src="./assets/images/cactus2.svg" alt="">
+      <video class="banner__image" autoplay muted playsinline>
+        <source src="./assets/images/video.webm" type="video/webm">
+      </video>
       <img class="banner__image" src="./assets/images/karta1.svg" alt="">
       <img class="banner__image" src="./assets/images/karta2.svg" alt="">
     </div>

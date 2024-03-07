@@ -1,0 +1,24 @@
+.select-option {
+  cursor: pointer;
+  position: relative;
+  padding: 3px 0 3px 22px;
+
+  &::before {
+    box-sizing: border-box;
+    content: '';
+    width: 8px;
+    height: 8px;
+    border: 2px solid $deepBlack;
+    border-radius: 100%;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+  }
+
+  &.select-option--active {
+    &::before {
+      background-color: $deepBlack;
+    }
+  }
+}

@@ -1,0 +1,78 @@
+.select {
+  $self: &;
+
+  position: relative;
+
+  &__input {
+    display: none;
+  }
+
+  &__arrow {
+    display: inline-flex;
+    width: 12px;
+    height: 7px;
+    clip-path: polygon(100% 0%, 0% 0%, 50% 100%);
+    background-color: $deepBlack;
+  }
+
+  &__btn {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 12px 22px;
+    border-radius: 22px;
+    border: 2px solid $deepBlack;
+    background-color: $lightBeige;
+    cursor: pointer;
+    color: $steelBlue;
+  }
+
+  &__btn-text {
+    position: relative;
+
+    &::after {
+      position: relative;
+      top: -3px;
+      left: 3px;
+      display: inline-block;
+      content: "*";
+      color: #d0011b;
+    }
+  }
+
+  &__options {
+    pointer-events: none;
+    position: absolute;
+    width: 100%;
+    list-style: none;
+    margin: -10px 0 0;
+    background-color: $lightBeige;
+    padding: 0 22px 12px;
+    border-radius: 0 0 25px 25px;
+    border: 2px solid $deepBlack;
+    border-top: none;
+    opacity: 0;
+  }
+
+  &.select--active {
+    #{$self}__arrow {
+      clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+    }
+
+    #{$self}__btn {
+      border-radius: 22px 22px 0 0;
+    }
+
+    #{$self}__options {
+      pointer-events: all;
+      display: block;
+      opacity: 1;
+      z-index: 10;
+    }
+
+    #{$self}__btn {
+      border-radius: 22px 22px 0 0;
+    }
+  }
+}

@@ -1,18 +1,24 @@
 <header class="header">
   <div class="header__container content">
     <a href="/" class="header__logo"></a>
-    <ul class="header__menu">
-      <li class="header__menu-item"><a href="#" class="header__menu-link">О нас</a></li>
-      <li class="header__menu-item"><a href="#" class="header__menu-link">Преимущества</a></li>
-      <li class="header__menu-item"><a href="#" class="header__menu-link">Условия</a></li>
-      <li class="header__menu-item"><a href="#" class="header__menu-link">Команда</a></li>
-      <li class="header__menu-item"><a href="#" class="header__menu-link">Контакты</a></li>
-    </ul>
-    @@include('button/component.html', {
-      text: 'Подать заявку',
-      type: 'default',
-      addClass: 'header__button'
-    })
+    <div class="header__nav">
+      <ul class="header__menu">
+        <li class="header__menu-item"><a href="#" class="header__menu-link">О нас</a></li>
+        <li class="header__menu-item"><a href="#" class="header__menu-link">Преимущества</a></li>
+        <li class="header__menu-item"><a href="#" class="header__menu-link">Условия</a></li>
+        <li class="header__menu-item"><a href="#" class="header__menu-link">Команда</a></li>
+        <li class="header__menu-item"><a href="#" class="header__menu-link">Контакты</a></li>
+      </ul>
+      @@include('button/component.html', {
+        text: 'Подать заявку',
+        type: 'default',
+        addClass: 'header__button'
+      })
+    </div>
+
+    <div class="header__hamburger">
+      <span></span>
+    </div>
   </div>
 </header>
 

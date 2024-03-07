@@ -6,9 +6,8 @@
 @import "global";
 
 /* Components Styles */
-@import "../components/header/component";
-@import "../components/header-pin/component";
 @import "../components/button/component";
+@import "../components/header/component";
 @import "../components/banner/component";
 @import "../components/results/component";
 @import "../components/statistics/component";
@@ -26,3 +25,7 @@
 @import "../components/footer/component";
 @import "../components/copyright/component";
 @import "../components/callback/component";
+@import "../components/form/component";
+@import "../components/input/component";
+@import "../components/select/component";
+@import "../components/select/option/component";
