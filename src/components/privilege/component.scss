@@ -4,6 +4,10 @@
   flex-wrap: wrap;
   gap: 23px;
 
+  @include mobile {
+
+  }
+
   &__title {
     @include fontTTNeoris30;
   }
