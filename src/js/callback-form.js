@@ -11,3 +11,8 @@ submitButton.addEventListener('click', (e) => {
     console.log(key +': '+ value);
   })
 })
+
+function openModal() {
+  const popupContent = document.querySelector('.popup-overlay');
+  popupContent.classList.add('active')
+}
