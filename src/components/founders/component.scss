@@ -5,6 +5,11 @@
   padding-bottom: 46px;
   overflow: hidden;
 
+  @include mobile {
+    padding-top: 35px;
+    padding-bottom: 0;
+  }
+
   &::before {
     position: absolute;
     content: '';
@@ -13,7 +18,13 @@
     background-image: url('./assets/images/pattern-deep-black.svg');
     background-repeat: no-repeat;
     top: -427px;
-    right: -18px;
+    right: -318px;
+    rotate: 180deg;
+  }
+
+  &__wrapper {
+    position: relative;
+    z-index: 1;
   }
 
   &__title {
@@ -28,6 +39,11 @@
     justify-content: space-between;
     gap: 39px;
     margin-top: 24px;
+
+    @include mobile {
+      margin-top: 37px;
+      gap: 65px;
+    }
 
     .card {
       flex: 1;

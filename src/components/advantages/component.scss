@@ -1,8 +1,16 @@
 .advantages {
-    margin-top: 105px;
+  margin-top: 105px;
+
+  @include mobile {
+    margin-top: 80px;
+  }
 
   &__title {
     @include fontTTNeoris30;
+
+    @include mobile {
+      @include fontTTNeoris25;
+    }
   }
 
   &__list {
@@ -11,15 +19,29 @@
     width: 100%;
     margin-top: 28px;
     gap: 35px 60px;
+
+    @include mobile {
+      flex-direction: column;
+      margin-top: 34px;
+      gap: 48px;
+    }
   }
 
   &__list-item {
     display: flex;
     align-items: center;
     width: calc(100% / 3 - 40px);
+
+    @include mobile {
+      width: 100%;
+    }
   }
 
   &__icon {
     padding-right: 20px;
+
+    @include mobile {
+      padding-right: 50px;
+    }
   }
 }

@@ -63,6 +63,11 @@
     width: 200px;
     height: 200px;
 
+    @include mobile {
+      width: 142px;
+      height: 142px;
+    }
+
     &::before {
       background-image: url('./assets/images/chip-orange.svg');
     }
