@@ -3,7 +3,6 @@ function openModal(id) {
   document.querySelector(id).classList.add('active');
   document.querySelector(id).addEventListener('click', ({ target }) => {
     if (`#${target.id}` === id) {
-      console.log('хуй')
       closeModal(id);
     }
   })
