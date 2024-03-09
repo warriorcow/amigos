@@ -1,4 +1,4 @@
-<div class="slider-item">
+<div class="swiper-slide slider-item">
   <div class="slider-item__header">
     <div class="slider-item__photo">
       <img src="@@photo" alt="@@name">
@@ -9,6 +9,11 @@
   </div>
 
   <div class="slider-item__body">
-    @@text
+    <div class="slider-item__text">
+      @@text
+    </div>
+    <div class="slider-item__more" onclick="openReviewModal(event)">
+      Показать полностью
+    </div>
   </div>
 </div>

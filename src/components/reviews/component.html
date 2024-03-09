@@ -7,17 +7,25 @@
         src="./assets/images/gipsyteam.svg"
         alt="gipsyteam"
       >
-      <span class="reviews__name">gipsyteam</span>
+      <span class="reviews__name">
+        <a href="https://www.gipsyteam.ru/">gipsyteam</a>
+      </span>
     </div>
     <div class="reviews__slider">
-      @@loop('reviews/item/component.html', [
-        { photo: './assets/images/kirill.png', name: 'Askar1KK', text: 'В фонде нахожусь с начала существования. Ребята тут веселые, трени долгие и познавательные. Отношение к каждому игроку хорошее. Всем рекомендую!' },
-        { photo: './assets/images/kirill.png', name: 'Askar1KK', text: 'В фонде нахожусь с начала существования. Ребята тут веселые, трени долгие и познавательные. Отношение к каждому игроку хорошее. Всем рекомендую!' },
-        { photo: './assets/images/kirill.png', name: 'Askar1KK', text: 'В фонде нахожусь с начала существования. Ребята тут веселые, трени долгие и познавательные. Отношение к каждому игроку хорошее. Всем рекомендую!' },
-        { photo: './assets/images/kirill.png', name: 'Askar1KK', text: 'В фонде нахожусь с начала существования. Ребята тут веселые, трени долгие и познавательные. Отношение к каждому игроку хорошее. Всем рекомендую!' },
-        { photo: './assets/images/kirill.png', name: 'Askar1KK', text: 'В фонде нахожусь с начала существования. Ребята тут веселые, трени долгие и познавательные. Отношение к каждому игроку хорошее. Всем рекомендую!' },
-        { photo: './assets/images/kirill.png', name: 'Askar1KK', text: 'В фонде нахожусь с начала существования. Ребята тут веселые, трени долгие и познавательные. Отношение к каждому игроку хорошее. Всем рекомендую!' },
-      ])
+      <div class="swiper">
+        <div class="swiper-wrapper">
+          @@loop('reviews/item/component.html', [
+            { photo: './assets/images/kirill.png', name: 'Askar1KK', text: 'В фонде нахожусь с начала существования. Ребята тут веселые, трени долгие и познавательные. Отношение к каждому игроку хорошее. Всем рекомендую!' },
+            { photo: './assets/images/kirill.png', name: 'Askar1KK', text: 'В фонде нахожусь с начала существования. Ребята тут веселые, трени долгие и познавательные. Отношение к каждому игроку хорошее. Всем рекомендую!' },
+            { photo: './assets/images/kirill.png', name: 'Askar1KK', text: 'В фонде нахожусь с начала существования. Ребята тут веселые, трени долгие и познавательные. Отношение к каждому игроку хорошее. Всем рекомендую!' },
+            { photo: './assets/images/kirill.png', name: 'Askar1KK', text: 'В фонде нахожусь с начала существования. Ребята тут веселые, трени долгие и познавательные. Отношение к каждому игроку хорошее. Всем рекомендую!' },
+            { photo: './assets/images/kirill.png', name: 'Askar1KK', text: 'В фонде нахожусь с начала существования. Ребята тут веселые, трени долгие и познавательные. Отношение к каждому игроку хорошее. Всем рекомендую!' },
+            { photo: './assets/images/kirill.png', name: 'Askar1KK', text: 'В фонде нахожусь с начала существования. Ребята тут веселые, трени долгие и познавательные. Отношение к каждому игроку хорошее. Всем рекомендую!' },
+          ])
+        </div>
+      </div>
+      <div class="reviews__slider-arrow reviews__slider-arrow-prev"></div>
+      <div class="reviews__slider-arrow reviews__slider-arrow-next"></div>
     </div>
   </div>
 </div>

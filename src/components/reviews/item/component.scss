@@ -1,6 +1,6 @@
 .slider-item {
   width: 284px;
-  height: 300px;
+  height: auto !important;
   padding: 30px 20px 40px;
   background-color: $darkGray;
   border-radius: 25px;
@@ -28,5 +28,27 @@
 
   &__body {
     margin-top: 28px;
+  }
+
+  &__text {
+    &.active {
+      display: -webkit-box;
+      -webkit-line-clamp: 10;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      max-height: 160px;
+    }
+  }
+
+  &__more {
+    display: none;
+    margin-top: 10px;
+    cursor: pointer;
+    text-decoration: underline;
+
+    &.active {
+      display: inline-block;
+    }
   }
 }

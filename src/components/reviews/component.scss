@@ -2,12 +2,23 @@
   background-color: $skyBlue;
   border-radius: 25px 25px 0;
   color: $deepBlack;
+  margin: 0 40px;
+
+  @include mobile {
+    margin: 0;
+  }
 
   &__title {
     @include fontTTNeoris30;
 
     display: flex;
     align-items: center;
+
+    @include mobile {
+      @include fontTTNeoris25;
+
+      display: inline-block;
+    }
   }
 
   &__name {
@@ -15,47 +26,64 @@
   }
 
   &__logo {
-    padding: 0 5px;
+    margin: 0 5px;
+
+    @include mobile {
+      width: 26px;
+      height: 26px;
+      padding: 0;
+      vertical-align: middle;
+    }
   }
 
   &__slider {
+    position: relative;
+    padding: 0 80px;
+    margin-top: 60px;
 
-    .slick-list {
-      margin: 60px auto 0;
-      max-width: 1025px;
+    @include mobile {
+      padding: 0 30px;
     }
 
-    .slick-slide {
-      margin: 0 30px;
+    .swiper-wrapper {
+      align-items: normal !important;
     }
 
-    .slick-arrow {
-      width: 43px;
-      height: 43px;
-      z-index: 1;
+    &-arrow {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 36px;
+      height: 62px;
+      cursor: pointer;
+
+      @include mobile {
+        width: 19px;
+        height: 38px;
+      }
 
       &::before {
         position: absolute;
+        top: 0;
+        left: 0;
         content: '';
         width: 100%;
         height: 100%;
-        top: 0;
-        left: 0;
-        border-left: 6px solid $darkGray;
-        border-bottom: 6px solid $darkGray;
-        box-sizing: border-box;
-        opacity: 1;
+        background-image: url('./assets/images/arrow.svg');
+        background-size: 19px 38px;
       }
-    }
 
-    .slick-prev {
-      left: 10px;
-      transform: rotate(45deg);
-    }
+      &-prev {
+        left: 0;
+      }
 
-    .slick-next {
-      right: 10px;
-      transform: rotate(-135deg);
+      &-next {
+        right: 0;
+
+        &::before {
+          rotate: 180deg;
+        }
+      }
     }
   }
 }
