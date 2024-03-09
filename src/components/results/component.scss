@@ -9,20 +9,46 @@
     flex-direction: column;
     align-items: center;
     flex: 1 0 250px;
+
+    @include mobile {
+      flex-direction: row-reverse;
+      align-items: flex-start;
+
+      .results__title {
+        max-width: 160px;
+        z-index: 1;
+        margin-right: -28px;
+      }
+    }
   }
 
   &__image1 {
     height: 310px;
     padding-bottom: 18px;
 
+    @include mobile {
+      width: 213px;
+      padding: 0;
+      margin-top: 56px;
+    }
+
     img {
       height: 100%;
+
+      @include mobile {
+        width: 100%;
+        object-fit: contain;
+      }
     }
   }
 
 
   &__title {
     @include fontTTNeoris30;
+
+    @include mobile {
+      @include fontTTNeoris24;
+    }
 
     &--offset {
       padding-left: 26px;
@@ -31,5 +57,13 @@
 
   &__image2 {
     padding-top: 42px;
+
+    @include mobile {
+      padding-top: 35px;
+    }
+
+    img {
+      width: 100%;
+    }
   }
 }

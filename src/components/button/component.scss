@@ -27,6 +27,10 @@
   color: $deepBlack;
   position: relative;
 
+  @include mobile {
+    height: 30px;
+  }
+
   &__icon {
     position: absolute;
     top: 0;
@@ -38,6 +42,11 @@
     background-position: 19px center;
     border: 2px solid $deepBlack;
     border-radius: 30px;
+
+    @include mobile {
+      background-position: 13px center;
+      background-size: 17px 13px;
+    }
 
     &:hover {
       background-image: url('./assets/images/youtube-hover.svg');
@@ -59,6 +68,12 @@
     text-decoration: none;
     color: $deepBlack;
     white-space: nowrap;
+
+    @include mobile {
+      min-width: auto;
+      padding: 8px 13px;
+      margin-left: 40px;
+    }
 
     &:hover {
       background-color: $coralOrange;

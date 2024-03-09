@@ -15,6 +15,11 @@ body {
     box-sizing: border-box;
   }
 
+  &.locked {
+    overflow: hidden;
+    padding-right: 17px;
+  }
+
   @include mobile {
     @include fontUbuntu13;
   }

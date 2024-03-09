@@ -2,9 +2,28 @@
   position: relative;
   height: 377px;
   margin-top: 95px;
+  overflow: hidden;
+  display: flex;
+
+  @include mobile {
+    height: auto;
+  }
+
+  &__wrapper {
+    display: flex;
+    align-items: flex-start;
+
+    @include mobile {
+      display: block;
+    }
+  }
 
   &__text {
     @include fontTTNeoris30;
+
+    @include mobile {
+      @include fontTTNeoris25;
+    }
   }
 
   &__bubble {
@@ -15,15 +34,41 @@
     background-color: $coralOrange;
     width: 100%;
     max-width: 850px;
+
+    @include mobile {
+      padding: 27px 52px;
+      top: 0;
+    }
   }
 
   &__image {
-    position: absolute;
-    right: 0;
-    top: 0;
+    align-self: self-end;
+    min-width: 418px;
+    margin-right: -140px;
+    margin-left: 50px;
+
+    @include mobile {
+      position: relative;
+      max-width: 281px;
+      width: 100%;
+      margin-left: auto;
+      margin-right: -70px;
+      margin-top: 10px;
+      min-width: auto;
+    }
+
+    img {
+      width: 100%;
+    }
   }
 
   &__button {
     margin-top: 20px;
+
+    @include mobile {
+      position: absolute;
+      bottom: -62px;
+      left: 0;
+    }
   }
 }

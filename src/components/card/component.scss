@@ -12,10 +12,21 @@
 
     margin-top: 36px;
     white-space: nowrap;
+
+    @include mobile {
+      @include fontTTNeoris25;
+
+      margin-top: 25px;
+      white-space: normal;
+    }
   }
 
   &__description {
     margin-top: 16px;
+
+    @include mobile {
+      margin-top: 22px;
+    }
   }
 
   &__link {
@@ -28,8 +39,16 @@
   &--small {
     width: 230px;
 
+    @include mobile {
+      width: 142px;
+    }
+
     #{$self}__name {
       @include fontTTNeoris16;
+
+      @include mobile {
+        @include fontTTNeoris13;
+      }
     }
 
     #{$self}__description {
