@@ -3,6 +3,9 @@
   border-radius: 30px;
   padding-top: 133px;
   padding-bottom: 80px;
+  background-image: url('./assets/images/pattern-banner_left.svg'), url('./assets/images/pattern-banner_center.svg'), url('./assets/images/pattern-banner_right.svg');
+  background-position: left top, calc(50% + 100px) bottom, right top;
+  background-repeat: no-repeat, no-repeat, no-repeat;
 
   @include mobile {
     padding-top: 170px;

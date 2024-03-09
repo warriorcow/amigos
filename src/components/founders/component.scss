@@ -15,11 +15,14 @@
     content: '';
     width: 533px;
     height: 568px;
-    background-image: url('./assets/images/pattern-deep-black.svg');
+    top: -420px;
+    right: 0;
+    background-image: url('./assets/images/pattern-founders.svg');
     background-repeat: no-repeat;
-    top: -427px;
-    right: -318px;
-    rotate: 180deg;
+    background-size: auto;
+    background-position: top;
+
+
   }
 
   &__wrapper {

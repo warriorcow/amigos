@@ -34,6 +34,9 @@
     background-color: $coralOrange;
     width: 100%;
     max-width: 850px;
+    background-image: url('./assets/images/puttern-callback.svg');
+    background-position: bottom right;
+    background-repeat: no-repeat;
 
     @include mobile {
       padding: 27px 52px;

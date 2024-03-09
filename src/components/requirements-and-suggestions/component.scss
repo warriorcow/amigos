@@ -58,23 +58,14 @@
       background-color: $goldenYellow;
       clip-path: polygon(0.162% 0.16%, 80.876% 0.16%, 80.876% 0.16%, 81.378% 0.192%, 81.863% 0.285%, 82.327% 0.437%, 82.765% 0.643%, 83.173% 0.9%, 83.545% 1.204%, 83.878% 1.554%, 84.165% 1.944%, 84.403% 2.372%, 84.587% 2.833%, 99.609% 49.14%, 99.609% 49.14%, 99.676% 49.371%, 99.728% 49.606%, 99.765% 49.843%, 99.787% 50.081%, 99.794% 50.32%, 99.786% 50.559%, 99.763% 50.797%, 99.725% 51.033%, 99.672% 51.268%, 99.604% 51.499%, 84.594% 97.18%, 84.594% 97.18%, 84.409% 97.64%, 84.17% 98.066%, 83.883% 98.454%, 83.551% 98.801%, 83.179% 99.105%, 82.772% 99.36%, 82.335% 99.565%, 81.872% 99.715%, 81.388% 99.808%, 80.888% 99.84%, 0.162% 99.84%, 0.162% 0.16%);
       z-index: -1;
-      background-image: url('./assets/images/pattern-saffron-yellow.svg');
-      background-size: 533px 568px;
+      background-image: url('./assets/images/pattern-requirements.svg');
+      background-size: auto;
       background-repeat: no-repeat;
-      background-position: 377px 259px;
+      background-position: right bottom;
     }
 
     &-inner {
       padding: 31px 110px 42px 67px;
-    }
-
-    &-pattern {
-      position: absolute;
-      content: '';
-      width: 533px;
-      height: 568px;
-      bottom: -204px;
-      right: -300px;
 
     }
   }
@@ -90,5 +81,9 @@
   &__right {
     flex: 1;
     padding: 37px 90px 42px 54px;
+    background-image: url('./assets/images/pattern-offers.svg');
+    background-size: auto;
+    background-repeat: no-repeat;
+    background-position: right top;
   }
 }

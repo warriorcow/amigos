@@ -3,6 +3,9 @@
   color: $lightBeige;
   padding-top: 173px;
   padding-bottom: 100px;
+  background-image: url('./assets/images/pattern-youtube.svg');
+  background-position: left 410px;
+  background-repeat: no-repeat;
 
   @include mobile {
     padding-top: 84px;

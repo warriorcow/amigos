@@ -1,0 +1,50 @@
+.privilege {
+  display: flex;
+  margin-top: 157px;
+  flex-wrap: wrap;
+  gap: 23px;
+
+  &__title {
+    @include fontTTNeoris30;
+  }
+
+  &__contauners {
+    display: flex;
+    gap: 26px;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    background-color: $paleGreen;
+    top: 0;
+    left: 0;
+    max-width: 362px;
+    width: 100%;
+    border-radius: 25px;
+    padding: 20px 44px 13px 33px;
+
+    &:nth-child(1) {
+      background-image: url('./assets/images/pattern-workout.svg');
+      background-position: top right;
+      background-repeat: no-repeat;
+    }
+
+    &:nth-child(2) {
+      background-image: url('./assets/images/pattern-connection.svg');
+      background-position: top;
+      background-repeat: no-repeat;
+    }
+
+    &:nth-child(3) {
+      background-image: url('./assets/images/pattern-fast.svg');
+      background-position: top left;
+      background-repeat: no-repeat;
+    }
+  }
+
+  &__headline {
+    @include fontTTNeoris30;
+    margin: 17px 0 6px;
+  }
+}
