@@ -2,7 +2,6 @@
   "name": "gulp-template",
   "version": "1.0.0",
   "description": "",
-  "type": "module",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -11,17 +10,22 @@
   "license": "ISC",
   "devDependencies": {
     "browser-sync": "^3.0.2",
+    "css-loader": "^6.10.0",
     "gulp": "^4.0.2",
     "gulp-autoprefixer": "^9.0.0",
     "gulp-sass": "^5.1.0",
-    "sass": "^1.71.1"
+    "sass": "^1.71.1",
+    "style-loader": "^3.3.4",
+    "webpack-stream": "^7.0.0"
   },
   "dependencies": {
+    "gulp-changed": "^4.0.3",
     "gulp-clean": "^0.4.0",
     "gulp-concat": "^2.6.1",
     "gulp-eslint": "^6.0.0",
     "gulp-file-include": "^2.3.0",
     "gulp-html-beautify": "^1.0.1",
-    "node-sass": "^9.0.0"
+    "node-sass": "^9.0.0",
+    "swiper": "^11.0.7"
   }
 }
