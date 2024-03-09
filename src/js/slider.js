@@ -5,7 +5,7 @@ const swiper = new Swiper('.swiper', {
     nextEl: ".reviews__slider-arrow-next",
     prevEl: ".reviews__slider-arrow-prev",
   },
-  breakpoint: {
+  breakpoints: {
     960: {
       slidesPerView: 3
     }

@@ -70,7 +70,10 @@
         width: 100%;
         height: 100%;
         background-image: url('./assets/images/arrow.svg');
-        background-size: 19px 38px;
+
+        @include mobile {
+          background-size: 19px 38px;
+        }
       }
 
       &-prev {
