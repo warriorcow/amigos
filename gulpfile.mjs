@@ -15,8 +15,8 @@ import * as fs from "fs";
 
 const server = browserSync.create();
 
-const distFolder = 'dist';
-const distAssetsFolder = 'dist/assets';
+const distFolder = 'docs';
+const distAssetsFolder = 'docs/assets';
 const componentsFolderPath = 'src/components';
 
 const componentsFilesPath = `${componentsFolderPath}/**/*.html`;

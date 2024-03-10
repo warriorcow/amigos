@@ -1,0 +1,2431 @@
+/* Variables */
+@font-face {
+  font-family: "TT Neoris Trial";
+  src: url("./assets/fonts/tt-neoris/TT-Neoris-Trial-Black.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Ubuntu";
+  src: url("./assets/fonts/ubuntu/Ubuntu-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+/* Global Styles */
+body {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  background-color: #F3EAD4;
+  margin: 0;
+  padding: 0;
+}
+body::-webkit-scrollbar {
+  width: 10px;
+}
+body::-webkit-scrollbar-thumb {
+  background-color: #A6CC9E;
+  border-radius: 30px;
+}
+body::-webkit-scrollbar-track {
+  background-color: #F3EAD4;
+  border-radius: 30px;
+}
+body * {
+  box-sizing: border-box;
+}
+body.locked {
+  overflow: hidden;
+  padding-right: 10px;
+}
+@media (max-width: 960px) {
+  body.locked {
+    padding-right: 0;
+  }
+}
+@media (max-width: 960px) {
+  body {
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 15px;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+p {
+  margin: 0;
+  font-size: 1em;
+}
+
+a {
+  color: inherit;
+}
+
+.container {
+  max-width: 1280px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.content {
+  max-width: 1180px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+@media (max-width: 960px) {
+  .content {
+    padding: 0 15px;
+    max-width: 375px;
+  }
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+}
+
+.section-reviews {
+  padding: 85px 0 55px;
+  border-radius: 25px 25px 0 0;
+  margin-top: -25px;
+  margin-bottom: -25px;
+  gap: 55px 0;
+  background-image: url("./assets/images/pattern-reviews.svg"), url("./assets/images/pattern-reviews-quote_left.svg"), url("./assets/images/pattern-reviews-quote_right.svg");
+  background-position: top right, bottom left, bottom right;
+  background-repeat: no-repeat;
+}
+@media (max-width: 960px) {
+  .section-reviews {
+    padding: 50px 0 80px;
+  }
+}
+
+.bg-skyblue {
+  background-color: #8BB4C8;
+}
+
+#__bs_notify__ {
+  display: none !important;
+}
+
+/* Components Styles */
+.button {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  display: inline-block;
+  background-color: #F3EAD4;
+  border: 2px solid #141414;
+  border-radius: 30px;
+  padding: 11px 10px;
+  cursor: pointer;
+  text-decoration: none;
+  color: #141414;
+  white-space: nowrap;
+  width: 100%;
+  max-width: 200px;
+  text-align: center;
+}
+.button:hover {
+  background-color: #FC9B59;
+}
+
+.button-yt {
+  display: inline-flex;
+  border-radius: 30px;
+  height: 42px;
+  text-decoration: none;
+  color: #141414;
+  position: relative;
+}
+@media (max-width: 960px) {
+  .button-yt {
+    height: 30px;
+  }
+}
+.button-yt__icon {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #F3EAD4;
+  background-image: url("./assets/images/youtube.svg");
+  background-repeat: no-repeat;
+  background-position: 19px center;
+  border: 2px solid #141414;
+  border-radius: 30px;
+}
+@media (max-width: 960px) {
+  .button-yt__icon {
+    background-position: 13px center;
+    background-size: 17px 13px;
+  }
+}
+.button-yt__icon:hover {
+  background-image: url("./assets/images/youtube-hover.svg");
+  background-color: #FC9B59;
+}
+.button-yt__text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 172px;
+  border-radius: 30px;
+  border: 2px solid #141414;
+  position: relative;
+  height: 100%;
+  background-color: #F3EAD4;
+  margin-left: 55px;
+  text-decoration: none;
+  color: #141414;
+  white-space: nowrap;
+}
+@media (max-width: 960px) {
+  .button-yt__text {
+    min-width: auto;
+    padding: 8px 13px;
+    margin-left: 40px;
+  }
+}
+.button-yt__text:hover {
+  background-color: #FC9B59;
+}
+
+.header {
+  position: absolute;
+  z-index: 2000;
+  top: 0;
+  width: 100%;
+}
+.header__container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 33px;
+  padding-bottom: 33px;
+}
+@media (max-width: 960px) {
+  .header__container {
+    padding-top: 26px;
+    padding-bottom: 26px;
+  }
+}
+.header__logo {
+  min-width: 137px;
+  max-width: 137px;
+  height: 45px;
+  background-image: url("./assets/images/logo.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin-right: 5%;
+  z-index: 1;
+}
+@media (max-width: 960px) {
+  .header__logo {
+    min-width: 110px;
+    max-width: 110px;
+    height: 36px;
+  }
+}
+.header__menu {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  display: flex;
+  align-items: center;
+  gap: 38px;
+  list-style: none;
+  padding-left: 0;
+  margin: 0 auto;
+}
+@media (max-width: 960px) {
+  .header__menu {
+    font-family: "TT Neoris Trial", sans-serif;
+    font-weight: 900;
+    font-size: 24px;
+    line-height: 29px;
+    flex-direction: column;
+    margin-top: auto;
+  }
+}
+.header__menu-link {
+  text-decoration: none;
+  color: #141414;
+  white-space: nowrap;
+}
+.header__menu-link:hover {
+  border-bottom: 2px solid #F3EAD4;
+}
+.header__nav {
+  width: 100%;
+  display: flex;
+}
+@media (max-width: 960px) {
+  .header__nav {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100dvh;
+    background-color: #8BB4C8;
+    padding-bottom: 50px;
+    transform: translateX(-100%);
+    transition: 100ms ease-in-out;
+  }
+}
+.header__button {
+  min-width: 200px;
+}
+@media (max-width: 960px) {
+  .header__button {
+    margin-top: auto;
+  }
+}
+.header__hamburger {
+  display: none;
+  align-items: center;
+  width: 30px;
+  height: 20px;
+  cursor: pointer;
+  z-index: 20;
+  margin-right: 7px;
+  align-self: flex-start;
+  top: 5px;
+  position: relative;
+}
+@media (max-width: 960px) {
+  .header__hamburger {
+    display: flex;
+  }
+}
+.header__hamburger span {
+  width: 100%;
+  height: 3px;
+  background-color: black;
+  border-radius: 12px;
+  display: block;
+  transition: background-color 0.1s ease-in-out;
+}
+.header__hamburger span::after, .header__hamburger span::before {
+  content: "";
+  width: 100%;
+  background-color: black;
+  display: block;
+  transition: all 0.1s ease-in-out;
+  border-radius: 12px;
+  height: 3px;
+}
+.header__hamburger span::before {
+  transform: translateY(-8px);
+}
+.header__hamburger span::after {
+  transform: translateY(8px);
+  margin-top: -3px;
+}
+.header__hamburger.header__hamburger--active span {
+  background-color: transparent;
+}
+.header__hamburger.header__hamburger--active span::before {
+  transform: rotateZ(45deg) translateY(0);
+}
+.header__hamburger.header__hamburger--active span::after {
+  transform: rotateZ(-45deg) translateY(0);
+}
+.header--fixed {
+  position: fixed;
+  border: 2px solid #141414;
+  border-radius: 40px;
+  background-color: #8BB4C8;
+  animation: slideInDown 100ms forwards ease-in-out;
+  overflow: hidden;
+}
+.header--fixed.header--slide-up {
+  animation: slideInUp 100ms forwards ease-in-out;
+}
+@keyframes slideInDown {
+  0% {
+    top: -100%;
+  }
+  100% {
+    top: 0;
+  }
+}
+@keyframes slideInUp {
+  0% {
+    top: 0;
+  }
+  100% {
+    top: -100%;
+  }
+}
+.header--fixed .header__container {
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+@media (max-width: 960px) {
+  .header--fixed .header__container {
+    padding: 4px 22px;
+  }
+}
+.header--fixed .header__logo {
+  max-width: 264px;
+  min-width: 264px;
+  height: 56px;
+  background-image: url("./assets/images/logo-pin.svg");
+}
+@media (max-width: 960px) {
+  .header--fixed .header__logo {
+    max-width: 202px;
+    min-width: 202px;
+    height: 43px;
+  }
+}
+.header--fixed .header__hamburger {
+  top: 12px;
+}
+.header.header--open-menu .header__nav {
+  display: flex;
+  transform: translateX(0);
+}
+.header.header--open-menu .header__logo {
+  display: flex;
+  background-image: url("./assets/images/logo-pin.svg");
+  max-width: 202px;
+  min-width: 202px;
+  height: 43px;
+}
+
+.banner {
+  background-color: #8BB4C8;
+  border-radius: 30px;
+  padding-top: 133px;
+  padding-bottom: 80px;
+  background-image: url("./assets/images/pattern-banner_left.svg"), url("./assets/images/pattern-banner_center.svg"), url("./assets/images/pattern-banner_right.svg");
+  background-position: left top, calc(50% + 100px) bottom, right top;
+  background-repeat: no-repeat, no-repeat, no-repeat;
+}
+@media (max-width: 960px) {
+  .banner {
+    padding-top: 120px;
+    padding-bottom: 40px;
+    background-position: -150px top, calc(100% + 320px) calc(100% + 10px), 300px;
+  }
+}
+.banner__container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+@media (max-width: 960px) {
+  .banner__container {
+    flex-direction: column-reverse;
+  }
+}
+.banner__info {
+  max-width: 564px;
+  flex: 1 0 400px;
+}
+@media (max-width: 960px) {
+  .banner__info {
+    margin-top: 85px;
+    flex: 1 0;
+  }
+}
+.banner__title {
+  font-family: "TT Neoris Trial", sans-serif;
+  font-weight: 900;
+  font-size: 40px;
+  line-height: 48px;
+  margin-bottom: 10px;
+}
+@media (max-width: 960px) {
+  .banner__title {
+    font-family: "TT Neoris Trial", sans-serif;
+    font-weight: 900;
+    font-size: 24px;
+    line-height: 29px;
+    margin-bottom: 17px;
+  }
+}
+.banner__description {
+  margin-bottom: 40px;
+}
+@media (max-width: 960px) {
+  .banner__button {
+    display: block;
+    margin: 0 auto;
+  }
+}
+.banner__picture {
+  display: flex;
+  margin-left: 10px;
+  position: relative;
+}
+.banner__image {
+  position: relative;
+}
+.banner__image:nth-child(1) {
+  left: 0;
+  margin-top: -65px;
+  width: 230px;
+  object-fit: contain;
+  z-index: 3;
+  bottom: -30px;
+}
+@media (max-width: 960px) {
+  .banner__image:nth-child(1) {
+    width: 150px;
+  }
+}
+.banner__image:nth-child(2) {
+  margin-left: -60px;
+  top: 25px;
+  z-index: 2;
+}
+@media (max-width: 960px) {
+  .banner__image:nth-child(2) {
+    width: 115px;
+    margin-left: -40px;
+  }
+}
+.banner__image:nth-child(3) {
+  margin-left: -130px;
+  top: 13px;
+  z-index: 1;
+}
+@media (max-width: 960px) {
+  .banner__image:nth-child(3) {
+    width: 160px;
+    margin-left: -50px;
+    top: 20px;
+  }
+}
+
+.results {
+  display: flex;
+  margin-top: 83px;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.results__container1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1 0 250px;
+}
+@media (max-width: 960px) {
+  .results__container1 {
+    flex-direction: row-reverse;
+    align-items: flex-start;
+  }
+  .results__container1 .results__title {
+    max-width: 160px;
+    z-index: 1;
+    margin-right: -28px;
+  }
+}
+.results__image1 {
+  height: 310px;
+  padding-bottom: 18px;
+  margin-bottom: 18px;
+}
+@media (max-width: 960px) {
+  .results__image1 {
+    width: 213px;
+    padding: 0;
+    margin-top: 56px;
+    margin-bottom: 0;
+  }
+}
+.results__image1 video {
+  height: 100%;
+}
+@media (max-width: 960px) {
+  .results__image1 video {
+    width: 100%;
+    object-fit: contain;
+  }
+}
+.results__title {
+  font-family: "TT Neoris Trial", sans-serif;
+  font-weight: 900;
+  font-size: 30px;
+  line-height: 36px;
+}
+@media (max-width: 960px) {
+  .results__title {
+    font-family: "TT Neoris Trial", sans-serif;
+    font-weight: 900;
+    font-size: 24px;
+    line-height: 29px;
+  }
+}
+.results__title--offset {
+  padding-left: 26px;
+}
+.results__image2 {
+  padding-top: 42px;
+}
+@media (max-width: 960px) {
+  .results__image2 {
+    padding-top: 35px;
+  }
+}
+.results__image2 img {
+  width: 100%;
+}
+
+.statistics {
+  margin-top: 44px;
+}
+.statistics__conteiner {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #8BB4C8;
+  padding: 31px 35px 24px 33px;
+  border-radius: 25px;
+  gap: 25px;
+}
+@media (max-width: 960px) {
+  .statistics__conteiner {
+    flex-direction: column-reverse;
+    padding: 35px 25px;
+    gap: 34px;
+  }
+}
+.statistics__title {
+  flex: 1 0 300px;
+}
+@media (max-width: 960px) {
+  .statistics__title {
+    flex-basis: auto;
+  }
+}
+.statistics__boxes {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(310px, 1fr));
+  gap: 18px 17px;
+  flex: 1;
+}
+@media (max-width: 960px) {
+  .statistics__boxes {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+}
+.statistics__box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  background-color: #F3EAD4;
+  border: 2px solid #141414;
+  border-radius: 40px;
+  gap: 0 28px;
+  padding: 16px 20px;
+  max-height: 70px;
+}
+@media (max-width: 960px) {
+  .statistics__box {
+    padding: 15px 20px;
+  }
+}
+.statistics__box-expanded {
+  box-sizing: border-box;
+  background-color: #F3EAD4;
+  border: 2px solid #141414;
+  border-radius: 40px;
+  position: relative;
+  padding: 16px 20px;
+}
+@media (max-width: 960px) {
+  .statistics__box-expanded {
+    padding: 15px 0;
+  }
+}
+.statistics__box-expanded-item {
+  display: flex;
+  box-sizing: border-box;
+  align-items: center;
+  height: 100%;
+  max-width: calc(100% - 148px);
+  gap: 3px;
+}
+@media (max-width: 960px) {
+  .statistics__box-expanded-item {
+    gap: 15px;
+    padding-left: 22px;
+  }
+}
+.statistics__box-expanded-item--top {
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  position: absolute;
+  right: -2px;
+  top: -1px;
+  border: 2px solid #141414;
+  border-radius: 40px;
+  height: calc(100% + 2px);
+  padding: 10px 23px;
+  gap: 8px;
+}
+@media (max-width: 960px) {
+  .statistics__box-expanded-item--top {
+    padding: 0 19px;
+  }
+}
+.statistics__box-value {
+  font-family: "TT Neoris Trial", sans-serif;
+  font-weight: 900;
+  font-size: 30px;
+  line-height: 36px;
+}
+@media (max-width: 960px) {
+  .statistics__box-value {
+    font-family: "TT Neoris Trial", sans-serif;
+    font-weight: 900;
+    font-size: 25px;
+    line-height: 30px;
+  }
+}
+
+.advantages {
+  margin-top: 105px;
+}
+@media (max-width: 960px) {
+  .advantages {
+    margin-top: 80px;
+  }
+}
+.advantages__title {
+  font-family: "TT Neoris Trial", sans-serif;
+  font-weight: 900;
+  font-size: 30px;
+  line-height: 36px;
+}
+@media (max-width: 960px) {
+  .advantages__title {
+    font-family: "TT Neoris Trial", sans-serif;
+    font-weight: 900;
+    font-size: 25px;
+    line-height: 30px;
+  }
+}
+.advantages__list {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  margin-top: 28px;
+  gap: 35px 60px;
+}
+@media (max-width: 960px) {
+  .advantages__list {
+    flex-direction: column;
+    margin-top: 34px;
+    gap: 48px;
+  }
+}
+.advantages__list-item {
+  display: flex;
+  align-items: center;
+  width: calc(33.3333333333% - 40px);
+}
+@media (max-width: 960px) {
+  .advantages__list-item {
+    width: 100%;
+  }
+}
+.advantages__icon {
+  padding-right: 20px;
+}
+@media (max-width: 960px) {
+  .advantages__icon {
+    padding-right: 50px;
+  }
+}
+
+.requirements-and-suggestions {
+  margin-top: 40px;
+  z-index: 1;
+  margin-bottom: -25px;
+}
+@media (max-width: 960px) {
+  .requirements-and-suggestions br {
+    display: none;
+  }
+}
+.requirements-and-suggestions__header {
+  font-family: "TT Neoris Trial", sans-serif;
+  font-weight: 900;
+  font-size: 30px;
+  line-height: 36px;
+  display: flex;
+  margin-bottom: 18px;
+}
+.requirements-and-suggestions__title:nth-child(1) {
+  width: 620px;
+}
+.requirements-and-suggestions__title:nth-child(2) {
+  padding-left: 54px;
+}
+@media (max-width: 960px) {
+  .requirements-and-suggestions__title:nth-child(2) {
+    font-family: "TT Neoris Trial", sans-serif;
+    font-weight: 900;
+    font-size: 25px;
+    line-height: 30px;
+    display: none;
+  }
+}
+.requirements-and-suggestions__wrapper {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  height: 100%;
+  background-color: #FC9B59;
+  border: 2px solid #000000;
+  border-radius: 25px;
+  overflow: hidden;
+}
+@media (max-width: 960px) {
+  .requirements-and-suggestions__wrapper {
+    flex-direction: column;
+  }
+}
+.requirements-and-suggestions__wrapper .requirements-and-suggestions__title {
+  font-family: "TT Neoris Trial", sans-serif;
+  font-weight: 900;
+  font-size: 25px;
+  line-height: 30px;
+  display: none;
+  margin-bottom: 25px;
+}
+@media (max-width: 960px) {
+  .requirements-and-suggestions__wrapper .requirements-and-suggestions__title {
+    display: block;
+  }
+}
+.requirements-and-suggestions__left {
+  margin: -4px 0 -4px -3px;
+  position: relative;
+}
+@media (max-width: 960px) {
+  .requirements-and-suggestions__left {
+    margin: -4px -4px 0 -4px;
+  }
+}
+.requirements-and-suggestions__left::before {
+  position: absolute;
+  content: "";
+  height: 100%;
+  width: 300%;
+  background-color: #FFD24A;
+  right: 630px;
+  z-index: 1;
+}
+@media (max-width: 960px) {
+  .requirements-and-suggestions__left::before {
+    display: none;
+  }
+}
+.requirements-and-suggestions__left-inner {
+  padding: 31px 110px 42px 20px;
+  display: flex;
+  flex-direction: column;
+  max-width: 635px;
+  margin-left: auto;
+  position: relative;
+  height: 100%;
+  clip-path: polygon(0.162% 0.16%, 80.876% 0.16%, 80.876% 0.16%, 81.378% 0.192%, 81.863% 0.285%, 82.327% 0.437%, 82.765% 0.643%, 83.173% 0.9%, 83.545% 1.204%, 83.878% 1.554%, 84.165% 1.944%, 84.403% 2.372%, 84.587% 2.833%, 99.609% 49.14%, 99.609% 49.14%, 99.676% 49.371%, 99.728% 49.606%, 99.765% 49.843%, 99.787% 50.081%, 99.794% 50.32%, 99.786% 50.559%, 99.763% 50.797%, 99.725% 51.033%, 99.672% 51.268%, 99.604% 51.499%, 84.594% 97.18%, 84.594% 97.18%, 84.409% 97.64%, 84.17% 98.066%, 83.883% 98.454%, 83.551% 98.801%, 83.179% 99.105%, 82.772% 99.36%, 82.335% 99.565%, 81.872% 99.715%, 81.388% 99.808%, 80.888% 99.84%, 0.162% 99.84%, 0.162% 0.16%);
+}
+@media (max-width: 960px) {
+  .requirements-and-suggestions__left-inner {
+    max-width: 375px;
+    margin: 0 auto;
+    padding: 30px 40px 100px;
+    clip-path: polygon(99.733% 2.774%, 99.733% 82.513%, 99.733% 82.513%, 99.707% 82.784%, 99.628% 83.048%, 99.499% 83.306%, 99.322% 83.554%, 99.099% 83.791%, 98.831% 84.015%, 98.52% 84.224%, 98.169% 84.418%, 97.78% 84.593%, 97.353% 84.748%, 52.384% 99.373%, 52.384% 99.373%, 51.876% 99.518%, 51.346% 99.631%, 50.801% 99.711%, 50.244% 99.758%, 49.683% 99.774%, 49.122% 99.757%, 48.566% 99.707%, 48.022% 99.626%, 47.493% 99.511%, 46.987% 99.365%, 2.622% 84.75%, 2.622% 84.75%, 2.2% 84.595%, 1.814% 84.42%, 1.467% 84.227%, 1.159% 84.018%, 0.894% 83.794%, 0.673% 83.558%, 0.498% 83.312%, 0.371% 83.056%, 0.293% 82.793%, 0.267% 82.524%, 0.267% 2.774%, 0.267% 2.774%, 0.333% 2.346%, 0.525% 1.941%, 0.832% 1.563%, 1.244% 1.218%, 1.751% 0.911%, 2.341% 0.647%, 3.005% 0.433%, 3.732% 0.273%, 4.511% 0.173%, 5.333% 0.139%, 94.667% 0.139%, 94.667% 0.139%, 95.488% 0.173%, 96.268% 0.273%, 96.995% 0.433%, 97.659% 0.647%, 98.249% 0.911%, 98.756% 1.218%, 99.168% 1.563%, 99.475% 1.941%, 99.667% 2.346%, 99.733% 2.774%);
+  }
+}
+.requirements-and-suggestions__left-inner::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000000;
+  clip-path: polygon(0.162% 0.16%, 80.876% 0.16%, 80.876% 0.16%, 81.378% 0.192%, 81.863% 0.285%, 82.327% 0.437%, 82.765% 0.643%, 83.173% 0.9%, 83.545% 1.204%, 83.878% 1.554%, 84.165% 1.944%, 84.403% 2.372%, 84.587% 2.833%, 99.609% 49.14%, 99.609% 49.14%, 99.676% 49.371%, 99.728% 49.606%, 99.765% 49.843%, 99.787% 50.081%, 99.794% 50.32%, 99.786% 50.559%, 99.763% 50.797%, 99.725% 51.033%, 99.672% 51.268%, 99.604% 51.499%, 84.594% 97.18%, 84.594% 97.18%, 84.409% 97.64%, 84.17% 98.066%, 83.883% 98.454%, 83.551% 98.801%, 83.179% 99.105%, 82.772% 99.36%, 82.335% 99.565%, 81.872% 99.715%, 81.388% 99.808%, 80.888% 99.84%, 0.162% 99.84%, 0.162% 0.16%);
+  z-index: -1;
+}
+@media (max-width: 960px) {
+  .requirements-and-suggestions__left-inner::before {
+    clip-path: polygon(99.733% 2.774%, 99.733% 82.513%, 99.733% 82.513%, 99.707% 82.784%, 99.628% 83.048%, 99.499% 83.306%, 99.322% 83.554%, 99.099% 83.791%, 98.831% 84.015%, 98.52% 84.224%, 98.169% 84.418%, 97.78% 84.593%, 97.353% 84.748%, 52.384% 99.373%, 52.384% 99.373%, 51.876% 99.518%, 51.346% 99.631%, 50.801% 99.711%, 50.244% 99.758%, 49.683% 99.774%, 49.122% 99.757%, 48.566% 99.707%, 48.022% 99.626%, 47.493% 99.511%, 46.987% 99.365%, 2.622% 84.75%, 2.622% 84.75%, 2.2% 84.595%, 1.814% 84.42%, 1.467% 84.227%, 1.159% 84.018%, 0.894% 83.794%, 0.673% 83.558%, 0.498% 83.312%, 0.371% 83.056%, 0.293% 82.793%, 0.267% 82.524%, 0.267% 2.774%, 0.267% 2.774%, 0.333% 2.346%, 0.525% 1.941%, 0.832% 1.563%, 1.244% 1.218%, 1.751% 0.911%, 2.341% 0.647%, 3.005% 0.433%, 3.732% 0.273%, 4.511% 0.173%, 5.333% 0.139%, 94.667% 0.139%, 94.667% 0.139%, 95.488% 0.173%, 96.268% 0.273%, 96.995% 0.433%, 97.659% 0.647%, 98.249% 0.911%, 98.756% 1.218%, 99.168% 1.563%, 99.475% 1.941%, 99.667% 2.346%, 99.733% 2.774%);
+  }
+}
+.requirements-and-suggestions__left-inner::after {
+  content: "";
+  position: absolute;
+  top: 2px;
+  right: 2px;
+  width: calc(100% - 4px);
+  height: calc(100% - 4px);
+  background-color: #FFD24A;
+  clip-path: polygon(0.162% 0.16%, 80.876% 0.16%, 80.876% 0.16%, 81.378% 0.192%, 81.863% 0.285%, 82.327% 0.437%, 82.765% 0.643%, 83.173% 0.9%, 83.545% 1.204%, 83.878% 1.554%, 84.165% 1.944%, 84.403% 2.372%, 84.587% 2.833%, 99.609% 49.14%, 99.609% 49.14%, 99.676% 49.371%, 99.728% 49.606%, 99.765% 49.843%, 99.787% 50.081%, 99.794% 50.32%, 99.786% 50.559%, 99.763% 50.797%, 99.725% 51.033%, 99.672% 51.268%, 99.604% 51.499%, 84.594% 97.18%, 84.594% 97.18%, 84.409% 97.64%, 84.17% 98.066%, 83.883% 98.454%, 83.551% 98.801%, 83.179% 99.105%, 82.772% 99.36%, 82.335% 99.565%, 81.872% 99.715%, 81.388% 99.808%, 80.888% 99.84%, 0.162% 99.84%, 0.162% 0.16%);
+  z-index: -1;
+  background-image: url("./assets/images/pattern-requirements.svg");
+  background-size: auto;
+  background-repeat: no-repeat;
+  background-position: right bottom;
+}
+@media (max-width: 960px) {
+  .requirements-and-suggestions__left-inner::after {
+    clip-path: polygon(99.733% 2.774%, 99.733% 82.513%, 99.733% 82.513%, 99.707% 82.784%, 99.628% 83.048%, 99.499% 83.306%, 99.322% 83.554%, 99.099% 83.791%, 98.831% 84.015%, 98.52% 84.224%, 98.169% 84.418%, 97.78% 84.593%, 97.353% 84.748%, 52.384% 99.373%, 52.384% 99.373%, 51.876% 99.518%, 51.346% 99.631%, 50.801% 99.711%, 50.244% 99.758%, 49.683% 99.774%, 49.122% 99.757%, 48.566% 99.707%, 48.022% 99.626%, 47.493% 99.511%, 46.987% 99.365%, 2.622% 84.75%, 2.622% 84.75%, 2.2% 84.595%, 1.814% 84.42%, 1.467% 84.227%, 1.159% 84.018%, 0.894% 83.794%, 0.673% 83.558%, 0.498% 83.312%, 0.371% 83.056%, 0.293% 82.793%, 0.267% 82.524%, 0.267% 2.774%, 0.267% 2.774%, 0.333% 2.346%, 0.525% 1.941%, 0.832% 1.563%, 1.244% 1.218%, 1.751% 0.911%, 2.341% 0.647%, 3.005% 0.433%, 3.732% 0.273%, 4.511% 0.173%, 5.333% 0.139%, 94.667% 0.139%, 94.667% 0.139%, 95.488% 0.173%, 96.268% 0.273%, 96.995% 0.433%, 97.659% 0.647%, 98.249% 0.911%, 98.756% 1.218%, 99.168% 1.563%, 99.475% 1.941%, 99.667% 2.346%, 99.733% 2.774%);
+  }
+}
+.requirements-and-suggestions__quote {
+  padding: 21px 35px;
+  background-color: #F3EAD4;
+  border-radius: 25px;
+  border: 1px solid #141414;
+  margin-bottom: 27px;
+}
+@media (max-width: 960px) {
+  .requirements-and-suggestions__quote {
+    padding: 18px 20px;
+  }
+}
+.requirements-and-suggestions__right {
+  max-width: 550px;
+  width: 100%;
+  padding: 37px 90px 42px 54px;
+  background-image: url("./assets/images/pattern-offers.svg");
+  background-size: auto;
+  background-repeat: no-repeat;
+  background-position: right top;
+}
+@media (max-width: 960px) {
+  .requirements-and-suggestions__right {
+    max-width: 375px;
+    margin: 0 auto;
+    padding: 18px 40px 55px 40px;
+  }
+}
+
+.requirements-and-suggestions-item {
+  display: flex;
+  align-items: center;
+}
+.requirements-and-suggestions-item:not(:last-child) {
+  margin-bottom: 46px;
+}
+.requirements-and-suggestions-item--small-offset:not(:last-child) {
+  margin-bottom: 16px;
+}
+@media (max-width: 960px) {
+  .requirements-and-suggestions-item--small-offset:not(:last-child) {
+    margin-bottom: 28px;
+  }
+}
+.requirements-and-suggestions-item__icon {
+  margin-right: 36px;
+}
+@media (max-width: 960px) {
+  .requirements-and-suggestions-item__icon {
+    margin-right: 32px;
+  }
+}
+
+.founders {
+  position: relative;
+  background-color: #4D4D4D;
+  padding-top: 97px;
+  padding-bottom: 46px;
+  overflow: hidden;
+}
+@media (max-width: 960px) {
+  .founders {
+    padding-top: 75px;
+    padding-bottom: 0;
+  }
+}
+.founders::before {
+  position: absolute;
+  content: "";
+  width: 533px;
+  height: 568px;
+  top: -420px;
+  right: 0;
+  background-image: url("./assets/images/pattern-founders.svg");
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-position: top;
+}
+.founders__wrapper {
+  position: relative;
+  z-index: 1;
+}
+.founders__title {
+  font-family: "TT Neoris Trial", sans-serif;
+  font-weight: 900;
+  font-size: 30px;
+  line-height: 36px;
+  color: #F3EAD4;
+}
+.founders__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 39px;
+  margin-top: 24px;
+}
+@media (max-width: 960px) {
+  .founders__list {
+    margin-top: 37px;
+    gap: 65px;
+  }
+}
+.founders__list .card {
+  flex: 1;
+}
+.founders__button {
+  margin-top: auto;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #F3EAD4;
+  text-align: center;
+}
+.card__name {
+  font-family: "TT Neoris Trial", sans-serif;
+  font-weight: 900;
+  font-size: 30px;
+  line-height: 36px;
+  margin-top: 36px;
+  white-space: nowrap;
+}
+@media (max-width: 960px) {
+  .card__name {
+    font-family: "TT Neoris Trial", sans-serif;
+    font-weight: 900;
+    font-size: 25px;
+    line-height: 30px;
+    margin-top: 25px;
+    white-space: normal;
+  }
+}
+.card__description {
+  margin-top: 16px;
+}
+@media (max-width: 960px) {
+  .card__description {
+    margin-top: 22px;
+  }
+}
+.card__link {
+  color: inherit;
+  margin-top: 18px;
+  text-decoration: underline;
+  margin-bottom: 19px;
+}
+.card--small {
+  width: 230px;
+}
+@media (max-width: 960px) {
+  .card--small {
+    width: 142px;
+  }
+}
+.card--small .card__name {
+  font-family: "TT Neoris Trial", sans-serif;
+  font-weight: 900;
+  font-size: 16px;
+  line-height: 20px;
+}
+@media (max-width: 960px) {
+  .card--small .card__name {
+    font-family: "TT Neoris Trial", sans-serif;
+    font-weight: 900;
+    font-size: 13px;
+    line-height: 16px;
+  }
+}
+.card--small .card__description {
+  margin-top: 6px;
+}
+.card--small__link {
+  margin-bottom: 17px;
+}
+
+.chip-photo {
+  width: 280px;
+  height: 280px;
+  perspective: 1000px;
+}
+.chip-photo:hover .chip-photo__content {
+  transform: rotateY(180deg);
+}
+.chip-photo__content {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 200ms linear 1ms;
+}
+.chip-photo__front {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 280px;
+  height: 280px;
+}
+.chip-photo__back {
+  transform: rotateY(180deg);
+}
+.chip-photo__front, .chip-photo__back {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+.chip-photo__front::before, .chip-photo__back::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  object-fit: contain;
+  width: 100%;
+  height: 100%;
+  background-image: url("./assets/images/chip-blue.svg");
+  background-size: contain;
+  z-index: 4;
+}
+.chip-photo__front::after, .chip-photo__back::after {
+  position: absolute;
+  content: "";
+  top: 50%;
+  left: 50%;
+  object-fit: contain;
+  transform: translate(-50%, -50%);
+  width: 98%;
+  height: 98%;
+  background-color: #F3EAD4;
+  z-index: 1;
+  border-radius: 100%;
+}
+.chip-photo__image {
+  position: relative;
+  object-fit: contain;
+  width: 98%;
+  height: 98%;
+  z-index: 3;
+  border-radius: 100%;
+  padding-top: 42px;
+}
+.chip-photo__image--default {
+  width: 50%;
+  border-radius: 0;
+  padding: 0;
+}
+.chip-photo__pattern {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 98%;
+  height: 98%;
+  background-image: url("./assets/images/pattern-sky-blue.svg");
+  background-size: 100%;
+  background-position-y: -500%;
+  background-repeat: no-repeat;
+  border-radius: 100%;
+  z-index: 2;
+}
+.chip-photo--small {
+  width: 200px;
+  height: 200px;
+}
+@media (max-width: 960px) {
+  .chip-photo--small {
+    width: 142px;
+    height: 142px;
+  }
+}
+.chip-photo--small .chip-photo__front::before,
+.chip-photo--small .chip-photo__back::before {
+  background-image: url("./assets/images/chip-orange.svg");
+}
+.chip-photo--small .chip-photo__pattern {
+  background-image: url("./assets/images/pattern-pumpkin-orange.svg");
+}
+.chip-photo--small-yellow .chip-photo__front::before,
+.chip-photo--small-yellow .chip-photo__back::before {
+  background-image: url("./assets/images/chip-yellow.svg");
+}
+.chip-photo--small-yellow .chip-photo__pattern {
+  background-image: url("./assets/images/pattern-saffron-yellow.svg");
+}
+
+.staff {
+  background-color: #4D4D4D;
+  padding-top: 107px;
+  color: #F3EAD4;
+  background-image: url("./assets/images/pattern-staff_left.svg"), url("./assets/images/pattern-staff_right.svg");
+  background-position: left top, right center;
+  background-repeat: no-repeat, no-repeat;
+}
+.staff__item {
+  display: flex;
+  justify-content: space-between;
+}
+@media (max-width: 960px) {
+  .staff__item {
+    flex-direction: column;
+  }
+}
+.staff__item:not(:first-child) {
+  margin-top: 60px;
+}
+.staff__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 60px;
+}
+@media (max-width: 960px) {
+  .staff__list {
+    margin-top: 28px;
+    gap: 20px;
+    justify-content: normal;
+  }
+  .staff__list .card {
+    width: calc(50% - 10px);
+  }
+}
+.staff__title {
+  font-family: "TT Neoris Trial", sans-serif;
+  font-weight: 900;
+  font-size: 30px;
+  line-height: 36px;
+  width: 310px;
+  margin-top: 15px;
+}
+@media (max-width: 960px) {
+  .staff__title {
+    font-family: "TT Neoris Trial", sans-serif;
+    font-weight: 900;
+    font-size: 25px;
+    line-height: 30px;
+    width: 100%;
+  }
+}
+.staff__description {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  margin-top: 14px;
+}
+.staff__button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 172px;
+  padding: 0;
+  height: 42px;
+}
+@media (max-width: 960px) {
+  .staff__button {
+    padding: 8px 14px;
+    height: 30px;
+    width: 100%;
+  }
+}
+
+.videos {
+  background-color: #4D4D4D;
+  color: #F3EAD4;
+  padding-top: 173px;
+  padding-bottom: 100px;
+  background-image: url("./assets/images/pattern-youtube.svg");
+  background-position: left 410px;
+  background-repeat: no-repeat;
+}
+@media (max-width: 960px) {
+  .videos {
+    padding-top: 84px;
+    padding-bottom: 110px;
+  }
+}
+.videos__title {
+  font-family: "TT Neoris Trial", sans-serif;
+  font-weight: 900;
+  font-size: 30px;
+  line-height: 36px;
+  max-width: 56vw;
+  width: 100%;
+}
+@media (max-width: 960px) {
+  .videos__title {
+    font-family: "TT Neoris Trial", sans-serif;
+    font-weight: 900;
+    font-size: 25px;
+    line-height: 30px;
+    max-width: 100%;
+  }
+}
+.videos__inner {
+  display: flex;
+  gap: 65px;
+  margin-top: 41px;
+}
+@media (max-width: 960px) {
+  .videos__inner {
+    flex-direction: column;
+    gap: 30px;
+  }
+}
+.videos__item {
+  max-width: 360px;
+  width: 100%;
+  height: 203px;
+}
+.videos__item:nth-child(1) {
+  margin-left: auto;
+}
+@media (max-width: 960px) {
+  .videos__item:nth-child(1) {
+    margin-left: 0;
+  }
+}
+.videos__item:nth-child(2) {
+  margin-top: -108px;
+}
+@media (max-width: 960px) {
+  .videos__item:nth-child(2) {
+    margin-top: 0;
+  }
+}
+.videos__item iframe {
+  display: block;
+  height: 100%;
+  width: 100%;
+  border-radius: 25px;
+  overflow: hidden;
+}
+.videos__item-title {
+  font-family: "TT Neoris Trial", sans-serif;
+  font-weight: 900;
+  font-size: 16px;
+  line-height: 20px;
+  text-align: center;
+  margin-top: 18px;
+}
+@media (max-width: 960px) {
+  .videos__item-title {
+    font-family: "TT Neoris Trial", sans-serif;
+    font-weight: 900;
+    font-size: 13px;
+    line-height: 16px;
+    margin-top: 5px;
+  }
+}
+
+.reviews {
+  border-radius: 25px 25px 0;
+  color: #141414;
+  margin: 0 40px;
+}
+@media (max-width: 960px) {
+  .reviews {
+    margin: 0;
+  }
+}
+.reviews__title {
+  font-family: "TT Neoris Trial", sans-serif;
+  font-weight: 900;
+  font-size: 30px;
+  line-height: 36px;
+  display: flex;
+  align-items: center;
+}
+@media (max-width: 960px) {
+  .reviews__title {
+    font-family: "TT Neoris Trial", sans-serif;
+    font-weight: 900;
+    font-size: 25px;
+    line-height: 30px;
+    display: inline-block;
+  }
+}
+.reviews__name {
+  text-decoration: underline;
+}
+.reviews__logo {
+  margin: 0 5px;
+}
+@media (max-width: 960px) {
+  .reviews__logo {
+    width: 26px;
+    height: 26px;
+    padding: 0;
+    vertical-align: middle;
+  }
+}
+.reviews__slider {
+  position: relative;
+  padding: 0 80px;
+  margin-top: 60px;
+}
+@media (max-width: 960px) {
+  .reviews__slider {
+    padding: 0 30px;
+  }
+}
+.reviews__slider .swiper-wrapper {
+  align-items: normal !important;
+}
+.reviews__slider-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 36px;
+  height: 62px;
+  cursor: pointer;
+}
+@media (max-width: 960px) {
+  .reviews__slider-arrow {
+    width: 19px;
+    height: 38px;
+  }
+}
+.reviews__slider-arrow::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-image: url("./assets/images/arrow.svg");
+}
+@media (max-width: 960px) {
+  .reviews__slider-arrow::before {
+    background-size: 19px 38px;
+  }
+}
+.reviews__slider-arrow-prev {
+  left: 0;
+}
+.reviews__slider-arrow-next {
+  right: 0;
+}
+.reviews__slider-arrow-next::before {
+  rotate: 180deg;
+}
+
+.slider-item {
+  width: 284px;
+  height: auto !important;
+  padding: 30px 20px 40px;
+  background-color: #4D4D4D;
+  border-radius: 25px;
+  color: #F3EAD4;
+}
+.slider-item__header {
+  display: flex;
+  align-items: center;
+}
+.slider-item__photo {
+  width: 68px;
+  height: 68px;
+  border-radius: 100%;
+  overflow: hidden;
+  margin-right: 14px;
+  background-color: #fff;
+  background-image: url("./assets/images/photo-reviews.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.slider-item__photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.slider-item__photo img[src=""] {
+  display: none;
+}
+.slider-item__body {
+  margin-top: 28px;
+}
+.slider-item__text.active {
+  display: -webkit-box;
+  -webkit-line-clamp: 10;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-height: 160px;
+}
+.slider-item__more {
+  display: none;
+  margin-top: 10px;
+  cursor: pointer;
+  text-decoration: underline;
+}
+.slider-item__more.active {
+  display: inline-block;
+}
+
+.quote {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+@media (max-width: 960px) {
+  .quote {
+    flex-direction: column-reverse;
+    gap: 25px;
+  }
+}
+.quote__image {
+  margin-right: 35px;
+}
+.quote__image img {
+  display: block;
+}
+.quote__block {
+  padding: 38px 68px 28px 72px;
+  border-radius: 86px 86px 86px 0;
+  border: 2px solid #141414;
+  background-color: #FC9B59;
+  margin-top: 15px;
+  max-width: 500px;
+}
+@media (max-width: 960px) {
+  .quote__block {
+    margin-top: 0;
+    padding: 20px 20px 9px 30px;
+  }
+}
+.quote__name {
+  font-family: "TT Neoris Trial", sans-serif;
+  font-weight: 900;
+  font-size: 16px;
+  line-height: 20px;
+  margin-top: 15px;
+}
+@media (max-width: 960px) {
+  .quote__name {
+    margin-top: 5px;
+  }
+}
+
+.footer {
+  background-color: #F3EAD4;
+  padding: 45px 0;
+  border: 1px solid #141414;
+  border-radius: 25px;
+}
+@media (max-width: 960px) {
+  .footer {
+    padding: 30px 0 60px;
+  }
+}
+.footer__wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+@media (max-width: 960px) {
+  .footer__wrapper {
+    flex-direction: column;
+    gap: 60px;
+  }
+}
+@media (max-width: 960px) {
+  .footer__logo {
+    display: none;
+  }
+}
+.footer__logo video {
+  width: 100%;
+  height: 100%;
+}
+.footer__column {
+  margin-left: 25px;
+}
+@media (max-width: 960px) {
+  .footer__column {
+    margin-left: 0;
+  }
+}
+.footer__title {
+  font-family: "TT Neoris Trial", sans-serif;
+  font-weight: 900;
+  font-size: 30px;
+  line-height: 36px;
+}
+.footer__text {
+  margin-top: 27px;
+}
+@media (max-width: 960px) {
+  .footer__text {
+    margin-top: 20px;
+  }
+}
+@media (max-width: 960px) {
+  .footer__text br {
+    display: none;
+  }
+}
+.footer__social {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px 25px;
+  margin-top: 25px;
+}
+@media (max-width: 960px) {
+  .footer__social {
+    margin-top: 20px;
+  }
+}
+.footer__social-item {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 33px;
+  height: 33px;
+}
+.footer__social-item img {
+  object-fit: contain;
+}
+@media (max-width: 960px) {
+  .footer__contacts-wrapper {
+    display: flex;
+  }
+}
+.footer__contacts-wrapper .footer__logo {
+  display: none;
+}
+@media (max-width: 960px) {
+  .footer__contacts-wrapper .footer__logo {
+    display: block;
+    align-self: flex-end;
+    margin-left: 15px;
+  }
+}
+.footer__contacts {
+  display: flex;
+  flex-direction: column;
+  gap: 40px 0;
+  margin-top: 25px;
+}
+@media (max-width: 960px) {
+  .footer__contacts {
+    gap: 30px 0;
+  }
+}
+.footer__contact {
+  display: flex;
+  align-items: center;
+  gap: 38px 0;
+}
+.footer__contact-icon {
+  margin-right: 25px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 33px;
+  height: 33px;
+}
+@media (max-width: 960px) {
+  .footer__contact-icon {
+    margin-right: 16px;
+  }
+}
+.footer__contact-icon img {
+  object-fit: contain;
+}
+
+.copyright {
+  border: 1px solid #141414;
+  border-radius: 25px 25px 0 0;
+  background-color: #F3EAD4;
+  padding: 20px 0;
+  margin-top: -3px;
+}
+.copyright__wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+@media (max-width: 960px) {
+  .copyright__wrapper {
+    flex-direction: column;
+    gap: 20px 0;
+  }
+}
+.copyright__item {
+  display: flex;
+  align-items: center;
+}
+.copyright__item img {
+  margin-left: 23px;
+}
+.copyright__item-link {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.callback {
+  position: relative;
+  margin-top: 95px;
+  overflow: hidden;
+  display: flex;
+}
+@media (max-width: 960px) {
+  .callback {
+    height: auto;
+  }
+}
+.callback__wrapper {
+  display: flex;
+  align-items: flex-start;
+}
+@media (max-width: 960px) {
+  .callback__wrapper {
+    display: block;
+  }
+}
+.callback__text {
+  font-family: "TT Neoris Trial", sans-serif;
+  font-weight: 900;
+  font-size: 30px;
+  line-height: 36px;
+}
+@media (max-width: 960px) {
+  .callback__text {
+    font-family: "TT Neoris Trial", sans-serif;
+    font-weight: 900;
+    font-size: 25px;
+    line-height: 30px;
+  }
+}
+.callback__bubble {
+  position: relative;
+  top: 60px;
+  padding: 30px 0 30px 80px;
+  border-radius: 90px 90px 0 90px;
+  background-color: #FC9B59;
+  width: 100%;
+  max-width: 850px;
+  background-image: url("./assets/images/puttern-callback.svg");
+  background-position: bottom right;
+  background-repeat: no-repeat;
+}
+@media (max-width: 960px) {
+  .callback__bubble {
+    padding: 27px 52px;
+    top: 0;
+  }
+}
+.callback__image {
+  align-self: self-end;
+  min-width: 418px;
+  margin-right: -140px;
+  margin-left: 50px;
+}
+@media (max-width: 960px) {
+  .callback__image {
+    position: relative;
+    max-width: 281px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: -70px;
+    margin-top: 10px;
+    min-width: auto;
+  }
+}
+.callback__image video {
+  width: 100%;
+}
+.callback__button {
+  margin-top: 20px;
+}
+.callback__button:hover {
+  background-color: #F3EAD4;
+}
+@media (max-width: 960px) {
+  .callback__button {
+    position: absolute;
+    bottom: -62px;
+    left: 0;
+  }
+}
+
+.form {
+  margin: 45px 0;
+}
+@media (max-width: 960px) {
+  .form {
+    margin-top: -50px;
+  }
+}
+.form__wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #8BB4C8;
+  border-radius: 25px;
+  padding: 33px 62px;
+}
+@media (max-width: 960px) {
+  .form__wrapper {
+    margin: 0;
+    max-width: 100%;
+    padding: 40px 7px;
+  }
+}
+.form__fields {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px 45px;
+}
+@media (max-width: 960px) {
+  .form__fields {
+    grid-template-columns: 1fr;
+  }
+}
+.form__button {
+  max-width: 220px;
+  margin-top: 25px;
+}
+.form__policy {
+  margin-top: 24px;
+}
+@media (max-width: 960px) {
+  .form__policy {
+    max-width: 250px;
+    text-align: center;
+  }
+}
+
+.input-field {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  position: relative;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+.input-field__label {
+  position: absolute;
+  top: 50%;
+  left: 22px;
+  display: block;
+  color: #4C8BAA;
+  user-select: none;
+  cursor: text;
+  transform: translateY(-50%);
+}
+.input-field__label::after {
+  position: relative;
+  top: -3px;
+  left: 0;
+  display: inline-block;
+  content: "*";
+  font-size: 14px;
+  color: #FB7C26;
+}
+.input-field__input {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  width: 100%;
+  padding: 12px 22px;
+  border-radius: 25px;
+  border: 2px solid #141414;
+  background-color: #F3EAD4;
+}
+.input-field__input:focus {
+  outline: none;
+}
+.input-field__input::placeholder {
+  color: transparent;
+}
+.input-field__input:invalid:focus {
+  border-color: red;
+}
+.input-field__input:focus + .input-field__label, .input-field__input:valid + .input-field__label, .input-field__input:disabled + .input-field__label {
+  display: none;
+}
+
+.select {
+  position: relative;
+}
+.select__input {
+  display: none;
+}
+.select__arrow {
+  display: inline-flex;
+  width: 12px;
+  height: 7px;
+  clip-path: polygon(100% 0%, 0% 0%, 50% 100%);
+  background-color: #141414;
+}
+.select__btn {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 12px 22px;
+  border-radius: 22px;
+  border: 2px solid #141414;
+  background-color: #F3EAD4;
+  cursor: pointer;
+  color: #4C8BAA;
+}
+.select__btn-text {
+  position: relative;
+}
+.select__btn-text::after {
+  position: relative;
+  top: -3px;
+  left: 0;
+  display: inline-block;
+  content: "*";
+  font-size: 14px;
+  color: #FB7C26;
+}
+.select__options {
+  pointer-events: none;
+  position: absolute;
+  width: 100%;
+  list-style: none;
+  margin: -10px 0 0;
+  background-color: #F3EAD4;
+  padding: 0 22px 12px;
+  border-radius: 0 0 25px 25px;
+  border: 2px solid #141414;
+  border-top: none;
+  opacity: 0;
+}
+.select.select--active .select__arrow {
+  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+}
+.select.select--active .select__btn {
+  border-radius: 22px 22px 0 0;
+}
+.select.select--active .select__options {
+  pointer-events: all;
+  display: block;
+  opacity: 1;
+  z-index: 10;
+}
+.select.select--active .select__btn {
+  border-radius: 22px 22px 0 0;
+}
+
+.select-option {
+  cursor: pointer;
+  position: relative;
+  padding: 3px 0 3px 22px;
+}
+.select-option::before {
+  box-sizing: border-box;
+  content: "";
+  width: 8px;
+  height: 8px;
+  border: 2px solid #141414;
+  border-radius: 100%;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+}
+.select-option.select-option--active::before {
+  background-color: #141414;
+}
+
+.popup-overlay {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.3764705882);
+  z-index: 10000;
+}
+.popup-overlay .popup {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  max-width: 543px;
+  width: 100%;
+  background-color: #FC9B59;
+  border-radius: 25px;
+  padding: 42px 20px 37px;
+}
+.popup-overlay .popup__img {
+  padding-bottom: 34px;
+}
+.popup-overlay .popup__title {
+  font-family: "TT Neoris Trial", sans-serif;
+  font-weight: 900;
+  font-size: 30px;
+  line-height: 36px;
+}
+.popup-overlay .popup__description {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+}
+.popup-overlay .popup__close {
+  position: absolute;
+  top: 19px;
+  right: 19px;
+  cursor: pointer;
+  width: 23px;
+  height: 23px;
+}
+.popup-overlay .popup__close::before, .popup-overlay .popup__close::after {
+  content: "";
+  position: absolute;
+  width: 3px;
+  height: 100%;
+  background-color: #141414;
+}
+.popup-overlay .popup__close::before {
+  transform: rotate(45deg);
+}
+.popup-overlay .popup__close::after {
+  transform: rotate(-45deg);
+}
+.popup-overlay.active {
+  display: flex;
+}
+
+.popup-overlay {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.3764705882);
+  z-index: 10000;
+}
+.popup-overlay .popup-reviews {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  max-width: 543px;
+  width: 100%;
+  background-color: #4D4D4D;
+  border-radius: 25px;
+  padding: 27px 28px;
+  color: #F3EAD4;
+  max-height: 90vh;
+}
+.popup-overlay .popup-reviews .scrollable-content {
+  max-height: 100%;
+  overflow-y: auto;
+  padding-right: 30px;
+}
+.popup-overlay .popup-reviews .scrollable-content::-webkit-scrollbar {
+  width: 10px;
+}
+.popup-overlay .popup-reviews .scrollable-content::-webkit-scrollbar-thumb {
+  background-color: #8BB4C8;
+  border-radius: 30px;
+}
+.popup-overlay .popup-reviews .scrollable-content::-webkit-scrollbar-track {
+  background-color: #F3EAD4;
+  border-radius: 30px;
+}
+.popup-overlay .popup-reviews__content {
+  display: flex;
+  align-items: center;
+  margin-bottom: 28px;
+}
+.popup-overlay .popup-reviews__img {
+  width: 68px;
+  height: 68px;
+  border-radius: 100%;
+  overflow: hidden;
+  margin-right: 14px;
+  background-color: #fff;
+  background-image: url("./assets/images/photo-reviews.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.popup-overlay .popup-reviews__img-person {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.popup-overlay .popup-reviews__title-person {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+}
+.popup-overlay .popup-reviews__description-person {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+}
+.popup-overlay .popup-reviews__close {
+  position: absolute;
+  top: 19px;
+  right: 19px;
+  cursor: pointer;
+  width: 23px;
+  height: 23px;
+}
+.popup-overlay .popup-reviews__close::before, .popup-overlay .popup-reviews__close::after {
+  content: "";
+  position: absolute;
+  width: 3px;
+  height: 100%;
+  background-color: #F3EAD4;
+}
+.popup-overlay .popup-reviews__close::before {
+  transform: rotate(45deg);
+}
+.popup-overlay .popup-reviews__close::after {
+  transform: rotate(-45deg);
+}
+.popup-overlay.active {
+  display: flex;
+}
+
+.popup-overlay {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.3764705882);
+  z-index: 10000;
+}
+.popup-overlay .popup-policy {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  max-width: 960px;
+  width: 100%;
+  background-color: #4D4D4D;
+  border-radius: 25px;
+  padding: 27px 28px;
+  color: #F3EAD4;
+  max-height: 90vh;
+}
+.popup-overlay .popup-policy .scrollable-content {
+  max-height: 100%;
+  overflow-y: auto;
+}
+.popup-overlay .popup-policy .scrollable-content::-webkit-scrollbar {
+  width: 10px;
+}
+.popup-overlay .popup-policy .scrollable-content::-webkit-scrollbar-thumb {
+  background-color: #8BB4C8;
+  border-radius: 30px;
+}
+.popup-overlay .popup-policy .scrollable-content::-webkit-scrollbar-track {
+  background-color: #F3EAD4;
+  border-radius: 30px;
+}
+.popup-overlay .popup-policy__top-title {
+  font-family: "TT Neoris Trial", sans-serif;
+  font-weight: 900;
+  font-size: 30px;
+  line-height: 36px;
+  margin-bottom: 10px;
+}
+@media (max-width: 960px) {
+  .popup-overlay .popup-policy__top-title {
+    font-family: "TT Neoris Trial", sans-serif;
+    font-weight: 900;
+    font-size: 20px;
+    line-height: 25px;
+  }
+}
+.popup-overlay .popup-policy__content {
+  display: flex;
+  align-items: center;
+}
+.popup-overlay .popup-policy__title {
+  font-family: "TT Neoris Trial", sans-serif;
+  font-weight: 900;
+  font-size: 25px;
+  line-height: 30px;
+  margin: 10px 0;
+}
+@media (max-width: 960px) {
+  .popup-overlay .popup-policy__title {
+    font-family: "TT Neoris Trial", sans-serif;
+    font-weight: 900;
+    font-size: 20px;
+    line-height: 25px;
+  }
+}
+.popup-overlay .popup-policy__description {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  margin-right: 30px;
+}
+.popup-overlay .popup-policy__close {
+  position: absolute;
+  top: 19px;
+  right: 19px;
+  cursor: pointer;
+  width: 23px;
+  height: 23px;
+}
+.popup-overlay .popup-policy__close::before, .popup-overlay .popup-policy__close::after {
+  content: "";
+  position: absolute;
+  width: 3px;
+  height: 100%;
+  background-color: #F3EAD4;
+}
+.popup-overlay .popup-policy__close::before {
+  transform: rotate(45deg);
+}
+.popup-overlay .popup-policy__close::after {
+  transform: rotate(-45deg);
+}
+.popup-overlay.active {
+  display: flex;
+}
+
+.popup-overlay {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.3764705882);
+  z-index: 10000;
+  opacity: 0;
+}
+@media (max-width: 960px) {
+  .popup-overlay {
+    padding: 10px;
+  }
+}
+.popup-overlay .popup-personal {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  max-width: 960px;
+  width: 100%;
+  background-color: #4D4D4D;
+  border-radius: 25px;
+  padding: 27px 28px;
+  color: #F3EAD4;
+  max-height: 90vh;
+}
+.popup-overlay .popup-personal .scrollable-content {
+  max-height: 100%;
+  overflow-y: auto;
+}
+.popup-overlay .popup-personal .scrollable-content::-webkit-scrollbar {
+  width: 10px;
+}
+.popup-overlay .popup-personal .scrollable-content::-webkit-scrollbar-thumb {
+  background-color: #8BB4C8;
+  border-radius: 30px;
+}
+.popup-overlay .popup-personal .scrollable-content::-webkit-scrollbar-track {
+  background-color: #F3EAD4;
+  border-radius: 30px;
+}
+.popup-overlay .popup-personal__top-title {
+  font-family: "TT Neoris Trial", sans-serif;
+  font-weight: 900;
+  font-size: 30px;
+  line-height: 36px;
+  margin-bottom: 10px;
+}
+@media (max-width: 960px) {
+  .popup-overlay .popup-personal__top-title {
+    font-family: "TT Neoris Trial", sans-serif;
+    font-weight: 900;
+    font-size: 20px;
+    line-height: 25px;
+    margin-right: 20px;
+  }
+}
+.popup-overlay .popup-personal__content {
+  display: flex;
+  align-items: center;
+}
+.popup-overlay .popup-personal__title {
+  font-family: "TT Neoris Trial", sans-serif;
+  font-weight: 900;
+  font-size: 25px;
+  line-height: 30px;
+  margin: 10px 0;
+}
+.popup-overlay .popup-personal__description {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  margin-right: 30px;
+}
+.popup-overlay .popup-personal__close {
+  position: absolute;
+  top: 19px;
+  right: 19px;
+  cursor: pointer;
+  width: 23px;
+  height: 23px;
+}
+.popup-overlay .popup-personal__close::before, .popup-overlay .popup-personal__close::after {
+  content: "";
+  position: absolute;
+  width: 3px;
+  height: 100%;
+  background-color: #F3EAD4;
+}
+.popup-overlay .popup-personal__close::before {
+  transform: rotate(45deg);
+}
+.popup-overlay .popup-personal__close::after {
+  transform: rotate(-45deg);
+}
+.popup-overlay.active {
+  display: flex;
+}
+
+.privilege {
+  display: flex;
+  margin-top: 130px;
+  flex-wrap: wrap;
+  gap: 23px;
+}
+@media (max-width: 960px) {
+  .privilege {
+    margin-top: 80px;
+  }
+}
+.privilege__title {
+  font-family: "TT Neoris Trial", sans-serif;
+  font-weight: 900;
+  font-size: 30px;
+  line-height: 36px;
+}
+@media (max-width: 960px) {
+  .privilege__title {
+    font-family: "TT Neoris Trial", sans-serif;
+    font-weight: 900;
+    font-size: 25px;
+    line-height: 30px;
+  }
+}
+.privilege__containers {
+  display: flex;
+  gap: 26px;
+}
+@media (max-width: 960px) {
+  .privilege__containers {
+    flex-direction: column;
+  }
+}
+.privilege__item {
+  display: flex;
+  flex-direction: column;
+  background-color: #A6CC9E;
+  top: 0;
+  left: 0;
+  max-width: 362px;
+  width: 100%;
+  border-radius: 25px;
+  padding: 20px 44px 13px 33px;
+}
+@media (max-width: 960px) {
+  .privilege__item {
+    padding: 14px 24px 21px;
+  }
+}
+.privilege__item:nth-child(1) {
+  background-image: url("./assets/images/pattern-workout.svg");
+  background-position: top right;
+  background-repeat: no-repeat;
+}
+.privilege__item:nth-child(2) {
+  background-image: url("./assets/images/pattern-connection.svg");
+  background-position: top;
+  background-repeat: no-repeat;
+}
+@media (max-width: 960px) {
+  .privilege__item:nth-child(2) {
+    background-image: url("./assets/images/pattern-workout.svg");
+    background-position: top right;
+  }
+}
+.privilege__item:nth-child(3) {
+  background-image: url("./assets/images/pattern-fast.svg");
+  background-position: top left;
+  background-repeat: no-repeat;
+}
+@media (max-width: 960px) {
+  .privilege__item:nth-child(3) {
+    background-image: url("./assets/images/pattern-workout.svg");
+    background-position: top right;
+  }
+}
+.privilege__headline {
+  font-family: "TT Neoris Trial", sans-serif;
+  font-weight: 900;
+  font-size: 30px;
+  line-height: 36px;
+  margin: 17px 0 6px;
+}
+@media (max-width: 960px) {
+  .privilege__headline {
+    font-family: "TT Neoris Trial", sans-serif;
+    font-weight: 900;
+    font-size: 25px;
+    line-height: 30px;
+    margin: 21px 0 11px;
+  }
+}
