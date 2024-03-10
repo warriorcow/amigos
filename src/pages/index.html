@@ -13,17 +13,25 @@
   <title>AmigosBacking</title>
 </head>
 
-<body class="loading">
+<body>
   @@include('header/component.html')
   @@include('banner/component.html')
-  @@include('results/component.html')
+  <section id="about">
+    @@include('results/component.html')
+  </section>
   @@include('statistics/component.html')
-  @@include('privilege/component.html')
+  <section id="privilege">
+    @@include('privilege/component.html')
+  </section>
   @@include('advantages/component.html')
   @@include('callback/component.html')
-  @@include('requirements-and-suggestions/component.html')
-  @@include('founders/component.html')
-  @@include('staff/component.html')
+  <section id="requirements">
+    @@include('requirements-and-suggestions/component.html')
+  </section>
+  <section id="team">
+    @@include('founders/component.html')
+    @@include('staff/component.html')
+  </section>
   @@include('videos/component.html')
   <section class="section-reviews bg-skyblue">
     @@include('reviews/component.html')

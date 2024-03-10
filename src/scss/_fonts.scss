@@ -33,6 +33,13 @@
   line-height: 30px;
 }
 
+@mixin fontTTNeoris20() {
+  font-family: "TT Neoris Trial", sans-serif;
+  font-weight: 900;
+  font-size: 20px;
+  line-height: 25px;
+}
+
 @mixin fontTTNeoris16() {
   font-family: "TT Neoris Trial", sans-serif;
   font-weight: 900;

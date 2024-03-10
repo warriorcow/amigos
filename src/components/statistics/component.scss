@@ -70,12 +70,12 @@
       box-sizing: border-box;
       align-items: center;
       height: 100%;
-      padding-left: 22px;
       max-width: calc(100% - 148px);
       gap: 3px;
 
       @include mobile {
         gap: 15px;
+        padding-left: 22px;
       }
 
       &--top {
@@ -88,7 +88,7 @@
         border: 2px solid #141414;
         border-radius: 40px;
         height: calc(100% + 2px);
-        padding: 10px 15px;
+        padding: 10px 23px;
         gap: 8px;
 
         @include mobile {

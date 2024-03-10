@@ -72,7 +72,7 @@
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      position: absolute;
+      position: fixed;
       top: 0;
       left: 0;
       height: 100dvh;
@@ -99,6 +99,9 @@
     cursor: pointer;
     z-index: 20;
     margin-right: 7px;
+    align-self: flex-start;
+    top: 5px;
+    position: relative;
 
     @include mobile {
       display: flex;
@@ -110,7 +113,7 @@
       background-color: black;
       border-radius: 12px;
       display: block;
-      transition: background-color 0.5s ease-in-out;
+      transition: background-color 0.1s ease-in-out;
 
       &::after,
       &::before {
@@ -118,7 +121,7 @@
         width: 100%;
         background-color: black;
         display: block;
-        transition: all 0.5s ease-in-out;
+        transition: all 0.1s ease-in-out;
         border-radius: 12px;
         height: 3px;
       }
@@ -162,19 +165,19 @@
 
     @keyframes slideInDown {
       0% {
-        transform: translateY(-100%);
+        top: -100%;
       }
       100% {
-        transform: translateY(0);
+        top: 0
       }
     }
 
     @keyframes slideInUp {
       0% {
-        transform: translateY(0);
+        top: 0;
       }
       100% {
-        transform: translateY(-100%);
+        top: -100%;
       }
     }
 
@@ -198,6 +201,10 @@
         min-width: 202px;
         height: 43px;
       }
+    }
+
+    #{$self}__hamburger {
+      top: 12px;
     }
   }
 

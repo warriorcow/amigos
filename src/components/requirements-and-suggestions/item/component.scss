@@ -9,10 +9,18 @@
   &--small-offset {
     &:not(:last-child) {
       margin-bottom: 16px;
+
+      @include mobile {
+        margin-bottom: 28px;
+      }
     }
   }
 
   &__icon {
     margin-right: 36px;
+
+    @include mobile {
+      margin-right: 32px;
+    }
   }
 }

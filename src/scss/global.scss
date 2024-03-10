@@ -4,6 +4,10 @@
   }
 }
 
+html {
+  //scroll-behavior: smooth;
+}
+
 body {
   @include fontUbuntu14;
 
@@ -32,6 +36,10 @@ body {
   &.locked {
     overflow: hidden;
     padding-right: 10px;
+
+    @include mobile {
+      padding-right: 0;
+    }
   }
 
   @include mobile {

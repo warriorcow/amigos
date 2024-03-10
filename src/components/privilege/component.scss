@@ -1,20 +1,28 @@
 .privilege {
   display: flex;
-  margin-top: 157px;
+  margin-top: 130px;
   flex-wrap: wrap;
   gap: 23px;
 
   @include mobile {
-
+    margin-top: 80px;
   }
 
   &__title {
     @include fontTTNeoris30;
+
+    @include mobile {
+      @include fontTTNeoris25;
+    }
   }
 
-  &__contauners {
+  &__containers {
     display: flex;
     gap: 26px;
+
+    @include mobile {
+      flex-direction: column;
+    }
   }
 
   &__item {
@@ -28,6 +36,10 @@
     border-radius: 25px;
     padding: 20px 44px 13px 33px;
 
+    @include mobile {
+      padding: 14px 24px 21px;
+    }
+
     &:nth-child(1) {
       background-image: url('./assets/images/pattern-workout.svg');
       background-position: top right;
@@ -38,17 +50,34 @@
       background-image: url('./assets/images/pattern-connection.svg');
       background-position: top;
       background-repeat: no-repeat;
+
+      @include mobile {
+        background-image: url('./assets/images/pattern-workout.svg');
+        background-position: top right;
+      }
     }
 
     &:nth-child(3) {
       background-image: url('./assets/images/pattern-fast.svg');
       background-position: top left;
       background-repeat: no-repeat;
+
+      @include mobile {
+        background-image: url('./assets/images/pattern-workout.svg');
+        background-position: top right;
+      }
     }
   }
 
   &__headline {
     @include fontTTNeoris30;
+
     margin: 17px 0 6px;
+
+    @include mobile {
+      @include fontTTNeoris25;
+
+      margin: 21px 0 11px;
+    }
   }
 }

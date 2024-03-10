@@ -7,9 +7,30 @@
   <link rel="shortcut icon" href="./assets/images/favicon.svg">
   <title>AmigosBacking</title>
 </head>
-<body class="loading">
+<body>
   @@include('header/component.html')
-  @@include('banner/component.html')
+  <div class="banner">
+    <div class="banner__container content">
+      <div class="banner__info">
+        <h1 class="banner__title">
+          Оставь заявку
+        </h1>
+        <p class="banner__description">
+          Откройте для себя новый мир покера,
+          подав заявку научастие в нашем проекте!
+          <br><br>
+          В Amigos Backing ты получишь мгновенный доступ
+          к обучающим материалам по покеру!
+        </p>
+      </div>
+      <div class="banner__picture">
+        <video class="banner__image" autoplay muted playsinline>
+          <source src="./assets/images/cactus_1.webm" type="video/webm">
+        </video>
+      </div>
+    </div>
+  </div>
+
   @@include('form/component.html')
   @@include('footer/component.html')
   @@include('copyright/component.html')

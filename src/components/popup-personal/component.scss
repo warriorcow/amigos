@@ -9,6 +9,11 @@
   left: 0;
   background-color: #00000060;
   z-index: 10000;
+  opacity: 0;
+
+  @include mobile {
+    padding: 10px;
+  }
 
   .popup-personal {
     display: flex;
@@ -44,6 +49,12 @@
     &__top-title {
       @include fontTTNeoris30;
       margin-bottom: 10px;
+
+      @include mobile {
+        @include fontTTNeoris20;
+
+        margin-right: 20px;
+      }
     }
 
     &__content {

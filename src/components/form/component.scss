@@ -1,6 +1,10 @@
 .form {
   margin: 45px 0;
 
+  @include mobile {
+    margin-top: -50px;
+  }
+
   &__wrapper {
     display: flex;
     flex-direction: column;
@@ -8,6 +12,12 @@
     background-color: $skyBlue;
     border-radius: 25px;
     padding: 33px 62px;
+
+    @include mobile {
+      margin: 0;
+      max-width: 100%;
+      padding: 40px 7px;
+    }
   }
 
   &__fields {
@@ -15,6 +25,10 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 20px 45px;
+
+    @include mobile {
+      grid-template-columns: 1fr;
+    }
   }
 
   &__button {
@@ -24,5 +38,10 @@
 
   &__policy {
     margin-top: 24px;
+
+    @include mobile {
+      max-width: 250px;
+      text-align: center;
+    }
   }
 }

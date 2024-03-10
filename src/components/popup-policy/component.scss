@@ -44,6 +44,10 @@
     &__top-title {
       @include fontTTNeoris30;
       margin-bottom: 10px;
+
+      @include mobile {
+        @include fontTTNeoris20
+      }
     }
 
     &__content {
@@ -54,6 +58,10 @@
     &__title {
       @include fontTTNeoris25;
       margin: 10px 0;
+
+      @include mobile {
+        @include fontTTNeoris20
+      }
     }
 
     &__description {

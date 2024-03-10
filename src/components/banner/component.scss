@@ -8,8 +8,9 @@
   background-repeat: no-repeat, no-repeat, no-repeat;
 
   @include mobile {
-    padding-top: 170px;
+    padding-top: 120px;
     padding-bottom: 40px;
+    background-position: -150px top, calc(100% + 320px) calc(100% + 10px), 300px;
   }
 
   &__container {

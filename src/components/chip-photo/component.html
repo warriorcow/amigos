@@ -9,6 +9,14 @@
 @@if (type === 'default') {
   <div class="chip-photo">
 }
-    <img class="chip-photo__image" src="@@photo" alt="">
-    <div class="chip-photo__pattern"></div>
+    <div class="chip-photo__content">
+      <div class="chip-photo__front">
+        <img class="chip-photo__image" src="@@photo" alt="">
+        <div class="chip-photo__pattern"></div>
+      </div>
+      <div class="chip-photo__back">
+        <img class="chip-photo__image chip-photo__image--default" src="./assets/images/cactus-chip.svg" alt="">
+        <div class="chip-photo__pattern"></div>
+      </div>
+    </div>
 </div>
