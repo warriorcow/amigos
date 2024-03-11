@@ -7,5 +7,4 @@ anchors.forEach(anchor => {
       behavior: 'smooth'
     })
   })
-  console.log(anchor.dataset.anchor)
 })

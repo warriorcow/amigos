@@ -62,6 +62,7 @@
       text-decoration: none;
       color: $deepBlack;
       white-space: nowrap;
+      cursor: pointer;
 
       &:hover {
         border-bottom: 2px solid $lightBeige;
@@ -161,19 +162,15 @@
     border: 2px solid $deepBlack;
     border-radius: 40px;
     background-color: $skyBlue;
-    animation: slideInDown 100ms forwards ease-in-out;
+    animation: slideInDown 200ms forwards ease-in-out;
     overflow: hidden;
-
-    &.header--slide-up {
-      animation: slideInUp 100ms forwards ease-in-out;
-    }
 
     @keyframes slideInDown {
       0% {
-        top: -100%;
+        transform: translateY(-100%);
       }
       100% {
-        top: 0
+        transform: translateY(0);
       }
     }
 

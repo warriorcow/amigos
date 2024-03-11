@@ -76,6 +76,9 @@
       cursor: pointer;
       width: 23px;
       height: 23px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
 
       &::before,
       &::after {

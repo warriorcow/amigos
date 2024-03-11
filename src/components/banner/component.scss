@@ -19,6 +19,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    gap: 20px;
 
     @include mobile {
       flex-direction: column-reverse;
@@ -26,11 +27,10 @@
   }
 
   &__info {
-    max-width: 564px;
     flex: 1 0 400px;
 
     @include mobile {
-      margin-top: 85px;
+      margin-top: 55px;
       flex: 1 0;
     }
   }
@@ -60,8 +60,11 @@
 
   &__picture {
     display: flex;
+    align-items: flex-end;
     margin-left: 10px;
     position: relative;
+    flex: 1;
+    justify-content: center;
   }
 
   &__image {
@@ -70,10 +73,7 @@
     &:nth-child(1) {
       left: 0;
       margin-top: -65px;
-      width: 230px;
-      object-fit: contain;
       z-index: 3;
-      bottom: -30px;
 
       @include mobile {
         width: 150px;
@@ -82,7 +82,6 @@
 
     &:nth-child(2) {
       margin-left: -60px;
-      top: 25px;
       z-index: 2;
 
       @include mobile {
@@ -92,8 +91,8 @@
     }
 
     &:nth-child(3) {
-      margin-left: -130px;
-      top: 13px;
+      margin-left: -80px;
+      top: 20px;
       z-index: 1;
 
       @include mobile {
@@ -105,10 +104,46 @@
   }
 
   &--callback {
-    background-image: none;
+    padding-top: 110px;
+
+    @include mobile {
+      background-image: none;
+    }
+
+    #{$self}__container {
+      align-items: center;
+      justify-content: center;
+    }
+
+    #{$self}__picture {
+      max-width: 500px;
+      width: 100%;
+      flex: none;
+    }
+
+    #{$self}__picture {
+      flex: 1;
+
+      @include mobile {
+        display: none;
+      }
+    }
+
+    #{$self}__image {
+      margin-top: 0;
+    }
+
+    #{$self}__title {
+      margin-bottom: 30px;
+    }
 
     #{$self}__info {
       margin-top: 0;
+      flex: 1;
+
+      @include mobile {
+        width: 100%;
+      }
     }
 
     #{$self}__description {

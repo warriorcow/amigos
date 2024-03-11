@@ -1,6 +1,7 @@
 function openModal(id) {
   document.querySelector('body').classList.add('locked');
   document.querySelector('.header').classList.add('locked');
+  document.querySelector('html').classList.add('locked');
   document.querySelector(id).classList.add('active');
   document.querySelector(id).style.opacity = 0;
   document.querySelector(id).style.transition = '300ms ease-in-out';
@@ -23,6 +24,7 @@ function closeModal(id) {
   setTimeout(() => {
     document.querySelector(id).classList.remove('active');
     document.querySelector('body').classList.remove('locked');
+    document.querySelector('html').classList.remove('locked');
     document.querySelector('.header').classList.remove('locked');
   }, 500);
 }

@@ -17,7 +17,6 @@ hamburgerButtonElement.addEventListener('click', () => {
 if (window.innerWidth < 960) {
   headerLinksElements.forEach(link => {
     link.addEventListener('click', () => {
-      console.log('adada')
       document.querySelector('body').classList.remove('locked');
       headerElement.classList.remove(ACTIVE_MENU_CLASS);
       hamburgerButtonElement.classList.remove(ACTIVE_HAMBURGER_BUTTON_CLASS);
@@ -30,17 +29,17 @@ const observer = new IntersectionObserver((entries) => {
     if (entry.isIntersecting) {
       headerElement.classList.add(ANIMATION_SLIDE_UP_CLASS);
 
-      setTimeout(() => {
+      // setTimeout(() => {
         headerElement.classList.remove(ANIMATION_SLIDE_UP_CLASS);
         headerElement.classList.remove(HEADER_FIXED_CLASS);
-      }, 100);
+      // }, 500);
     } else {
       headerElement.classList.add(HEADER_FIXED_CLASS);
     }
   })
 }, {
-  rootMargin: '0px',
-  threshold: 0.4,
+  rootMargin: '100px',
+  threshold: 1,
 });
 
 observer.observe(bannerElement);
