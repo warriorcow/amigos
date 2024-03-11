@@ -21,3 +21,28 @@
     </a>
   </div>
 }
+
+
+@@if (type === 'shark') {
+<a
+  onclick="openModal('#popup-shark')"
+  class="button @@addClass"
+>
+  @@text
+</a>
+}
+
+@@if (type === 'shark-big') {
+<div class="button-yt @@addClass">
+  <a
+    href="@@ytLink"
+    class="button-yt__icon">
+  </a>
+  <a
+    onclick="openModal('#popup-shark')"
+    class="button-yt__text"
+  >
+    @@text
+  </a>
+</div>
+}

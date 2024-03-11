@@ -1,26 +1,30 @@
-const swiper = new Swiper('.swiper', {
-  slidesPerView: 1,
-  spaceBetween: 60,
-  loop: true,
-  navigation: {
-    nextEl: ".reviews__slider-arrow-next",
-    prevEl: ".reviews__slider-arrow-prev",
-  },
-  breakpoints: {
-    960: {
-      slidesPerView: 3
+const swiperElement = document.querySelector('.swiper');
+
+if (swiperElement) {
+  const swiper = new Swiper('.swiper', {
+    slidesPerView: 1,
+    spaceBetween: 60,
+    loop: true,
+    navigation: {
+      nextEl: ".reviews__slider-arrow-next",
+      prevEl: ".reviews__slider-arrow-prev",
+    },
+    breakpoints: {
+      960: {
+        slidesPerView: 3
+      }
     }
-  }
-});
+  });
 
-const reviewsTexts = document.querySelectorAll('.slider-item__text');
+  const reviewsTexts = document.querySelectorAll('.slider-item__text');
 
-reviewsTexts.forEach(text => {
-  if (text.offsetHeight > 160) {
-    text.classList.add('active');
-    text.nextElementSibling.classList.add('active')
-  }
-})
+  reviewsTexts.forEach(text => {
+    if (text.offsetHeight > 160) {
+      text.classList.add('active');
+      text.nextElementSibling.classList.add('active')
+    }
+  })
+}
 
 function openReviewModal({ target }) {
   openModal('#popup-reviews');

@@ -6,6 +6,10 @@
   top: 0;
   width: 100%;
 
+  &.locked {
+    width: calc(100% - 10px);
+  }
+
   &__container {
     display: flex;
     align-items: center;
@@ -54,6 +58,7 @@
     }
 
     &-link {
+      display: inline;
       text-decoration: none;
       color: $deepBlack;
       white-space: nowrap;

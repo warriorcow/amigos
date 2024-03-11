@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
     <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" href="./assets/images/favicon.svg">
     <title>AmigosBacking</title>
@@ -15,16 +15,31 @@
             <a href="/" class="header__logo"></a>
             <div class="header__nav">
                 <ul class="header__menu">
-                    <li class="header__menu-item"><a href="#about" class="header__menu-link">О нас</a></li>
-                    <li class="header__menu-item"><a href="#privilege" class="header__menu-link">Преимущества</a></li>
-                    <li class="header__menu-item"><a href="#requirements" class="header__menu-link">Условия</a></li>
-                    <li class="header__menu-item"><a href="#team" class="header__menu-link">Команда</a></li>
-                    <li class="header__menu-item"><a href="#footer" class="header__menu-link">Контакты</a></li>
+                    <li class="header__menu-item">
+                        <div data-anchor="#about" class="header__menu-link">О нас</div>
+                    </li>
+                    <li class="header__menu-item">
+                        <div data-anchor="#privilege" class="header__menu-link">Преимущества</div>
+                    </li>
+                    <li class="header__menu-item">
+                        <div data-anchor="#requirements" class="header__menu-link">Условия</div>
+                    </li>
+                    <li class="header__menu-item">
+                        <div data-anchor="#team" class="header__menu-link">Команда</div>
+                    </li>
+                    <li class="header__menu-item">
+                        <div data-anchor="#footer" class="header__menu-link">Контакты</div>
+                    </li>
                 </ul>
 
                 <a href="callback.html" class="button header__button">
                     Подать заявку
                 </a>
+
+
+
+
+
 
 
 
@@ -38,7 +53,7 @@
     </header>
 
 
-    <div class="banner">
+    <div class="banner banner--callback">
         <div class="banner__container content">
             <div class="banner__info">
                 <h1 class="banner__title">
@@ -51,11 +66,6 @@
                     В Amigos Backing ты получишь мгновенный доступ
                     к обучающим материалам по покеру!
                 </p>
-            </div>
-            <div class="banner__picture">
-                <video class="banner__image" autoplay muted playsinline>
-                    <source src="./assets/images/cactus_1.webm" type="video/webm">
-                </video>
             </div>
         </div>
     </div>
@@ -184,7 +194,7 @@
 
             <div class="form__policy">
                 Я согласен с условиями
-                <a href="/">политики конфиденциальности</a>
+                <div class="form__policy-link" onclick="openModal('#popup-policy')">политики конфиденциальности</div>
             </div>
         </form>
     </div>
@@ -192,9 +202,7 @@
     <footer id="footer" class="footer">
         <div class="footer__wrapper content">
             <div class="footer__logo">
-                <video autoplay loop muted playsinline>
-                    <source src="./assets/images/cactus_4.webm" type="video/webm">
-                </video>
+                <img data-gif="./assets/images/cactus_4.gif" src="" alt="">
             </div>
             <div class="footer__column">
                 <div class="footer__title">
@@ -250,9 +258,7 @@
                         </div>
                     </div>
                     <div class="footer__logo">
-                        <video autoplay loop muted playsinline>
-                            <source src="./assets/images/cactus_4.webm" type="video/webm">
-                        </video>
+                        <img data-gif="./assets/images/cactus_4.gif" src="" alt="">
                     </div>
                 </div>
             </div>
@@ -488,6 +494,16 @@
                         Отзыв согласия на обработку персональных данных может быть осуществлен путём направления гражданином
                         соответствующего распоряжения в простой письменной форме на адрес электронной почты (E-mail): <a href="mailto:amigosbacking@gmail.com">amigosbacking@gmail.com</a>
                     </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="popup-shark" class="popup-overlay">
+            <div class="popup-shark">
+                <span class="popup-shark__close" onclick="closeModal('#popup-shark')">
+                </span>
+                <div class="popup-shark__content">
+                    <img src="./assets/images/shark.jpg" alt="shark">
                 </div>
             </div>
         </div>

@@ -13,9 +13,10 @@
   &__wrapper {
     display: flex;
     justify-content: space-between;
+    align-items: flex-start;
 
     @include mobile {
-      flex-direction: column;
+      flex-wrap: wrap;
       gap: 60px;
     }
   }
@@ -25,9 +26,10 @@
       display: none;
     }
 
-    video {
+    img {
       width: 100%;
       height: 100%;
+      object-fit: contain;
     }
   }
 
@@ -36,6 +38,7 @@
 
     @include mobile {
       margin-left: 0;
+      flex: 1 0 300px;
     }
   }
 
@@ -91,7 +94,9 @@
       @include mobile {
         display: block;
         align-self: flex-end;
-        margin-left: 15px;
+        max-width: 150px;
+        margin-top: 20px;
+        margin-left: auto;
       }
     }
   }

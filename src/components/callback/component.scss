@@ -1,9 +1,9 @@
 .callback {
   position: relative;
-  //height: 377px;
   margin-top: 95px;
   overflow: hidden;
   display: flex;
+  margin-bottom: -100px;
 
   @include mobile {
     height: auto;
@@ -48,7 +48,7 @@
     align-self: self-end;
     min-width: 418px;
     margin-right: -140px;
-    margin-left: 50px;
+    margin-left: 30px;
 
     @include mobile {
       position: relative;
@@ -60,7 +60,7 @@
       min-width: auto;
     }
 
-    video {
+    img {
       width: 100%;
     }
   }
@@ -69,7 +69,9 @@
     margin-top: 20px;
 
     &:hover {
-      background-color: $lightBeige;
+      background-color: $deepBlack;
+      border-color: $lightBeige;
+      color: $lightBeige;
     }
 
     @include mobile {

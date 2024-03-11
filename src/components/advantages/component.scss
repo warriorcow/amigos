@@ -30,7 +30,8 @@
   &__list-item {
     display: flex;
     align-items: center;
-    width: calc(100% / 3 - 40px);
+    min-width: 28%;
+    flex: 1 0 28%;
 
     @include mobile {
       width: 100%;

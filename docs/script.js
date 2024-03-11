@@ -1,3 +1,15 @@
+const anchors = document.querySelectorAll('[data-anchor]');
+
+anchors.forEach(anchor => {
+  anchor.addEventListener('click', () => {
+    const targetElement = document.querySelector(anchor.dataset.anchor)
+    targetElement.scrollIntoView({
+      behavior: 'smooth'
+    })
+  })
+  console.log(anchor.dataset.anchor)
+})
+
 const submitButton = document.querySelector('.form__button');
 
 if (submitButton){
@@ -12,7 +24,7 @@ if (submitButton){
       console.log(key +': '+ value);
     })
 
-    openModal('#popup-thanks');
+    // openModal('#popup-thanks');
   })
 }
 
@@ -66,6 +78,7 @@ observer.observe(bannerElement);
 
 function openModal(id) {
   document.querySelector('body').classList.add('locked');
+  document.querySelector('.header').classList.add('locked');
   document.querySelector(id).classList.add('active');
   document.querySelector(id).style.opacity = 0;
   document.querySelector(id).style.transition = '300ms ease-in-out';
@@ -83,15 +96,32 @@ function openModal(id) {
 }
 
 function closeModal(id) {
-
   document.querySelector(id).style.opacity = 0;
   document.querySelector(id).querySelector('div').style.transform = null;
   setTimeout(() => {
     document.querySelector(id).classList.remove('active');
     document.querySelector('body').classList.remove('locked');
-  }, 500)
-
+    document.querySelector('.header').classList.remove('locked');
+  }, 500);
 }
+
+const quoteElement = document.querySelector('.quote');
+
+if (quoteElement) {
+  const observerQuote = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        quoteElement.classList.add('active');
+      }
+    })
+  }, {
+    rootMargin: '0px',
+    threshold: 1,
+  });
+
+  observerQuote.observe(quoteElement);
+}
+
 
 document.addEventListener('DOMContentLoaded', () => {
   const selectElements = document.querySelectorAll('.select'),
@@ -134,29 +164,33 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 })
 
-const swiper = new Swiper('.swiper', {
-  slidesPerView: 1,
-  spaceBetween: 60,
-  loop: true,
-  navigation: {
-    nextEl: ".reviews__slider-arrow-next",
-    prevEl: ".reviews__slider-arrow-prev",
-  },
-  breakpoints: {
-    960: {
-      slidesPerView: 3
+const swiperElement = document.querySelector('.swiper');
+
+if (swiperElement) {
+  const swiper = new Swiper('.swiper', {
+    slidesPerView: 1,
+    spaceBetween: 60,
+    loop: true,
+    navigation: {
+      nextEl: ".reviews__slider-arrow-next",
+      prevEl: ".reviews__slider-arrow-prev",
+    },
+    breakpoints: {
+      960: {
+        slidesPerView: 3
+      }
     }
-  }
-});
+  });
 
-const reviewsTexts = document.querySelectorAll('.slider-item__text');
+  const reviewsTexts = document.querySelectorAll('.slider-item__text');
 
-reviewsTexts.forEach(text => {
-  if (text.offsetHeight > 160) {
-    text.classList.add('active');
-    text.nextElementSibling.classList.add('active')
-  }
-})
+  reviewsTexts.forEach(text => {
+    if (text.offsetHeight > 160) {
+      text.classList.add('active');
+      text.nextElementSibling.classList.add('active')
+    }
+  })
+}
 
 function openReviewModal({ target }) {
   openModal('#popup-reviews');
@@ -173,3 +207,11 @@ function openReviewModal({ target }) {
   document.querySelector('.popup-reviews__title-person').innerText
     = target.parentElement.previousElementSibling.querySelector('.slider-item__name').innerText;
 }
+
+const gifImages = document.querySelectorAll('[data-gif]');
+
+gifImages.forEach(gif => {
+  const gifSrc = gif.dataset.gif;
+  const randomVersion = Math.floor(Math.random() * 1000);
+  gif.src = `${gifSrc}?v=${randomVersion}`
+})

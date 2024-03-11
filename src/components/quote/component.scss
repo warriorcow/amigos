@@ -1,4 +1,6 @@
 .quote {
+  $self: &;
+
   display: flex;
   justify-content: center;
   align-items: flex-start;
@@ -10,6 +12,19 @@
 
   &__image {
     margin-right: 35px;
+    opacity: 0;
+    transform: translateY(50px);
+
+    @keyframes quoteImageAnimation {
+      0% {
+        opacity: 0;
+      }
+
+      100% {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
 
     img {
       display: block;
@@ -23,15 +38,31 @@
     background-color: $coralOrange;
     margin-top: 15px;
     max-width: 500px;
+    transform: rotate(45deg);
+    transform-origin: bottom left;
+    opacity: 0;
+
+    @keyframes quoteBlockAnimation {
+      0% {
+        opacity: 0;
+      }
+
+      80% {
+        transform: rotate(-10deg);
+        opacity: 0.8;
+      }
+
+      100% {
+        transform: rotate(0);
+        opacity: 1;
+      }
+    }
 
     @include mobile {
+      max-width: 100%;
       margin-top: 0;
       padding: 20px 20px 9px 30px;
     }
-  }
-
-  &__text {
-
   }
 
   &__name {
@@ -41,6 +72,16 @@
 
     @include mobile {
       margin-top: 5px;
+    }
+  }
+
+  &.active {
+    #{$self}__image {
+      animation: quoteImageAnimation 500ms forwards;
+    }
+
+    #{$self}__block {
+      animation: quoteBlockAnimation 500ms forwards;
     }
   }
 }

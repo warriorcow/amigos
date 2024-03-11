@@ -1,4 +1,6 @@
 .banner {
+  $self: &;
+
   background-color: $skyBlue;
   border-radius: 30px;
   padding-top: 133px;
@@ -99,6 +101,18 @@
         margin-left: -50px;
         top: 20px;
       }
+    }
+  }
+
+  &--callback {
+    background-image: none;
+
+    #{$self}__info {
+      margin-top: 0;
+    }
+
+    #{$self}__description {
+      margin-bottom: 20px;
     }
   }
 }

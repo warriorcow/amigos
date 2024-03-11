@@ -49,7 +49,9 @@
     max-height: 70px;
 
     @include mobile {
+      justify-content: space-between;
       padding: 15px 20px;
+      text-align: right;
     }
   }
 

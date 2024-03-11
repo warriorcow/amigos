@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="shortcut icon" href="./assets/images/favicon.svg">
@@ -16,16 +16,31 @@
             <a href="/" class="header__logo"></a>
             <div class="header__nav">
                 <ul class="header__menu">
-                    <li class="header__menu-item"><a href="#about" class="header__menu-link">О нас</a></li>
-                    <li class="header__menu-item"><a href="#privilege" class="header__menu-link">Преимущества</a></li>
-                    <li class="header__menu-item"><a href="#requirements" class="header__menu-link">Условия</a></li>
-                    <li class="header__menu-item"><a href="#team" class="header__menu-link">Команда</a></li>
-                    <li class="header__menu-item"><a href="#footer" class="header__menu-link">Контакты</a></li>
+                    <li class="header__menu-item">
+                        <div data-anchor="#about" class="header__menu-link">О нас</div>
+                    </li>
+                    <li class="header__menu-item">
+                        <div data-anchor="#privilege" class="header__menu-link">Преимущества</div>
+                    </li>
+                    <li class="header__menu-item">
+                        <div data-anchor="#requirements" class="header__menu-link">Условия</div>
+                    </li>
+                    <li class="header__menu-item">
+                        <div data-anchor="#team" class="header__menu-link">Команда</div>
+                    </li>
+                    <li class="header__menu-item">
+                        <div data-anchor="#footer" class="header__menu-link">Контакты</div>
+                    </li>
                 </ul>
 
                 <a href="callback.html" class="button header__button">
                     Подать заявку
                 </a>
+
+
+
+
+
 
 
 
@@ -60,11 +75,14 @@
 
 
 
+
+
+
+
+
             </div>
             <div class="banner__picture">
-                <video class="banner__image" autoplay muted playsinline>
-                    <source src="./assets/images/cactus_1.webm" type="video/webm">
-                </video>
+                <img data-gif="./assets/images/cactus_1.gif" class="banner__image" src="" alt="">
                 <img class="banner__image" src="./assets/images/karta1.svg" alt="">
                 <img class="banner__image" src="./assets/images/karta2.svg" alt="">
             </div>
@@ -75,9 +93,7 @@
         <div class="results content">
             <div class="results__container1">
                 <div class="results__image1">
-                    <video autoplay muted playsinline>
-                        <source src="./assets/images/cactus_2.webm" type="video/webm">
-                    </video>
+                    <img data-gif="./assets/images/cactus_2.gif" src="" alt="">
                 </div>
                 <h2 class="results__title">
                     Присоединяйся к нам и подними свою игру на новый уровень
@@ -253,11 +269,14 @@
 
 
 
+
+
+
+
+
             </div>
             <div class="callback__image">
-                <video autoplay muted playsinline>
-                    <source src="./assets/images/cactus_3.webm" type="video/webm">
-                </video>
+                <img data-gif="./assets/images/cactus_3.gif" class="callback__image" src="" alt="">
             </div>
         </div>
     </div>
@@ -398,10 +417,15 @@
 
 
 
+
+
+
+
+
                         <div class="button-yt founders__button">
                             <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" class="button-yt__icon">
                             </a>
-                            <a href="https://www.youtube.com/watch?v=5qucy6og3o8" class="button-yt__text">
+                            <a onclick="openModal('#popup-shark')" class="button-yt__text">
                                 Смотреть шарк
                             </a>
                         </div>
@@ -449,10 +473,15 @@
 
 
 
+
+
+
+
+
                         <div class="button-yt founders__button">
                             <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" class="button-yt__icon">
                             </a>
-                            <a href="https://www.youtube.com/watch?v=5qucy6og3o8" class="button-yt__text">
+                            <a onclick="openModal('#popup-shark')" class="button-yt__text">
                                 Смотреть шарк
                             </a>
                         </div>
@@ -548,7 +577,12 @@
                             </a>
 
 
-                            <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" class="button staff__button">
+
+
+
+
+
+                            <a onclick="openModal('#popup-shark')" class="button staff__button">
                                 Смотреть шарк
                             </a>
 
@@ -597,10 +631,15 @@
 
 
 
+
+
+
+
+
                             <div class="button-yt @@addButtonClass">
                                 <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" class="button-yt__icon">
                                 </a>
-                                <a href="https://www.youtube.com/watch?v=5qucy6og3o8" class="button-yt__text">
+                                <a onclick="openModal('#popup-shark')" class="button-yt__text">
                                     Смотреть шарк
                                 </a>
                             </div>
@@ -654,7 +693,12 @@
                             </a>
 
 
-                            <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" class="button staff__button">
+
+
+
+
+
+                            <a onclick="openModal('#popup-shark')" class="button staff__button">
                                 Смотреть шарк
                             </a>
 
@@ -703,10 +747,15 @@
 
 
 
+
+
+
+
+
                             <div class="button-yt @@addButtonClass">
                                 <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" class="button-yt__icon">
                                 </a>
-                                <a href="https://www.youtube.com/watch?v=5qucy6og3o8" class="button-yt__text">
+                                <a onclick="openModal('#popup-shark')" class="button-yt__text">
                                     Смотреть шарк
                                 </a>
                             </div>
@@ -760,7 +809,12 @@
                             </a>
 
 
-                            <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" class="button staff__button">
+
+
+
+
+
+                            <a onclick="openModal('#popup-shark')" class="button staff__button">
                                 Смотреть шарк
                             </a>
 
@@ -809,10 +863,15 @@
 
 
 
+
+
+
+
+
                             <div class="button-yt @@addButtonClass">
                                 <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" class="button-yt__icon">
                                 </a>
-                                <a href="https://www.youtube.com/watch?v=5qucy6og3o8" class="button-yt__text">
+                                <a onclick="openModal('#popup-shark')" class="button-yt__text">
                                     Смотреть шарк
                                 </a>
                             </div>
@@ -869,7 +928,12 @@
                             </a>
 
 
-                            <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" class="button staff__button">
+
+
+
+
+
+                            <a onclick="openModal('#popup-shark')" class="button staff__button">
                                 Смотреть шарк
                             </a>
 
@@ -918,10 +982,15 @@
 
 
 
+
+
+
+
+
                             <div class="button-yt @@addButtonClass">
                                 <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" class="button-yt__icon">
                                 </a>
-                                <a href="https://www.youtube.com/watch?v=5qucy6og3o8" class="button-yt__text">
+                                <a onclick="openModal('#popup-shark')" class="button-yt__text">
                                     Смотреть шарк
                                 </a>
                             </div>
@@ -961,7 +1030,7 @@
                     Отзывы наших учеников на
                     <img class="reviews__logo" src="./assets/images/gipsyteam.svg" alt="gipsyteam">
                     <span class="reviews__name">
-                        <a href="https://www.gipsyteam.ru/">gipsyteam</a>
+                        <a target="_blank" href="https://forum.gipsyteam.ru/index.php?viewtopic=173009">gipsyteam</a>
                     </span>
                 </div>
                 <div class="reviews__slider">
@@ -1109,9 +1178,7 @@
     <footer id="footer" class="footer">
         <div class="footer__wrapper content">
             <div class="footer__logo">
-                <video autoplay loop muted playsinline>
-                    <source src="./assets/images/cactus_4.webm" type="video/webm">
-                </video>
+                <img data-gif="./assets/images/cactus_4.gif" src="" alt="">
             </div>
             <div class="footer__column">
                 <div class="footer__title">
@@ -1167,9 +1234,7 @@
                         </div>
                     </div>
                     <div class="footer__logo">
-                        <video autoplay loop muted playsinline>
-                            <source src="./assets/images/cactus_4.webm" type="video/webm">
-                        </video>
+                        <img data-gif="./assets/images/cactus_4.gif" src="" alt="">
                     </div>
                 </div>
             </div>
@@ -1405,6 +1470,16 @@
                         Отзыв согласия на обработку персональных данных может быть осуществлен путём направления гражданином
                         соответствующего распоряжения в простой письменной форме на адрес электронной почты (E-mail): <a href="mailto:amigosbacking@gmail.com">amigosbacking@gmail.com</a>
                     </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="popup-shark" class="popup-overlay">
+            <div class="popup-shark">
+                <span class="popup-shark__close" onclick="closeModal('#popup-shark')">
+                </span>
+                <div class="popup-shark__content">
+                    <img src="./assets/images/shark.jpg" alt="shark">
                 </div>
             </div>
         </div>

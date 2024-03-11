@@ -12,7 +12,7 @@ if (submitButton){
       console.log(key +': '+ value);
     })
 
-    openModal('#popup-thanks');
+    // openModal('#popup-thanks');
   })
 }
 

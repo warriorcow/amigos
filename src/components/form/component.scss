@@ -43,5 +43,11 @@
       max-width: 250px;
       text-align: center;
     }
+
+    &-link {
+      text-decoration: underline;
+      display: inline;
+      cursor: pointer;
+    }
   }
 }

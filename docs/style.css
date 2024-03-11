@@ -39,12 +39,12 @@ body.locked {
   overflow: hidden;
   padding-right: 10px;
 }
-@media (max-width: 960px) {
+@media (max-width: 767px) {
   body.locked {
     padding-right: 0;
   }
 }
-@media (max-width: 960px) {
+@media (max-width: 767px) {
   body {
     font-family: "Ubuntu", sans-serif;
     font-weight: 500;
@@ -79,10 +79,10 @@ a {
   margin: 0 auto;
   padding: 0 20px;
 }
-@media (max-width: 960px) {
+@media (max-width: 767px) {
   .content {
     padding: 0 15px;
-    max-width: 375px;
+    max-width: 100%;
   }
 }
 
@@ -101,7 +101,7 @@ section {
   background-position: top right, bottom left, bottom right;
   background-repeat: no-repeat;
 }
-@media (max-width: 960px) {
+@media (max-width: 767px) {
   .section-reviews {
     padding: 50px 0 80px;
   }
@@ -146,7 +146,7 @@ section {
   color: #141414;
   position: relative;
 }
-@media (max-width: 960px) {
+@media (max-width: 767px) {
   .button-yt {
     height: 30px;
   }
@@ -163,7 +163,7 @@ section {
   border: 2px solid #141414;
   border-radius: 30px;
 }
-@media (max-width: 960px) {
+@media (max-width: 767px) {
   .button-yt__icon {
     background-position: 13px center;
     background-size: 17px 13px;
@@ -187,8 +187,9 @@ section {
   text-decoration: none;
   color: #141414;
   white-space: nowrap;
+  cursor: pointer;
 }
-@media (max-width: 960px) {
+@media (max-width: 767px) {
   .button-yt__text {
     min-width: auto;
     padding: 8px 13px;
@@ -205,6 +206,9 @@ section {
   top: 0;
   width: 100%;
 }
+.header.locked {
+  width: calc(100% - 10px);
+}
 .header__container {
   display: flex;
   align-items: center;
@@ -212,7 +216,7 @@ section {
   padding-top: 33px;
   padding-bottom: 33px;
 }
-@media (max-width: 960px) {
+@media (max-width: 767px) {
   .header__container {
     padding-top: 26px;
     padding-bottom: 26px;
@@ -228,7 +232,7 @@ section {
   margin-right: 5%;
   z-index: 1;
 }
-@media (max-width: 960px) {
+@media (max-width: 767px) {
   .header__logo {
     min-width: 110px;
     max-width: 110px;
@@ -247,7 +251,7 @@ section {
   padding-left: 0;
   margin: 0 auto;
 }
-@media (max-width: 960px) {
+@media (max-width: 767px) {
   .header__menu {
     font-family: "TT Neoris Trial", sans-serif;
     font-weight: 900;
@@ -258,6 +262,7 @@ section {
   }
 }
 .header__menu-link {
+  display: inline;
   text-decoration: none;
   color: #141414;
   white-space: nowrap;
@@ -269,7 +274,7 @@ section {
   width: 100%;
   display: flex;
 }
-@media (max-width: 960px) {
+@media (max-width: 767px) {
   .header__nav {
     flex-direction: column;
     align-items: center;
@@ -287,7 +292,7 @@ section {
 .header__button {
   min-width: 200px;
 }
-@media (max-width: 960px) {
+@media (max-width: 767px) {
   .header__button {
     margin-top: auto;
   }
@@ -304,7 +309,7 @@ section {
   top: 5px;
   position: relative;
 }
-@media (max-width: 960px) {
+@media (max-width: 767px) {
   .header__hamburger {
     display: flex;
   }
@@ -373,7 +378,7 @@ section {
   padding-top: 8px;
   padding-bottom: 8px;
 }
-@media (max-width: 960px) {
+@media (max-width: 767px) {
   .header--fixed .header__container {
     padding: 4px 22px;
   }
@@ -384,7 +389,7 @@ section {
   height: 56px;
   background-image: url("./assets/images/logo-pin.svg");
 }
-@media (max-width: 960px) {
+@media (max-width: 767px) {
   .header--fixed .header__logo {
     max-width: 202px;
     min-width: 202px;
@@ -415,7 +420,7 @@ section {
   background-position: left top, calc(50% + 100px) bottom, right top;
   background-repeat: no-repeat, no-repeat, no-repeat;
 }
-@media (max-width: 960px) {
+@media (max-width: 767px) {
   .banner {
     padding-top: 120px;
     padding-bottom: 40px;
@@ -427,7 +432,7 @@ section {
   flex-wrap: wrap;
   justify-content: space-between;
 }
-@media (max-width: 960px) {
+@media (max-width: 767px) {
   .banner__container {
     flex-direction: column-reverse;
   }
@@ -436,7 +441,7 @@ section {
   max-width: 564px;
   flex: 1 0 400px;
 }
-@media (max-width: 960px) {
+@media (max-width: 767px) {
   .banner__info {
     margin-top: 85px;
     flex: 1 0;
@@ -449,7 +454,7 @@ section {
   line-height: 48px;
   margin-bottom: 10px;
 }
-@media (max-width: 960px) {
+@media (max-width: 767px) {
   .banner__title {
     font-family: "TT Neoris Trial", sans-serif;
     font-weight: 900;
@@ -461,7 +466,7 @@ section {
 .banner__description {
   margin-bottom: 40px;
 }
-@media (max-width: 960px) {
+@media (max-width: 767px) {
   .banner__button {
     display: block;
     margin: 0 auto;
@@ -483,7 +488,7 @@ section {
   z-index: 3;
   bottom: -30px;
 }
-@media (max-width: 960px) {
+@media (max-width: 767px) {
   .banner__image:nth-child(1) {
     width: 150px;
   }
@@ -493,7 +498,7 @@ section {
   top: 25px;
   z-index: 2;
 }
-@media (max-width: 960px) {
+@media (max-width: 767px) {
   .banner__image:nth-child(2) {
     width: 115px;
     margin-left: -40px;
@@ -504,12 +509,21 @@ section {
   top: 13px;
   z-index: 1;
 }
-@media (max-width: 960px) {
+@media (max-width: 767px) {
   .banner__image:nth-child(3) {
     width: 160px;
     margin-left: -50px;
     top: 20px;
   }
+}
+.banner--callback {
+  background-image: none;
+}
+.banner--callback .banner__info {
+  margin-top: 0;
+}
+.banner--callback .banner__description {
+  margin-bottom: 20px;
 }
 
 .results {
@@ -518,21 +532,35 @@ section {
   flex-wrap: wrap;
   gap: 20px;
 }
+@media (max-width: 767px) {
+  .results {
+    flex-direction: column;
+    flex-wrap: nowrap;
+  }
+}
 .results__container1 {
   display: flex;
   flex-direction: column;
   align-items: center;
   flex: 1 0 250px;
 }
-@media (max-width: 960px) {
+@media (max-width: 767px) {
   .results__container1 {
-    flex-direction: row-reverse;
     align-items: flex-start;
+    flex-direction: row-reverse;
+    justify-content: space-between;
   }
   .results__container1 .results__title {
     max-width: 160px;
     z-index: 1;
-    margin-right: -28px;
+  }
+}
+.results__container2 {
+  flex: 1 0 504px;
+}
+@media (max-width: 767px) {
+  .results__container2 {
+    flex: none;
   }
 }
 .results__image1 {
@@ -540,19 +568,20 @@ section {
   padding-bottom: 18px;
   margin-bottom: 18px;
 }
-@media (max-width: 960px) {
+@media (max-width: 767px) {
   .results__image1 {
-    width: 213px;
+    height: auto;
     padding: 0;
     margin-top: 56px;
     margin-bottom: 0;
   }
 }
-.results__image1 video {
+.results__image1 img {
   height: 100%;
 }
-@media (max-width: 960px) {
-  .results__image1 video {
+@media (max-width: 767px) {
+  .results__image1 img {
+    height: auto;
     width: 100%;
     object-fit: contain;
   }
@@ -563,7 +592,7 @@ section {
   font-size: 30px;
   line-height: 36px;
 }
-@media (max-width: 960px) {
+@media (max-width: 767px) {
   .results__title {
     font-family: "TT Neoris Trial", sans-serif;
     font-weight: 900;
@@ -574,10 +603,15 @@ section {
 .results__title--offset {
   padding-left: 26px;
 }
+@media (max-width: 767px) {
+  .results__title--offset {
+    padding-left: 0;
+  }
+}
 .results__image2 {
   padding-top: 42px;
 }
-@media (max-width: 960px) {
+@media (max-width: 767px) {
   .results__image2 {
     padding-top: 35px;
   }
@@ -597,7 +631,7 @@ section {
   border-radius: 25px;
   gap: 25px;
 }
-@media (max-width: 960px) {
+@media (max-width: 767px) {
   .statistics__conteiner {
     flex-direction: column-reverse;
     padding: 35px 25px;
@@ -607,7 +641,7 @@ section {
 .statistics__title {
   flex: 1 0 300px;
 }
-@media (max-width: 960px) {
+@media (max-width: 767px) {
   .statistics__title {
     flex-basis: auto;
   }
@@ -618,7 +652,7 @@ section {
   gap: 18px 17px;
   flex: 1;
 }
-@media (max-width: 960px) {
+@media (max-width: 767px) {
   .statistics__boxes {
     grid-template-columns: 1fr;
     gap: 16px;
@@ -636,9 +670,11 @@ section {
   padding: 16px 20px;
   max-height: 70px;
 }
-@media (max-width: 960px) {
+@media (max-width: 767px) {
   .statistics__box {
+    justify-content: space-between;
     padding: 15px 20px;
+    text-align: right;
   }
 }
 .statistics__box-expanded {
@@ -649,7 +685,7 @@ section {
   position: relative;
   padding: 16px 20px;
 }
-@media (max-width: 960px) {
+@media (max-width: 767px) {
   .statistics__box-expanded {
     padding: 15px 0;
   }
@@ -662,7 +698,7 @@ section {
   max-width: calc(100% - 148px);
   gap: 3px;
 }
-@media (max-width: 960px) {
+@media (max-width: 767px) {
   .statistics__box-expanded-item {
     gap: 15px;
     padding-left: 22px;
@@ -681,7 +717,7 @@ section {
   padding: 10px 23px;
   gap: 8px;
 }
-@media (max-width: 960px) {
+@media (max-width: 767px) {
   .statistics__box-expanded-item--top {
     padding: 0 19px;
   }
@@ -692,7 +728,7 @@ section {
   font-size: 30px;
   line-height: 36px;
 }
-@media (max-width: 960px) {
+@media (max-width: 767px) {
   .statistics__box-value {
     font-family: "TT Neoris Trial", sans-serif;
     font-weight: 900;
@@ -704,7 +740,7 @@ section {
 .advantages {
   margin-top: 105px;
 }
-@media (max-width: 960px) {
+@media (max-width: 767px) {
   .advantages {
     margin-top: 80px;
   }
@@ -715,7 +751,7 @@ section {
   font-size: 30px;
   line-height: 36px;
 }
-@media (max-width: 960px) {
+@media (max-width: 767px) {
   .advantages__title {
     font-family: "TT Neoris Trial", sans-serif;
     font-weight: 900;
@@ -730,7 +766,7 @@ section {
   margin-top: 28px;
   gap: 35px 60px;
 }
-@media (max-width: 960px) {
+@media (max-width: 767px) {
   .advantages__list {
     flex-direction: column;
     margin-top: 34px;
@@ -740,9 +776,10 @@ section {
 .advantages__list-item {
   display: flex;
   align-items: center;
-  width: calc(33.3333333333% - 40px);
+  min-width: 28%;
+  flex: 1 0 28%;
 }
-@media (max-width: 960px) {
+@media (max-width: 767px) {
   .advantages__list-item {
     width: 100%;
   }
@@ -750,7 +787,7 @@ section {
 .advantages__icon {
   padding-right: 20px;
 }
-@media (max-width: 960px) {
+@media (max-width: 767px) {
   .advantages__icon {
     padding-right: 50px;
   }
@@ -761,7 +798,7 @@ section {
   z-index: 1;
   margin-bottom: -25px;
 }
-@media (max-width: 960px) {
+@media (max-width: 767px) {
   .requirements-and-suggestions br {
     display: none;
   }
@@ -774,13 +811,21 @@ section {
   display: flex;
   margin-bottom: 18px;
 }
+@media (max-width: 767px) {
+  .requirements-and-suggestions__header {
+    font-family: "TT Neoris Trial", sans-serif;
+    font-weight: 900;
+    font-size: 25px;
+    line-height: 30px;
+  }
+}
 .requirements-and-suggestions__title:nth-child(1) {
   width: 620px;
 }
 .requirements-and-suggestions__title:nth-child(2) {
   padding-left: 54px;
 }
-@media (max-width: 960px) {
+@media (max-width: 767px) {
   .requirements-and-suggestions__title:nth-child(2) {
     font-family: "TT Neoris Trial", sans-serif;
     font-weight: 900;
@@ -799,7 +844,7 @@ section {
   border-radius: 25px;
   overflow: hidden;
 }
-@media (max-width: 960px) {
+@media (max-width: 767px) {
   .requirements-and-suggestions__wrapper {
     flex-direction: column;
   }
@@ -812,16 +857,17 @@ section {
   display: none;
   margin-bottom: 25px;
 }
-@media (max-width: 960px) {
+@media (max-width: 767px) {
   .requirements-and-suggestions__wrapper .requirements-and-suggestions__title {
     display: block;
+    margin-left: -30px;
   }
 }
 .requirements-and-suggestions__left {
   margin: -4px 0 -4px -3px;
   position: relative;
 }
-@media (max-width: 960px) {
+@media (max-width: 767px) {
   .requirements-and-suggestions__left {
     margin: -4px -4px 0 -4px;
   }
@@ -835,7 +881,7 @@ section {
   right: 630px;
   z-index: 1;
 }
-@media (max-width: 960px) {
+@media (max-width: 767px) {
   .requirements-and-suggestions__left::before {
     display: none;
   }
@@ -850,9 +896,9 @@ section {
   height: 100%;
   clip-path: polygon(0.162% 0.16%, 80.876% 0.16%, 80.876% 0.16%, 81.378% 0.192%, 81.863% 0.285%, 82.327% 0.437%, 82.765% 0.643%, 83.173% 0.9%, 83.545% 1.204%, 83.878% 1.554%, 84.165% 1.944%, 84.403% 2.372%, 84.587% 2.833%, 99.609% 49.14%, 99.609% 49.14%, 99.676% 49.371%, 99.728% 49.606%, 99.765% 49.843%, 99.787% 50.081%, 99.794% 50.32%, 99.786% 50.559%, 99.763% 50.797%, 99.725% 51.033%, 99.672% 51.268%, 99.604% 51.499%, 84.594% 97.18%, 84.594% 97.18%, 84.409% 97.64%, 84.17% 98.066%, 83.883% 98.454%, 83.551% 98.801%, 83.179% 99.105%, 82.772% 99.36%, 82.335% 99.565%, 81.872% 99.715%, 81.388% 99.808%, 80.888% 99.84%, 0.162% 99.84%, 0.162% 0.16%);
 }
-@media (max-width: 960px) {
+@media (max-width: 767px) {
   .requirements-and-suggestions__left-inner {
-    max-width: 375px;
+    max-width: 100%;
     margin: 0 auto;
     padding: 30px 40px 100px;
     clip-path: polygon(99.733% 2.774%, 99.733% 82.513%, 99.733% 82.513%, 99.707% 82.784%, 99.628% 83.048%, 99.499% 83.306%, 99.322% 83.554%, 99.099% 83.791%, 98.831% 84.015%, 98.52% 84.224%, 98.169% 84.418%, 97.78% 84.593%, 97.353% 84.748%, 52.384% 99.373%, 52.384% 99.373%, 51.876% 99.518%, 51.346% 99.631%, 50.801% 99.711%, 50.244% 99.758%, 49.683% 99.774%, 49.122% 99.757%, 48.566% 99.707%, 48.022% 99.626%, 47.493% 99.511%, 46.987% 99.365%, 2.622% 84.75%, 2.622% 84.75%, 2.2% 84.595%, 1.814% 84.42%, 1.467% 84.227%, 1.159% 84.018%, 0.894% 83.794%, 0.673% 83.558%, 0.498% 83.312%, 0.371% 83.056%, 0.293% 82.793%, 0.267% 82.524%, 0.267% 2.774%, 0.267% 2.774%, 0.333% 2.346%, 0.525% 1.941%, 0.832% 1.563%, 1.244% 1.218%, 1.751% 0.911%, 2.341% 0.647%, 3.005% 0.433%, 3.732% 0.273%, 4.511% 0.173%, 5.333% 0.139%, 94.667% 0.139%, 94.667% 0.139%, 95.488% 0.173%, 96.268% 0.273%, 96.995% 0.433%, 97.659% 0.647%, 98.249% 0.911%, 98.756% 1.218%, 99.168% 1.563%, 99.475% 1.941%, 99.667% 2.346%, 99.733% 2.774%);
@@ -869,7 +915,7 @@ section {
   clip-path: polygon(0.162% 0.16%, 80.876% 0.16%, 80.876% 0.16%, 81.378% 0.192%, 81.863% 0.285%, 82.327% 0.437%, 82.765% 0.643%, 83.173% 0.9%, 83.545% 1.204%, 83.878% 1.554%, 84.165% 1.944%, 84.403% 2.372%, 84.587% 2.833%, 99.609% 49.14%, 99.609% 49.14%, 99.676% 49.371%, 99.728% 49.606%, 99.765% 49.843%, 99.787% 50.081%, 99.794% 50.32%, 99.786% 50.559%, 99.763% 50.797%, 99.725% 51.033%, 99.672% 51.268%, 99.604% 51.499%, 84.594% 97.18%, 84.594% 97.18%, 84.409% 97.64%, 84.17% 98.066%, 83.883% 98.454%, 83.551% 98.801%, 83.179% 99.105%, 82.772% 99.36%, 82.335% 99.565%, 81.872% 99.715%, 81.388% 99.808%, 80.888% 99.84%, 0.162% 99.84%, 0.162% 0.16%);
   z-index: -1;
 }
-@media (max-width: 960px) {
+@media (max-width: 767px) {
   .requirements-and-suggestions__left-inner::before {
     clip-path: polygon(99.733% 2.774%, 99.733% 82.513%, 99.733% 82.513%, 99.707% 82.784%, 99.628% 83.048%, 99.499% 83.306%, 99.322% 83.554%, 99.099% 83.791%, 98.831% 84.015%, 98.52% 84.224%, 98.169% 84.418%, 97.78% 84.593%, 97.353% 84.748%, 52.384% 99.373%, 52.384% 99.373%, 51.876% 99.518%, 51.346% 99.631%, 50.801% 99.711%, 50.244% 99.758%, 49.683% 99.774%, 49.122% 99.757%, 48.566% 99.707%, 48.022% 99.626%, 47.493% 99.511%, 46.987% 99.365%, 2.622% 84.75%, 2.622% 84.75%, 2.2% 84.595%, 1.814% 84.42%, 1.467% 84.227%, 1.159% 84.018%, 0.894% 83.794%, 0.673% 83.558%, 0.498% 83.312%, 0.371% 83.056%, 0.293% 82.793%, 0.267% 82.524%, 0.267% 2.774%, 0.267% 2.774%, 0.333% 2.346%, 0.525% 1.941%, 0.832% 1.563%, 1.244% 1.218%, 1.751% 0.911%, 2.341% 0.647%, 3.005% 0.433%, 3.732% 0.273%, 4.511% 0.173%, 5.333% 0.139%, 94.667% 0.139%, 94.667% 0.139%, 95.488% 0.173%, 96.268% 0.273%, 96.995% 0.433%, 97.659% 0.647%, 98.249% 0.911%, 98.756% 1.218%, 99.168% 1.563%, 99.475% 1.941%, 99.667% 2.346%, 99.733% 2.774%);
   }
@@ -889,8 +935,11 @@ section {
   background-repeat: no-repeat;
   background-position: right bottom;
 }
-@media (max-width: 960px) {
+@media (max-width: 767px) {
   .requirements-and-suggestions__left-inner::after {
+    background-size: 100%;
+    background-position: center top;
+    background-image: url("./assets/images/pattern-requirements-mobile.svg");
     clip-path: polygon(99.733% 2.774%, 99.733% 82.513%, 99.733% 82.513%, 99.707% 82.784%, 99.628% 83.048%, 99.499% 83.306%, 99.322% 83.554%, 99.099% 83.791%, 98.831% 84.015%, 98.52% 84.224%, 98.169% 84.418%, 97.78% 84.593%, 97.353% 84.748%, 52.384% 99.373%, 52.384% 99.373%, 51.876% 99.518%, 51.346% 99.631%, 50.801% 99.711%, 50.244% 99.758%, 49.683% 99.774%, 49.122% 99.757%, 48.566% 99.707%, 48.022% 99.626%, 47.493% 99.511%, 46.987% 99.365%, 2.622% 84.75%, 2.622% 84.75%, 2.2% 84.595%, 1.814% 84.42%, 1.467% 84.227%, 1.159% 84.018%, 0.894% 83.794%, 0.673% 83.558%, 0.498% 83.312%, 0.371% 83.056%, 0.293% 82.793%, 0.267% 82.524%, 0.267% 2.774%, 0.267% 2.774%, 0.333% 2.346%, 0.525% 1.941%, 0.832% 1.563%, 1.244% 1.218%, 1.751% 0.911%, 2.341% 0.647%, 3.005% 0.433%, 3.732% 0.273%, 4.511% 0.173%, 5.333% 0.139%, 94.667% 0.139%, 94.667% 0.139%, 95.488% 0.173%, 96.268% 0.273%, 96.995% 0.433%, 97.659% 0.647%, 98.249% 0.911%, 98.756% 1.218%, 99.168% 1.563%, 99.475% 1.941%, 99.667% 2.346%, 99.733% 2.774%);
   }
 }
@@ -901,25 +950,27 @@ section {
   border: 1px solid #141414;
   margin-bottom: 27px;
 }
-@media (max-width: 960px) {
+@media (max-width: 767px) {
   .requirements-and-suggestions__quote {
     padding: 18px 20px;
   }
 }
 .requirements-and-suggestions__right {
   max-width: 550px;
-  width: 100%;
   padding: 37px 90px 42px 54px;
   background-image: url("./assets/images/pattern-offers.svg");
   background-size: auto;
   background-repeat: no-repeat;
   background-position: right top;
 }
-@media (max-width: 960px) {
+@media (max-width: 767px) {
   .requirements-and-suggestions__right {
-    max-width: 375px;
-    margin: 0 auto;
-    padding: 18px 40px 55px 40px;
+    background-size: 100%;
+    background-position: center top;
+    background-image: url("./assets/images/pattern-requirements-orange-mobile.svg");
+    max-width: 100%;
+    margin: -100px auto 0;
+    padding: 118px 40px 55px 40px;
   }
 }
 
@@ -933,7 +984,7 @@ section {
 .requirements-and-suggestions-item--small-offset:not(:last-child) {
   margin-bottom: 16px;
 }
-@media (max-width: 960px) {
+@media (max-width: 767px) {
   .requirements-and-suggestions-item--small-offset:not(:last-child) {
     margin-bottom: 28px;
   }
@@ -941,7 +992,7 @@ section {
 .requirements-and-suggestions-item__icon {
   margin-right: 36px;
 }
-@media (max-width: 960px) {
+@media (max-width: 767px) {
   .requirements-and-suggestions-item__icon {
     margin-right: 32px;
   }
@@ -954,7 +1005,7 @@ section {
   padding-bottom: 46px;
   overflow: hidden;
 }
-@media (max-width: 960px) {
+@media (max-width: 767px) {
   .founders {
     padding-top: 75px;
     padding-bottom: 0;
@@ -990,7 +1041,7 @@ section {
   gap: 39px;
   margin-top: 24px;
 }
-@media (max-width: 960px) {
+@media (max-width: 767px) {
   .founders__list {
     margin-top: 37px;
     gap: 65px;
@@ -1018,7 +1069,7 @@ section {
   margin-top: 36px;
   white-space: nowrap;
 }
-@media (max-width: 960px) {
+@media (max-width: 767px) {
   .card__name {
     font-family: "TT Neoris Trial", sans-serif;
     font-weight: 900;
@@ -1031,7 +1082,7 @@ section {
 .card__description {
   margin-top: 16px;
 }
-@media (max-width: 960px) {
+@media (max-width: 767px) {
   .card__description {
     margin-top: 22px;
   }
@@ -1045,7 +1096,7 @@ section {
 .card--small {
   width: 230px;
 }
-@media (max-width: 960px) {
+@media (max-width: 767px) {
   .card--small {
     width: 142px;
   }
@@ -1056,7 +1107,7 @@ section {
   font-size: 16px;
   line-height: 20px;
 }
-@media (max-width: 960px) {
+@media (max-width: 767px) {
   .card--small .card__name {
     font-family: "TT Neoris Trial", sans-serif;
     font-weight: 900;
@@ -1079,6 +1130,11 @@ section {
 .chip-photo:hover .chip-photo__content {
   transform: rotateY(180deg);
 }
+.chip-photo::after {
+  content: "";
+  display: table;
+  clear: both;
+}
 .chip-photo__content {
   width: 100%;
   height: 100%;
@@ -1087,15 +1143,11 @@ section {
   transition: transform 200ms linear 1ms;
 }
 .chip-photo__front {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-  width: 280px;
-  height: 280px;
+  z-index: 1;
 }
 .chip-photo__back {
   transform: rotateY(180deg);
+  z-index: 2;
 }
 .chip-photo__front, .chip-photo__back {
   position: absolute;
@@ -1162,7 +1214,7 @@ section {
   width: 200px;
   height: 200px;
 }
-@media (max-width: 960px) {
+@media (max-width: 767px) {
   .chip-photo--small {
     width: 142px;
     height: 142px;
@@ -1195,7 +1247,7 @@ section {
   display: flex;
   justify-content: space-between;
 }
-@media (max-width: 960px) {
+@media (max-width: 767px) {
   .staff__item {
     flex-direction: column;
   }
@@ -1209,7 +1261,7 @@ section {
   justify-content: flex-end;
   gap: 60px;
 }
-@media (max-width: 960px) {
+@media (max-width: 767px) {
   .staff__list {
     margin-top: 28px;
     gap: 20px;
@@ -1227,7 +1279,7 @@ section {
   width: 310px;
   margin-top: 15px;
 }
-@media (max-width: 960px) {
+@media (max-width: 767px) {
   .staff__title {
     font-family: "TT Neoris Trial", sans-serif;
     font-weight: 900;
@@ -1251,7 +1303,7 @@ section {
   padding: 0;
   height: 42px;
 }
-@media (max-width: 960px) {
+@media (max-width: 767px) {
   .staff__button {
     padding: 8px 14px;
     height: 30px;
@@ -1268,10 +1320,13 @@ section {
   background-position: left 410px;
   background-repeat: no-repeat;
 }
-@media (max-width: 960px) {
+@media (max-width: 767px) {
   .videos {
     padding-top: 84px;
-    padding-bottom: 110px;
+    padding-bottom: 120px;
+    background-position: 370px 0;
+    background-repeat: no-repeat;
+    background-size: 200px;
   }
 }
 .videos__title {
@@ -1282,7 +1337,7 @@ section {
   max-width: 56vw;
   width: 100%;
 }
-@media (max-width: 960px) {
+@media (max-width: 767px) {
   .videos__title {
     font-family: "TT Neoris Trial", sans-serif;
     font-weight: 900;
@@ -1296,10 +1351,10 @@ section {
   gap: 65px;
   margin-top: 41px;
 }
-@media (max-width: 960px) {
+@media (max-width: 767px) {
   .videos__inner {
     flex-direction: column;
-    gap: 30px;
+    gap: 50px;
   }
 }
 .videos__item {
@@ -1307,10 +1362,16 @@ section {
   width: 100%;
   height: 203px;
 }
+@media (max-width: 767px) {
+  .videos__item {
+    max-width: 100%;
+    height: 50vw;
+  }
+}
 .videos__item:nth-child(1) {
   margin-left: auto;
 }
-@media (max-width: 960px) {
+@media (max-width: 767px) {
   .videos__item:nth-child(1) {
     margin-left: 0;
   }
@@ -1318,7 +1379,7 @@ section {
 .videos__item:nth-child(2) {
   margin-top: -108px;
 }
-@media (max-width: 960px) {
+@media (max-width: 767px) {
   .videos__item:nth-child(2) {
     margin-top: 0;
   }
@@ -1338,13 +1399,13 @@ section {
   text-align: center;
   margin-top: 18px;
 }
-@media (max-width: 960px) {
+@media (max-width: 767px) {
   .videos__item-title {
     font-family: "TT Neoris Trial", sans-serif;
     font-weight: 900;
     font-size: 13px;
     line-height: 16px;
-    margin-top: 5px;
+    margin-top: 10px;
   }
 }
 
@@ -1353,7 +1414,7 @@ section {
   color: #141414;
   margin: 0 40px;
 }
-@media (max-width: 960px) {
+@media (max-width: 767px) {
   .reviews {
     margin: 0;
   }
@@ -1366,7 +1427,7 @@ section {
   display: flex;
   align-items: center;
 }
-@media (max-width: 960px) {
+@media (max-width: 767px) {
   .reviews__title {
     font-family: "TT Neoris Trial", sans-serif;
     font-weight: 900;
@@ -1381,7 +1442,7 @@ section {
 .reviews__logo {
   margin: 0 5px;
 }
-@media (max-width: 960px) {
+@media (max-width: 767px) {
   .reviews__logo {
     width: 26px;
     height: 26px;
@@ -1394,7 +1455,7 @@ section {
   padding: 0 80px;
   margin-top: 60px;
 }
-@media (max-width: 960px) {
+@media (max-width: 767px) {
   .reviews__slider {
     padding: 0 30px;
   }
@@ -1410,7 +1471,7 @@ section {
   height: 62px;
   cursor: pointer;
 }
-@media (max-width: 960px) {
+@media (max-width: 767px) {
   .reviews__slider-arrow {
     width: 19px;
     height: 38px;
@@ -1425,7 +1486,7 @@ section {
   height: 100%;
   background-image: url("./assets/images/arrow.svg");
 }
-@media (max-width: 960px) {
+@media (max-width: 767px) {
   .reviews__slider-arrow::before {
     background-size: 19px 38px;
   }
@@ -1497,7 +1558,7 @@ section {
   justify-content: center;
   align-items: flex-start;
 }
-@media (max-width: 960px) {
+@media (max-width: 767px) {
   .quote {
     flex-direction: column-reverse;
     gap: 25px;
@@ -1505,6 +1566,17 @@ section {
 }
 .quote__image {
   margin-right: 35px;
+  opacity: 0;
+  transform: translateY(50px);
+}
+@keyframes quoteImageAnimation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
 .quote__image img {
   display: block;
@@ -1516,9 +1588,26 @@ section {
   background-color: #FC9B59;
   margin-top: 15px;
   max-width: 500px;
+  transform: rotate(45deg);
+  transform-origin: bottom left;
+  opacity: 0;
 }
-@media (max-width: 960px) {
+@keyframes quoteBlockAnimation {
+  0% {
+    opacity: 0;
+  }
+  80% {
+    transform: rotate(-10deg);
+    opacity: 0.8;
+  }
+  100% {
+    transform: rotate(0);
+    opacity: 1;
+  }
+}
+@media (max-width: 767px) {
   .quote__block {
+    max-width: 100%;
     margin-top: 0;
     padding: 20px 20px 9px 30px;
   }
@@ -1530,10 +1619,16 @@ section {
   line-height: 20px;
   margin-top: 15px;
 }
-@media (max-width: 960px) {
+@media (max-width: 767px) {
   .quote__name {
     margin-top: 5px;
   }
+}
+.quote.active .quote__image {
+  animation: quoteImageAnimation 500ms forwards;
+}
+.quote.active .quote__block {
+  animation: quoteBlockAnimation 500ms forwards;
 }
 
 .footer {
@@ -1542,7 +1637,7 @@ section {
   border: 1px solid #141414;
   border-radius: 25px;
 }
-@media (max-width: 960px) {
+@media (max-width: 767px) {
   .footer {
     padding: 30px 0 60px;
   }
@@ -1550,28 +1645,31 @@ section {
 .footer__wrapper {
   display: flex;
   justify-content: space-between;
+  align-items: flex-start;
 }
-@media (max-width: 960px) {
+@media (max-width: 767px) {
   .footer__wrapper {
-    flex-direction: column;
+    flex-wrap: wrap;
     gap: 60px;
   }
 }
-@media (max-width: 960px) {
+@media (max-width: 767px) {
   .footer__logo {
     display: none;
   }
 }
-.footer__logo video {
+.footer__logo img {
   width: 100%;
   height: 100%;
+  object-fit: contain;
 }
 .footer__column {
   margin-left: 25px;
 }
-@media (max-width: 960px) {
+@media (max-width: 767px) {
   .footer__column {
     margin-left: 0;
+    flex: 1 0 300px;
   }
 }
 .footer__title {
@@ -1583,12 +1681,12 @@ section {
 .footer__text {
   margin-top: 27px;
 }
-@media (max-width: 960px) {
+@media (max-width: 767px) {
   .footer__text {
     margin-top: 20px;
   }
 }
-@media (max-width: 960px) {
+@media (max-width: 767px) {
   .footer__text br {
     display: none;
   }
@@ -1599,7 +1697,7 @@ section {
   gap: 15px 25px;
   margin-top: 25px;
 }
-@media (max-width: 960px) {
+@media (max-width: 767px) {
   .footer__social {
     margin-top: 20px;
   }
@@ -1614,7 +1712,7 @@ section {
 .footer__social-item img {
   object-fit: contain;
 }
-@media (max-width: 960px) {
+@media (max-width: 767px) {
   .footer__contacts-wrapper {
     display: flex;
   }
@@ -1622,11 +1720,13 @@ section {
 .footer__contacts-wrapper .footer__logo {
   display: none;
 }
-@media (max-width: 960px) {
+@media (max-width: 767px) {
   .footer__contacts-wrapper .footer__logo {
     display: block;
     align-self: flex-end;
-    margin-left: 15px;
+    max-width: 150px;
+    margin-top: 20px;
+    margin-left: auto;
   }
 }
 .footer__contacts {
@@ -1635,7 +1735,7 @@ section {
   gap: 40px 0;
   margin-top: 25px;
 }
-@media (max-width: 960px) {
+@media (max-width: 767px) {
   .footer__contacts {
     gap: 30px 0;
   }
@@ -1653,7 +1753,7 @@ section {
   width: 33px;
   height: 33px;
 }
-@media (max-width: 960px) {
+@media (max-width: 767px) {
   .footer__contact-icon {
     margin-right: 16px;
   }
@@ -1674,7 +1774,7 @@ section {
   align-items: center;
   justify-content: space-between;
 }
-@media (max-width: 960px) {
+@media (max-width: 767px) {
   .copyright__wrapper {
     flex-direction: column;
     gap: 20px 0;
@@ -1697,8 +1797,9 @@ section {
   margin-top: 95px;
   overflow: hidden;
   display: flex;
+  margin-bottom: -100px;
 }
-@media (max-width: 960px) {
+@media (max-width: 767px) {
   .callback {
     height: auto;
   }
@@ -1707,7 +1808,7 @@ section {
   display: flex;
   align-items: flex-start;
 }
-@media (max-width: 960px) {
+@media (max-width: 767px) {
   .callback__wrapper {
     display: block;
   }
@@ -1718,7 +1819,7 @@ section {
   font-size: 30px;
   line-height: 36px;
 }
-@media (max-width: 960px) {
+@media (max-width: 767px) {
   .callback__text {
     font-family: "TT Neoris Trial", sans-serif;
     font-weight: 900;
@@ -1738,7 +1839,7 @@ section {
   background-position: bottom right;
   background-repeat: no-repeat;
 }
-@media (max-width: 960px) {
+@media (max-width: 767px) {
   .callback__bubble {
     padding: 27px 52px;
     top: 0;
@@ -1748,9 +1849,9 @@ section {
   align-self: self-end;
   min-width: 418px;
   margin-right: -140px;
-  margin-left: 50px;
+  margin-left: 30px;
 }
-@media (max-width: 960px) {
+@media (max-width: 767px) {
   .callback__image {
     position: relative;
     max-width: 281px;
@@ -1761,16 +1862,18 @@ section {
     min-width: auto;
   }
 }
-.callback__image video {
+.callback__image img {
   width: 100%;
 }
 .callback__button {
   margin-top: 20px;
 }
 .callback__button:hover {
-  background-color: #F3EAD4;
+  background-color: #141414;
+  border-color: #F3EAD4;
+  color: #F3EAD4;
 }
-@media (max-width: 960px) {
+@media (max-width: 767px) {
   .callback__button {
     position: absolute;
     bottom: -62px;
@@ -1781,7 +1884,7 @@ section {
 .form {
   margin: 45px 0;
 }
-@media (max-width: 960px) {
+@media (max-width: 767px) {
   .form {
     margin-top: -50px;
   }
@@ -1794,7 +1897,7 @@ section {
   border-radius: 25px;
   padding: 33px 62px;
 }
-@media (max-width: 960px) {
+@media (max-width: 767px) {
   .form__wrapper {
     margin: 0;
     max-width: 100%;
@@ -1807,7 +1910,7 @@ section {
   grid-template-columns: repeat(2, 1fr);
   gap: 20px 45px;
 }
-@media (max-width: 960px) {
+@media (max-width: 767px) {
   .form__fields {
     grid-template-columns: 1fr;
   }
@@ -1819,11 +1922,16 @@ section {
 .form__policy {
   margin-top: 24px;
 }
-@media (max-width: 960px) {
+@media (max-width: 767px) {
   .form__policy {
     max-width: 250px;
     text-align: center;
   }
+}
+.form__policy-link {
+  text-decoration: underline;
+  display: inline;
+  cursor: pointer;
 }
 
 .input-field {
@@ -2173,7 +2281,7 @@ section {
   line-height: 36px;
   margin-bottom: 10px;
 }
-@media (max-width: 960px) {
+@media (max-width: 767px) {
   .popup-overlay .popup-policy__top-title {
     font-family: "TT Neoris Trial", sans-serif;
     font-weight: 900;
@@ -2192,7 +2300,7 @@ section {
   line-height: 30px;
   margin: 10px 0;
 }
-@media (max-width: 960px) {
+@media (max-width: 767px) {
   .popup-overlay .popup-policy__title {
     font-family: "TT Neoris Trial", sans-serif;
     font-weight: 900;
@@ -2245,7 +2353,7 @@ section {
   z-index: 10000;
   opacity: 0;
 }
-@media (max-width: 960px) {
+@media (max-width: 767px) {
   .popup-overlay {
     padding: 10px;
   }
@@ -2284,7 +2392,7 @@ section {
   line-height: 36px;
   margin-bottom: 10px;
 }
-@media (max-width: 960px) {
+@media (max-width: 767px) {
   .popup-overlay .popup-personal__top-title {
     font-family: "TT Neoris Trial", sans-serif;
     font-weight: 900;
@@ -2336,14 +2444,71 @@ section {
   display: flex;
 }
 
+.popup-overlay {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.3764705882);
+  z-index: 10000;
+}
+.popup-overlay .popup-shark {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  max-width: 960px;
+  width: 100%;
+  background-color: #4D4D4D;
+  border-radius: 25px;
+  padding: 27px 28px;
+  color: #F3EAD4;
+  max-height: 90vh;
+}
+.popup-overlay .popup-shark__close {
+  position: absolute;
+  top: 19px;
+  right: 19px;
+  cursor: pointer;
+  width: 23px;
+  height: 23px;
+}
+.popup-overlay .popup-shark__close::before, .popup-overlay .popup-shark__close::after {
+  content: "";
+  position: absolute;
+  width: 3px;
+  height: 100%;
+  background-color: #F3EAD4;
+}
+.popup-overlay .popup-shark__close::before {
+  transform: rotate(45deg);
+}
+.popup-overlay .popup-shark__close::after {
+  transform: rotate(-45deg);
+}
+.popup-overlay .popup-shark__content {
+  margin-top: 30px;
+}
+.popup-overlay .popup-shark__content img {
+  width: 100%;
+  object-fit: contain;
+}
+.popup-overlay.active {
+  display: flex;
+}
+
 .privilege {
   display: flex;
   margin-top: 130px;
   flex-wrap: wrap;
   gap: 23px;
 }
-@media (max-width: 960px) {
+@media (max-width: 767px) {
   .privilege {
+    flex-direction: column;
     margin-top: 80px;
   }
 }
@@ -2353,7 +2518,7 @@ section {
   font-size: 30px;
   line-height: 36px;
 }
-@media (max-width: 960px) {
+@media (max-width: 767px) {
   .privilege__title {
     font-family: "TT Neoris Trial", sans-serif;
     font-weight: 900;
@@ -2363,9 +2528,10 @@ section {
 }
 .privilege__containers {
   display: flex;
+  flex-wrap: wrap;
   gap: 26px;
 }
-@media (max-width: 960px) {
+@media (max-width: 767px) {
   .privilege__containers {
     flex-direction: column;
   }
@@ -2376,13 +2542,14 @@ section {
   background-color: #A6CC9E;
   top: 0;
   left: 0;
-  max-width: 362px;
+  flex: 1 0 362px;
   width: 100%;
   border-radius: 25px;
   padding: 20px 44px 13px 33px;
 }
-@media (max-width: 960px) {
+@media (max-width: 767px) {
   .privilege__item {
+    max-width: 100%;
     padding: 14px 24px 21px;
   }
 }
@@ -2396,7 +2563,7 @@ section {
   background-position: top;
   background-repeat: no-repeat;
 }
-@media (max-width: 960px) {
+@media (max-width: 767px) {
   .privilege__item:nth-child(2) {
     background-image: url("./assets/images/pattern-workout.svg");
     background-position: top right;
@@ -2407,7 +2574,7 @@ section {
   background-position: top left;
   background-repeat: no-repeat;
 }
-@media (max-width: 960px) {
+@media (max-width: 767px) {
   .privilege__item:nth-child(3) {
     background-image: url("./assets/images/pattern-workout.svg");
     background-position: top right;
@@ -2420,7 +2587,7 @@ section {
   line-height: 36px;
   margin: 17px 0 6px;
 }
-@media (max-width: 960px) {
+@media (max-width: 767px) {
   .privilege__headline {
     font-family: "TT Neoris Trial", sans-serif;
     font-weight: 900;
