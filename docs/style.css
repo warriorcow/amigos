@@ -914,10 +914,17 @@ section {
   border: 2px solid #000000;
   border-radius: 25px;
   overflow: hidden;
+  background-image: url("./assets/images/pattern-offers.svg");
+  background-size: auto;
+  background-repeat: no-repeat;
+  background-position: right top;
 }
 @media (max-width: 767px) {
   .requirements-and-suggestions__wrapper {
     flex-direction: column;
+    background-size: 100%;
+    background-position: 100% 47%;
+    background-image: url("./assets/images/pattern-requirements-orange-mobile.svg");
   }
 }
 .requirements-and-suggestions__wrapper .requirements-and-suggestions__title {
@@ -1029,16 +1036,9 @@ section {
 .requirements-and-suggestions__right {
   max-width: 550px;
   padding: 37px 90px 42px 54px;
-  background-image: url("./assets/images/pattern-offers.svg");
-  background-size: auto;
-  background-repeat: no-repeat;
-  background-position: right top;
 }
 @media (max-width: 767px) {
   .requirements-and-suggestions__right {
-    background-size: 100%;
-    background-position: center top;
-    background-image: url("./assets/images/pattern-requirements-orange-mobile.svg");
     max-width: 100%;
     margin: -100px auto 0;
     padding: 118px 40px 55px 40px;
@@ -1394,11 +1394,11 @@ section {
 }
 @media (max-width: 767px) {
   .videos {
+    background-image: url("./assets/images/pattern-youtube-mobile.svg");
     padding-top: 84px;
     padding-bottom: 120px;
-    background-position: 370px 0;
+    background-position: top right;
     background-repeat: no-repeat;
-    background-size: 200px;
   }
 }
 .videos__title {
@@ -2038,10 +2038,10 @@ section {
   transform: translateY(-50%);
 }
 .input-field__label::after {
+  display: none;
   position: relative;
   top: -3px;
   left: 0;
-  display: inline-block;
   content: "*";
   font-size: 14px;
   color: #FB7C26;
@@ -2059,14 +2059,18 @@ section {
 }
 .input-field__input:focus {
   outline: none;
+  border-color: #141414;
 }
 .input-field__input::placeholder {
   color: transparent;
 }
-.input-field__input:invalid:focus {
+.input-field__input.invalid {
   border-color: red;
 }
-.input-field__input:focus + .input-field__label, .input-field__input:valid + .input-field__label, .input-field__input:disabled + .input-field__label {
+.input-field__input.required + .input-field__label::after {
+  display: inline-block;
+}
+.input-field__input:focus + .input-field__label, .input-field__input.valid + .input-field__label {
   display: none;
 }
 
@@ -2074,6 +2078,21 @@ section {
   position: relative;
 }
 .select__input {
+  display: none;
+}
+.select__input.invalid ~ .select__btn {
+  border-color: red;
+}
+.select__input.invalid ~ .select__options {
+  border-color: red;
+}
+.select__input.required ~ .select__btn .select__btn-text::after {
+  display: inline-block;
+}
+.select__input.valid ~ .select__btn .select__btn-text {
+  color: #141414;
+}
+.select__input.valid ~ .select__btn .select__btn-text::after {
   display: none;
 }
 .select__arrow {
@@ -2102,7 +2121,7 @@ section {
   position: relative;
   top: -3px;
   left: 0;
-  display: inline-block;
+  display: none;
   content: "*";
   font-size: 14px;
   color: #FB7C26;

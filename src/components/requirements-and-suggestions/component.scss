@@ -46,9 +46,16 @@
     border: 2px solid $black;
     border-radius: 25px;
     overflow: hidden;
+    background-image: url('./assets/images/pattern-offers.svg');
+    background-size: auto;
+    background-repeat: no-repeat;
+    background-position: right top;
 
     @include mobile {
       flex-direction: column;
+      background-size: 100%;
+      background-position: 100% 47%;
+      background-image: url('./assets/images/pattern-requirements-orange-mobile.svg');
     }
 
     #{$self}__title {
@@ -160,15 +167,9 @@
   &__right {
     max-width: 550px;
     padding: 37px 90px 42px 54px;
-    background-image: url('./assets/images/pattern-offers.svg');
-    background-size: auto;
-    background-repeat: no-repeat;
-    background-position: right top;
+
 
     @include mobile {
-      background-size: 100%;
-      background-position: center top;
-      background-image: url('./assets/images/pattern-requirements-orange-mobile.svg');
       max-width: 100%;
       margin: -100px auto 0;
       padding: 118px 40px 55px 40px;

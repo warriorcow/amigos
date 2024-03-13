@@ -12,7 +12,11 @@
     <div class="slider-item__text">
       @@text
     </div>
-    <div class="slider-item__more" onclick="openReviewModal(event)">
+    <div class="slider-item__more" onclick="openReviewModal({
+      name: '@@name',
+      text: '@@text',
+      photo: '@@photo'
+    })">
       Показать полностью
     </div>
   </div>

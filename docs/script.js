@@ -11,22 +11,80 @@ anchors.forEach(anchor => {
 
 const submitButton = document.querySelector('.form__button');
 
+const name = document.getElementById('name');
+const gipsyteam = document.getElementById('gipsyteam');
+const country = document.getElementById('country');
+const rooms = document.getElementById('rooms');
+const age = document.getElementById('age');
+const tracker = document.getElementById('tracker');
+const discord = document.getElementById('discord');
+const email = document.getElementById('email');
+const nickname = document.getElementById('nickname');
+const programs = document.getElementById('programs');
+const abi = document.getElementById('abi');
+const source = document.getElementById('source');
+const messenger = document.getElementById('messenger');
+const fund = document.getElementById('fund');
+const about = document.getElementById('about');
+
 if (submitButton){
-  submitButton.addEventListener('click', (e) => {
-    // e.preventDefault();
-
-    const form = document.forms.callbackForm,
-      formData = new FormData(form);
-
-    // TODO: Делай, что нужно
-    formData.forEach((value, key) => {
-      console.log(key +': '+ value);
+  [
+    name, gipsyteam,
+    country, rooms,
+    age, tracker,
+    discord, email,
+    nickname, programs,
+    abi, source,
+    messenger, fund,
+    about
+  ].forEach(input => {
+    input.addEventListener('input', ({target}) => {
+      if (target.value.length > 0) {
+        target.classList.add('valid')
+      } else {
+        target.classList.remove('valid')
+      }
     })
+  });
 
-    // openModal('#popup-thanks');
+  submitButton.addEventListener('click', (e) => {
+    e.preventDefault();
+
+    if (checkRequired([
+      name, gipsyteam,
+      country, rooms,
+      age, tracker,
+      discord, email,
+      nickname, programs,
+      abi, source,
+      messenger, fund,
+      about
+    ])) {
+      const form = document.forms.callbackForm,
+        formData = new FormData(form);
+
+      // TODO: Делай, что нужно
+      formData.forEach((value, key) => {
+        console.log(key +': '+ value);
+      })
+      openModal('#popup-thanks');
+    }
   })
 }
 
+function checkRequired(inputArr) {
+  let validInputs = [];
+  inputArr.forEach(function(input){
+    if (input.classList.contains('required') && input.value.trim() === ''){
+      input.classList.add('invalid')
+    } else {
+      input.classList.remove('invalid');
+      validInputs.push(true)
+    }
+  });
+
+  return validInputs.length === inputArr.length;
+}
 
 const hamburgerButtonElement = document.querySelector('.header__hamburger'),
       bannerElement = document.querySelector('.banner'),
@@ -98,36 +156,55 @@ if (animationElements.length) {
 }
 
 
+const sharkModal = document.getElementById('popup-shark');
+
 function openModal(id) {
+  const modalElement = document.querySelector(id);
   document.querySelector('body').classList.add('locked');
   document.querySelector('.header').classList.add('locked');
   document.querySelector('html').classList.add('locked');
-  document.querySelector(id).classList.add('active');
-  document.querySelector(id).style.opacity = 0;
-  document.querySelector(id).style.transition = '300ms ease-in-out';
-  document.querySelector(id).querySelector('div').style.transform = 'translateY(30%)';
-  document.querySelector(id).querySelector('div').style.transition = '300ms ease-in-out';
+  modalElement.classList.add('active');
+  modalElement.style.opacity = 0;
+  modalElement.style.transition = '300ms ease-in-out';
+  modalElement.querySelector('div').style.transform = 'translateY(30%)';
+  modalElement.querySelector('div').style.transition = '300ms ease-in-out';
   setTimeout(() => {
-    document.querySelector(id).style.opacity = 1;
-    document.querySelector(id).querySelector('div').style.transform = 'translateY(0)';
+    modalElement.style.opacity = 1;
+    modalElement.querySelector('div').style.transform = 'translateY(0)';
   }, 0);
-  document.querySelector(id).addEventListener('click', ({ target }) => {
+  modalElement.addEventListener('click', ({ target }) => {
     if (`#${target.id}` === id) {
       closeModal(id);
     }
   })
 }
 
+function openModalShark(image) {
+  const modalElement = document.querySelector('#popup-shark');
+  modalElement.querySelector('.popup-shark__image').src = image;
+
+  openModal('#popup-shark');
+}
+
 function closeModal(id) {
-  document.querySelector(id).style.opacity = 0;
-  document.querySelector(id).querySelector('div').style.transform = null;
+  const modalElement = document.querySelector(id);
+  modalElement.style.opacity = 0;
+  modalElement.querySelector('div').style.transform = null;
   setTimeout(() => {
-    document.querySelector(id).classList.remove('active');
+    modalElement.classList.remove('active');
     document.querySelector('body').classList.remove('locked');
     document.querySelector('html').classList.remove('locked');
     document.querySelector('.header').classList.remove('locked');
+
+    if (id === '#popup-reviews') {
+      const imageElement = document.querySelector('.popup-reviews__img-person');
+      if (imageElement) {
+        document.querySelector('.popup-reviews__img-person').remove();
+      }
+    }
   }, 500);
 }
+
 
 const quoteElement = document.querySelector('.quote');
 
@@ -153,7 +230,6 @@ document.addEventListener('DOMContentLoaded', () => {
         selectBtnTextElements = document.querySelectorAll('.select__btn-text'),
         selectShadowInputElements = document.querySelectorAll('.select__input');
 
-
   const ACTIVE_SELECT_CLASS = 'select--active',
         ACTIVE_SELECT_OPTION_CLASS = 'select-option--active',
         SELECT_OPTION_TEXT_CLASS= '.select-option__text';
@@ -171,7 +247,7 @@ document.addEventListener('DOMContentLoaded', () => {
       option.addEventListener('click', () => {
         const selectedOptionText = option.querySelector(SELECT_OPTION_TEXT_CLASS).innerText;
         const selectedOptionValue = option.dataset.value;
-
+        selectShadowInputElements[index].classList.add('valid')
         selectOptions.forEach(item => item.classList.remove(ACTIVE_SELECT_OPTION_CLASS));
         selectBtnText.innerText = selectedOptionText;
         selectShadowInput.setAttribute('value', selectedOptionValue);
@@ -216,20 +292,19 @@ if (swiperElement) {
   })
 }
 
-function openReviewModal({ target }) {
-  openModal('#popup-reviews');
-  document.querySelector('.popup-reviews__description-person').innerText
-    = target.previousElementSibling.innerText;
-  console.log(window.location.origin)
-  if (target.parentElement.previousElementSibling.querySelector('img').src !== `${window.location.origin}/`) {
+function openReviewModal({ name, text, photo }) {
+  document.querySelector('.popup-reviews__description-person').innerText = text;
+
+  if (photo !== `${window.location.origin}/` && photo.length) {
     const img = new Image();
-    img.src = target.parentElement.previousElementSibling.querySelector('img').src;
+    img.src = photo;
     img.classList.add('popup-reviews__img-person')
     document.querySelector('.popup-reviews__img').appendChild(img);
   }
 
-  document.querySelector('.popup-reviews__title-person').innerText
-    = target.parentElement.previousElementSibling.querySelector('.slider-item__name').innerText;
+  document.querySelector('.popup-reviews__title-person').innerText = name;
+
+  openModal('#popup-reviews');
 }
 
 const gifImages = document.querySelectorAll('[data-gif]');

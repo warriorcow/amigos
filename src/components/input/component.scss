@@ -1,4 +1,6 @@
 .input-field {
+  $self: &;
+
   @include fontUbuntu14;
 
   position: relative;
@@ -18,10 +20,10 @@
     transform: translateY(-50%);
 
     &::after {
+      display: none;
       position: relative;
       top: -3px;
       left: 0;
-      display: inline-block;
       content: "*";
       font-size: 14px;
       color: $pumpkinOrange;
@@ -39,20 +41,26 @@
 
     &:focus {
       outline: none;
+      border-color: $deepBlack;
     }
 
     &::placeholder {
       color: transparent;
     }
 
-    &:invalid:focus {
+    &.invalid {
       border-color: red;
+    }
+
+    &.required {
+      + #{$self}__label::after {
+        display: inline-block;
+      }
     }
   }
 
   &__input:focus + &__label,
-  &__input:valid + &__label,
-  &__input:disabled + &__label {
+  &__input.valid + &__label {
     display: none;
   }
 }

@@ -8,11 +8,11 @@
   background-repeat: no-repeat;
 
   @include mobile {
+    background-image: url('./assets/images/pattern-youtube-mobile.svg');
     padding-top: 84px;
     padding-bottom: 120px;
-    background-position: 370px 0;
+    background-position: top right;
     background-repeat: no-repeat;
-    background-size: 200px;
   }
 
   &__title {

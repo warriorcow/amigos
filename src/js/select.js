@@ -4,7 +4,6 @@ document.addEventListener('DOMContentLoaded', () => {
         selectBtnTextElements = document.querySelectorAll('.select__btn-text'),
         selectShadowInputElements = document.querySelectorAll('.select__input');
 
-
   const ACTIVE_SELECT_CLASS = 'select--active',
         ACTIVE_SELECT_OPTION_CLASS = 'select-option--active',
         SELECT_OPTION_TEXT_CLASS= '.select-option__text';
@@ -22,7 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
       option.addEventListener('click', () => {
         const selectedOptionText = option.querySelector(SELECT_OPTION_TEXT_CLASS).innerText;
         const selectedOptionValue = option.dataset.value;
-
+        selectShadowInputElements[index].classList.add('valid')
         selectOptions.forEach(item => item.classList.remove(ACTIVE_SELECT_OPTION_CLASS));
         selectBtnText.innerText = selectedOptionText;
         selectShadowInput.setAttribute('value', selectedOptionValue);

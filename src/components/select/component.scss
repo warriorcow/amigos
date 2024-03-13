@@ -5,6 +5,39 @@
 
   &__input {
     display: none;
+
+    &.invalid {
+
+      ~ #{$self}__btn {
+        border-color: red;
+      }
+
+      ~ #{$self}__options {
+        border-color: red;
+      }
+    }
+
+    &.required {
+      ~ #{$self}__btn {
+        #{$self}__btn-text {
+          &::after {
+            display: inline-block;
+          }
+        }
+      }
+    }
+
+    &.valid {
+      ~ #{$self}__btn {
+        #{$self}__btn-text {
+          color: $deepBlack;
+
+          &::after {
+            display: none;
+          }
+        }
+      }
+    }
   }
 
   &__arrow {
@@ -35,7 +68,7 @@
       position: relative;
       top: -3px;
       left: 0;
-      display: inline-block;
+      display: none;
       content: "*";
       font-size: 14px;
       color: $pumpkinOrange;
