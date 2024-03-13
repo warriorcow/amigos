@@ -28,11 +28,8 @@ const observer = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
     if (entry.isIntersecting) {
       headerElement.classList.add(ANIMATION_SLIDE_UP_CLASS);
-
-      // setTimeout(() => {
-        headerElement.classList.remove(ANIMATION_SLIDE_UP_CLASS);
-        headerElement.classList.remove(HEADER_FIXED_CLASS);
-      // }, 500);
+      headerElement.classList.remove(ANIMATION_SLIDE_UP_CLASS);
+      headerElement.classList.remove(HEADER_FIXED_CLASS);
     } else {
       headerElement.classList.add(HEADER_FIXED_CLASS);
     }

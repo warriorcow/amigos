@@ -35,5 +35,23 @@ document.addEventListener('DOMContentLoaded', () => {
         selectElements[index].classList.remove(ACTIVE_SELECT_CLASS);
       }
     });
+
+    const observer = new MutationObserver(function(mutations) {
+      mutations.forEach(function(mutation) {
+        if (mutation.type === "attributes") {
+          if (!mutation.target.value) {
+            selectOptions.forEach(option => {
+              option.classList.remove(ACTIVE_SELECT_OPTION_CLASS);
+            })
+            selectBtnTextElements[index].innerText = mutation.target.dataset.placeholder;
+          }
+        }
+      });
+    });
+
+    observer.observe(selectShadowInputElements[index], {
+      attributes: true //configure it to listen to attribute changes
+    })
   });
 })
+

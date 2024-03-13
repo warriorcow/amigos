@@ -25,13 +25,15 @@
   }
 
   &__boxes {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(310px, 1fr));
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
     gap: 18px 17px;
     flex: 1;
+    min-width: 640px;
 
     @include mobile {
-      grid-template-columns: 1fr;
+      min-width: 100%;
       gap: 16px;
     }
   }
@@ -47,11 +49,13 @@
     gap: 0 28px;
     padding: 16px 20px;
     max-height: 70px;
+    width: calc(50% - 9px);
 
     @include mobile {
       justify-content: space-between;
       padding: 15px 20px;
       text-align: right;
+      width: 100%;
     }
   }
 
@@ -62,9 +66,11 @@
     border-radius: 40px;
     position: relative;
     padding: 16px 20px;
+    width: calc(50% - 9px);
 
     @include mobile {
       padding: 15px 0;
+      width: 100%;
     }
 
     &-item {

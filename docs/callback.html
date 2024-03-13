@@ -32,7 +32,7 @@
                     </li>
                 </ul>
 
-                <a data-animate-bottom href="callback.html" class="button header__button">
+                <a href="callback.html" class="button header__button">
                     Подать заявку
                 </a>
 
@@ -77,32 +77,32 @@
         <form name="callbackForm" id="callbackForm" class="form__wrapper content">
             <div class="form__fields">
                 <div class="input-field">
-                    <input id="name" name="name" type="text" class="input-field__input">
+                    <input id="name" name="name" type="text" class="input-field__input required">
                     <label for="name" class="input-field__label input-field__label--required">Твое имя</label>
                 </div>
 
                 <div class="input-field">
-                    <input id="gipsyteam" name="gipsyteam" type="text" class="input-field__input">
+                    <input id="gipsyteam" name="gipsyteam" type="text" class="input-field__input required">
                     <label for="gipsyteam" class="input-field__label input-field__label--required">Gipsyteam</label>
                 </div>
 
                 <div class="input-field">
-                    <input id="country" name="country" type="text" class="input-field__input">
+                    <input id="country" name="country" type="text" class="input-field__input required">
                     <label for="country" class="input-field__label input-field__label--required">Страна проживания</label>
                 </div>
 
                 <div class="input-field">
-                    <input id="rooms" name="rooms" type="text" class="input-field__input">
+                    <input id="rooms" name="rooms" type="text" class="input-field__input required">
                     <label for="rooms" class="input-field__label input-field__label--required">Сколько румов ты играешь</label>
                 </div>
 
                 <div class="input-field">
-                    <input id="age" name="age" type="text" class="input-field__input">
+                    <input id="age" name="age" type="text" class="input-field__input required">
                     <label for="age" class="input-field__label input-field__label--required">Сколько тебе лет</label>
                 </div>
 
                 <div class="select">
-                    <input class="select__input" name="tracker" id="tracker" type="text">
+                    <input data-placeholder="Трекер" class="select__input required" name="tracker" id="tracker" type="text">
                     <div class="select__btn">
                         <span class="select__btn-text">Трекер</span>
                         <i class="select__arrow"></i>
@@ -126,22 +126,22 @@
                 </div>
 
                 <div class="input-field">
-                    <input id="discord" name="discord" type="text" class="input-field__input">
+                    <input id="discord" name="discord" type="text" class="input-field__input required">
                     <label for="discord" class="input-field__label input-field__label--required">Discord</label>
                 </div>
 
                 <div class="input-field">
-                    <input id="email" name="email" type="text" class="input-field__input">
+                    <input id="email" name="email" type="text" class="input-field__input required">
                     <label for="email" class="input-field__label input-field__label--required">E-mail</label>
                 </div>
 
                 <div class="input-field">
-                    <input id="nickname" name="nickname" type="text" class="input-field__input">
+                    <input id="nickname" name="nickname" type="text" class="input-field__input required">
                     <label for="nickname" class="input-field__label input-field__label--required">Никнейм в румах</label>
                 </div>
 
                 <div class="select">
-                    <input class="select__input" name="programs" id="programs" type="text">
+                    <input data-placeholder="Какими программами умеешь пользоваться" class="select__input required" name="programs" id="programs" type="text">
                     <div class="select__btn">
                         <span class="select__btn-text">Какими программами умеешь пользоваться</span>
                         <i class="select__arrow"></i>
@@ -165,27 +165,27 @@
                 </div>
 
                 <div class="input-field">
-                    <input id="abi" name="abi" type="text" class="input-field__input">
+                    <input id="abi" name="abi" type="text" class="input-field__input required">
                     <label for="abi" class="input-field__label input-field__label--required">Abi</label>
                 </div>
 
                 <div class="input-field">
-                    <input id="source" name="source" type="text" class="input-field__input">
+                    <input id="source" name="source" type="text" class="input-field__input required">
                     <label for="source" class="input-field__label input-field__label--required">Откуда узнал о нас</label>
                 </div>
 
                 <div class="input-field">
-                    <input id="messenger" name="messenger" type="text" class="input-field__input">
+                    <input id="messenger" name="messenger" type="text" class="input-field__input required">
                     <label for="messenger" class="input-field__label input-field__label--required">Мессенджер для связи</label>
                 </div>
 
                 <div class="input-field">
-                    <input id="fund" name="fund" type="text" class="input-field__input">
+                    <input id="fund" name="fund" type="text" class="input-field__input required">
                     <label for="fund" class="input-field__label input-field__label--required">Был ли в каком-нибудь фонде</label>
                 </div>
 
                 <div class="input-field">
-                    <input id="about" name="about" type="text" class="input-field__input">
+                    <input id="about" name="about" type="text" class="input-field__input required">
                     <label for="about" class="input-field__label input-field__label--required">Расскажи о себе и о твоей карьере в покере</label>
                 </div>
 
@@ -205,7 +205,8 @@
     <footer id="footer" class="footer">
         <div class="footer__wrapper content">
             <div data-animate-bottom class="footer__logo">
-                <img data-gif="./assets/images/cactus_4.gif" src="" alt="">
+                <img class="footer__logo-image" src="./assets/images/logo-image.svg" alt="">
+                <img class="footer__logo-text" src="./assets/images/logo-text.svg" alt="">
             </div>
             <div data-animate-bottom class="footer__column">
                 <div class="footer__title">
@@ -260,8 +261,9 @@
                             </a>
                         </div>
                     </div>
-                    <div class="footer__logo">
-                        <img data-gif="./assets/images/cactus_4.gif" src="" alt="">
+                    <div data-animate-bottom class="footer__logo">
+                        <img class="footer__logo-image" src="./assets/images/logo-image.svg" alt="">
+                        <img class="footer__logo-text" src="./assets/images/logo-text.svg" alt="">
                     </div>
                 </div>
             </div>

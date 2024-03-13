@@ -19,17 +19,47 @@
       flex-wrap: wrap;
       gap: 60px;
     }
+
+    & > #{$self}__logo {
+      @include mobile {
+        display: none;
+      }
+    }
   }
 
   &__logo {
-    @include mobile {
-      display: none;
-    }
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    min-width: 301px;
+    height: 305px;
 
-    img {
+    &-text {
+      position: absolute;
+      top: 0;
+      left: 0;
       width: 100%;
       height: 100%;
-      object-fit: contain;
+      animation: 6s animationLogoText infinite;
+
+      @keyframes animationLogoText {
+        20% {
+          transform: rotate(0deg);
+        }
+
+        50% {
+          transform: rotate(60deg);
+        }
+
+        60% {
+          transform: rotate(60deg);
+        }
+
+        100% {
+          transform: rotate(0deg);
+        }
+      }
     }
   }
 
@@ -92,11 +122,22 @@
       display: none;
 
       @include mobile {
-        display: block;
+        display: flex;
         align-self: flex-end;
-        max-width: 150px;
+        min-width: 120px;
+        max-width: 120px;
+        height: 120px;
+        width: 100%;
         margin-top: 20px;
-        margin-left: auto;
+        margin-left: 10px;
+        margin-right: auto;
+      }
+
+      &-image {
+        @include mobile {
+          width: 73px;
+          height: 85px;
+        }
       }
     }
   }

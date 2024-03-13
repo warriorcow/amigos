@@ -1,16 +1,26 @@
 const anchors = document.querySelectorAll('[data-anchor]');
 
+document.addEventListener('DOMContentLoaded', () => {
+  setTimeout(() => {
+    history.replaceState(null, null, ' ');
+  }, 10)
+})
 anchors.forEach(anchor => {
   anchor.addEventListener('click', () => {
-    const targetElement = document.querySelector(anchor.dataset.anchor)
-    targetElement.scrollIntoView({
-      behavior: 'smooth'
-    })
+    if (window.location.pathname === '/') {
+      const targetElement = document.querySelector(anchor.dataset.anchor)
+      targetElement.scrollIntoView({
+        behavior: 'smooth'
+      })
+    } else {
+      window.location.href = `/${anchor.dataset.anchor}`
+    }
   })
 })
 
 const submitButton = document.querySelector('.form__button');
-
+const formWrapper = document.querySelector('#callbackForm');
+const headerWrapper = document.querySelector('.header');
 const name = document.getElementById('name');
 const gipsyteam = document.getElementById('gipsyteam');
 const country = document.getElementById('country');
@@ -27,17 +37,19 @@ const messenger = document.getElementById('messenger');
 const fund = document.getElementById('fund');
 const about = document.getElementById('about');
 
+const allInputs = [
+  name, gipsyteam,
+  country, rooms,
+  age, tracker,
+  discord, email,
+  nickname, programs,
+  abi, source,
+  messenger, fund,
+  about
+]
+
 if (submitButton){
-  [
-    name, gipsyteam,
-    country, rooms,
-    age, tracker,
-    discord, email,
-    nickname, programs,
-    abi, source,
-    messenger, fund,
-    about
-  ].forEach(input => {
+  allInputs.forEach(input => {
     input.addEventListener('input', ({target}) => {
       if (target.value.length > 0) {
         target.classList.add('valid')
@@ -50,24 +62,22 @@ if (submitButton){
   submitButton.addEventListener('click', (e) => {
     e.preventDefault();
 
-    if (checkRequired([
-      name, gipsyteam,
-      country, rooms,
-      age, tracker,
-      discord, email,
-      nickname, programs,
-      abi, source,
-      messenger, fund,
-      about
-    ])) {
+    if (checkRequired(allInputs)) {
       const form = document.forms.callbackForm,
         formData = new FormData(form);
 
       // TODO: Делай, что нужно
-      formData.forEach((value, key) => {
-        console.log(key +': '+ value);
-      })
+      // formData.forEach((value, key) => {
+      //   console.log(key +': '+ value);
+      // })
+
       openModal('#popup-thanks');
+      clearInputs();
+    } else {
+      window.scrollTo({
+        top: formWrapper.offsetTop - headerWrapper.offsetHeight,
+        behavior: 'smooth'
+      })
     }
   })
 }
@@ -84,6 +94,14 @@ function checkRequired(inputArr) {
   });
 
   return validInputs.length === inputArr.length;
+}
+
+function clearInputs() {
+  allInputs.forEach(input => {
+    input.removeAttribute('value');
+    input.value = null;
+    input.classList.remove('valid');
+  })
 }
 
 const hamburgerButtonElement = document.querySelector('.header__hamburger'),
@@ -116,11 +134,8 @@ const observer = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
     if (entry.isIntersecting) {
       headerElement.classList.add(ANIMATION_SLIDE_UP_CLASS);
-
-      // setTimeout(() => {
-        headerElement.classList.remove(ANIMATION_SLIDE_UP_CLASS);
-        headerElement.classList.remove(HEADER_FIXED_CLASS);
-      // }, 500);
+      headerElement.classList.remove(ANIMATION_SLIDE_UP_CLASS);
+      headerElement.classList.remove(HEADER_FIXED_CLASS);
     } else {
       headerElement.classList.add(HEADER_FIXED_CLASS);
     }
@@ -261,8 +276,26 @@ document.addEventListener('DOMContentLoaded', () => {
         selectElements[index].classList.remove(ACTIVE_SELECT_CLASS);
       }
     });
+
+    const observer = new MutationObserver(function(mutations) {
+      mutations.forEach(function(mutation) {
+        if (mutation.type === "attributes") {
+          if (!mutation.target.value) {
+            selectOptions.forEach(option => {
+              option.classList.remove(ACTIVE_SELECT_OPTION_CLASS);
+            })
+            selectBtnTextElements[index].innerText = mutation.target.dataset.placeholder;
+          }
+        }
+      });
+    });
+
+    observer.observe(selectShadowInputElements[index], {
+      attributes: true //configure it to listen to attribute changes
+    })
   });
 })
+
 
 const swiperElement = document.querySelector('.swiper');
 

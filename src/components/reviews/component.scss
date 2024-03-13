@@ -39,9 +39,14 @@
     position: relative;
     padding: 0 80px;
     margin-top: 60px;
+    border-radius: 25px;
 
     @include mobile {
       padding: 0 30px;
+    }
+
+    .swiper {
+      border-radius: 25px;
     }
 
     .swiper-wrapper {

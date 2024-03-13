@@ -23,6 +23,7 @@
 
   &__description {
     margin-top: 16px;
+    max-width: 500px;
 
     @include mobile {
       margin-top: 22px;
