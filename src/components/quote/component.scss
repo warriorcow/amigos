@@ -22,7 +22,7 @@
       height: auto;
     }
 
-    @keyframes quoteImageAnimation {
+    @keyframes quoteImageUpAnimation {
       0% {
         opacity: 0;
       }
@@ -33,11 +33,29 @@
       }
     }
 
+    @keyframes quoteImageDownAnimation {
+      0% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      100% {
+        transform: translateY(-50px);
+        opacity: 0;
+      }
+    }
+
     img {
       display: block;
       width: 100%;
       height: 100%;
+      object-fit: contain;
     }
+  }
+
+  &__wrapper {
+    opacity: 0;
+    transition: opacity 800ms 700ms;
   }
 
   &__block {
@@ -47,23 +65,43 @@
     background-color: $coralOrange;
     margin-top: 15px;
     max-width: 500px;
-    transform: rotate(45deg);
+    min-height: 170px;
+    width: 100%;
+    transform: rotate(35deg) scale(0.5);
     transform-origin: bottom left;
     opacity: 0;
 
-    @keyframes quoteBlockAnimation {
+    @keyframes quoteBlockUpAnimation {
       0% {
         opacity: 0;
+        transform: rotate(25deg) scale(0.5);
       }
 
       80% {
-        transform: rotate(-10deg);
+        transform: rotate(-5deg) scale(1.05);
         opacity: 0.8;
       }
 
       100% {
-        transform: rotate(0);
+        transform: rotate(0) scale(1);
         opacity: 1;
+      }
+    }
+
+    @keyframes quoteBlockDownAnimation {
+      0% {
+        transform: rotate(0) scale(1);
+        opacity: 1;
+      }
+
+      20% {
+        transform: rotate(10deg) scale(1.05);
+        opacity: 0.8;
+      }
+
+      100% {
+        opacity: 0;
+        transform: rotate(-25deg) scale(0.5);
       }
     }
 
@@ -86,11 +124,30 @@
 
   &.active {
     #{$self}__image {
-      animation: quoteImageAnimation 500ms forwards;
+      animation: quoteImageUpAnimation 800ms forwards;
     }
 
     #{$self}__block {
-      animation: quoteBlockAnimation 500ms forwards;
+      animation: quoteBlockUpAnimation 800ms forwards;
+    }
+
+    #{$self}__wrapper {
+      opacity: 1;
+    }
+  }
+
+  &.disable {
+    #{$self}__image {
+      animation: quoteImageDownAnimation 800ms forwards;
+    }
+
+    #{$self}__block {
+      animation: quoteBlockDownAnimation 800ms forwards;
+    }
+
+    #{$self}__wrapper {
+      opacity: 0;
+      transition-delay: 0s;
     }
   }
 }

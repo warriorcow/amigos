@@ -1183,17 +1183,32 @@
             </div>
         </div>
 
-        <div class="quote content">
+        <div class="quote content" data-quotes='[
+  {
+    "text": "Привет1",
+    "name": "Петр 1",
+    "image": "./assets/images/cactus-quote.svg"
+  },
+  {
+    "text": "Привет2 Привет2 Привет2 Привет2 Привет2 Привет2",
+    "name": "Петр 2",
+    "image": "./assets/images/kirill.png"
+  },
+  {
+    "text": "Привет3",
+    "name": "Петр 3",
+    "image": "./assets/images/artem.png"
+  }
+]'>
             <div class="quote__image">
                 <img src="./assets/images/cactus-quote.svg" alt="">
             </div>
             <div class="quote__block">
-                <div class="quote__text">
-                    Цитата от основателя:
-                    sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                </div>
-                <div class="quote__name">
-                    Рауль "xRauIx"
+                <div class="quote__wrapper">
+                    <div class="quote__text">
+                    </div>
+                    <div class="quote__name">
+                    </div>
                 </div>
             </div>
         </div>
@@ -1268,7 +1283,7 @@
         <div id="popup-thanks" class="popup-overlay">
             <div class="popup">
                 <div class="popup__content">
-                    <span class="popup__close" onclick="closeModal('#popup-thanks')"></span>
+                    <span class="popup__close" onclick="location.reload()"></span>
                     <img class="popup__img" src="./assets/images/popup-logo.svg" alt="">
                     <div class="popup__title">Заявка принята!</div>
                     <div class="popup__description">Рассмотрение может занять до 3 дней</div>

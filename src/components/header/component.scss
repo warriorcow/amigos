@@ -159,11 +159,10 @@
 
   &--fixed {
     position: fixed;
-    border: 2px solid $deepBlack;
+    box-shadow: inset 0 0 0 2px $deepBlack;
     border-radius: 40px;
     background-color: $skyBlue;
     animation: slideInDown 200ms forwards ease-in-out;
-    overflow: hidden;
 
     @keyframes slideInDown {
       0% {

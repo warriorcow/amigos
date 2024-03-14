@@ -390,11 +390,10 @@ section {
 }
 .header--fixed {
   position: fixed;
-  border: 2px solid #141414;
+  box-shadow: inset 0 0 0 2px #141414;
   border-radius: 40px;
   background-color: #8BB4C8;
   animation: slideInDown 200ms forwards ease-in-out;
-  overflow: hidden;
 }
 @keyframes slideInDown {
   0% {
@@ -1145,6 +1144,7 @@ section {
   line-height: 36px;
   margin-top: 36px;
   white-space: nowrap;
+  margin-bottom: 16px;
 }
 @media (max-width: 767px) {
   .card__name {
@@ -1157,8 +1157,8 @@ section {
   }
 }
 .card__description {
-  margin-top: 16px;
   max-width: 500px;
+  margin-bottom: 18px;
 }
 @media (max-width: 767px) {
   .card__description {
@@ -1167,10 +1167,8 @@ section {
 }
 .card__link {
   color: inherit;
-  margin-top: 18px;
   text-decoration: underline;
-  margin-bottom: auto;
-  padding-bottom: 20px;
+  margin-bottom: 20px;
 }
 .card--small {
   width: 230px;
@@ -1381,6 +1379,7 @@ section {
   width: 172px;
   padding: 0;
   height: 42px;
+  margin-top: auto;
 }
 @media (max-width: 767px) {
   .staff__button {
@@ -1660,7 +1659,7 @@ section {
     height: auto;
   }
 }
-@keyframes quoteImageAnimation {
+@keyframes quoteImageUpAnimation {
   0% {
     opacity: 0;
   }
@@ -1669,10 +1668,25 @@ section {
     opacity: 1;
   }
 }
+@keyframes quoteImageDownAnimation {
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+}
 .quote__image img {
   display: block;
   width: 100%;
   height: 100%;
+  object-fit: contain;
+}
+.quote__wrapper {
+  opacity: 0;
+  transition: opacity 800ms 700ms;
 }
 .quote__block {
   padding: 38px 68px 28px 72px;
@@ -1681,21 +1695,38 @@ section {
   background-color: #FC9B59;
   margin-top: 15px;
   max-width: 500px;
-  transform: rotate(45deg);
+  min-height: 170px;
+  width: 100%;
+  transform: rotate(35deg) scale(0.5);
   transform-origin: bottom left;
   opacity: 0;
 }
-@keyframes quoteBlockAnimation {
+@keyframes quoteBlockUpAnimation {
   0% {
     opacity: 0;
+    transform: rotate(25deg) scale(0.5);
   }
   80% {
-    transform: rotate(-10deg);
+    transform: rotate(-5deg) scale(1.05);
     opacity: 0.8;
   }
   100% {
-    transform: rotate(0);
+    transform: rotate(0) scale(1);
     opacity: 1;
+  }
+}
+@keyframes quoteBlockDownAnimation {
+  0% {
+    transform: rotate(0) scale(1);
+    opacity: 1;
+  }
+  20% {
+    transform: rotate(10deg) scale(1.05);
+    opacity: 0.8;
+  }
+  100% {
+    opacity: 0;
+    transform: rotate(-25deg) scale(0.5);
   }
 }
 @media (max-width: 767px) {
@@ -1718,10 +1749,23 @@ section {
   }
 }
 .quote.active .quote__image {
-  animation: quoteImageAnimation 500ms forwards;
+  animation: quoteImageUpAnimation 800ms forwards;
 }
 .quote.active .quote__block {
-  animation: quoteBlockAnimation 500ms forwards;
+  animation: quoteBlockUpAnimation 800ms forwards;
+}
+.quote.active .quote__wrapper {
+  opacity: 1;
+}
+.quote.disable .quote__image {
+  animation: quoteImageDownAnimation 800ms forwards;
+}
+.quote.disable .quote__block {
+  animation: quoteBlockDownAnimation 800ms forwards;
+}
+.quote.disable .quote__wrapper {
+  opacity: 0;
+  transition-delay: 0s;
 }
 
 .footer {

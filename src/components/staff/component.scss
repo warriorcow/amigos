@@ -2,7 +2,7 @@
   background-color: $darkGray;
   padding-top: 107px;
   color: $lightBeige;
-  
+
   background-image: url('./assets/images/pattern-staff_left.svg'), url('./assets/images/pattern-staff_right.svg');
   background-position: left top, right center;
   background-repeat: no-repeat, no-repeat;
@@ -67,6 +67,7 @@
     width: 172px;
     padding: 0;
     height: 42px;
+    margin-top: auto;
 
     @include mobile {
       padding: 8px 14px;
