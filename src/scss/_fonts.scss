@@ -1,54 +1,59 @@
 @font-face {
-  font-family: 'TT Neoris Trial';
-  src: url('./assets/fonts/tt-neoris/TT-Neoris-Trial-Black.ttf') format('truetype');
+  font-family: 'TT Neoris';
+  src:
+    local("TT Neoris"),
+    url("./assets/fonts/TTNeoris/otf/TT-Neoris-ExtraBold.otf") format("opentype"),
+    url("./assets/fonts/TTNeoris/woff/TT-Neoris-ExtraBold.woff") format("woff"),
+    url("./assets/fonts/TTNeoris/ttf/TT-Neoris-ExtraBold.ttf") format("truetype"),
+    url("./assets/fonts/TTNeoris/woff2/TT-Neoris-ExtraBold.woff2") format("woff2");
   font-weight: 900;
   font-style: normal;
 }
 
 @mixin fontTTNeoris40() {
-  font-family: "TT Neoris Trial", sans-serif;
+  font-family: "TT Neoris", Arial, sans-serif;
   font-weight: 900;
   font-size: 40px;
   line-height: 48px;
 }
 
 @mixin fontTTNeoris30() {
-  font-family: "TT Neoris Trial", sans-serif;
+  font-family: "TT Neoris", Arial, sans-serif;
   font-weight: 900;
   font-size: 30px;
   line-height: 36px;
 }
 
 @mixin fontTTNeoris24() {
-  font-family: "TT Neoris Trial", sans-serif;
+  font-family: "TT Neoris", Arial, sans-serif;
   font-weight: 900;
   font-size: 24px;
   line-height: 29px;
 }
 
 @mixin fontTTNeoris25() {
-  font-family: "TT Neoris Trial", sans-serif;
+  font-family: "TT Neoris", Arial, sans-serif;
   font-weight: 900;
   font-size: 25px;
   line-height: 30px;
 }
 
 @mixin fontTTNeoris20() {
-  font-family: "TT Neoris Trial", sans-serif;
+  font-family: "TT Neoris", Arial, sans-serif;
   font-weight: 900;
   font-size: 20px;
   line-height: 25px;
 }
 
 @mixin fontTTNeoris16() {
-  font-family: "TT Neoris Trial", sans-serif;
+  font-family: "TT Neoris", Arial, sans-serif;
   font-weight: 900;
   font-size: 16px;
   line-height: 20px;
 }
 
 @mixin fontTTNeoris13() {
-  font-family: "TT Neoris Trial", sans-serif;
+  font-family: "TT Neoris", Arial, sans-serif;
   font-weight: 900;
   font-size: 13px;
   line-height: 16px;

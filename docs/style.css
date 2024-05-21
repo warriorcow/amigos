@@ -1,7 +1,7 @@
 /* Variables */
 @font-face {
-  font-family: "TT Neoris Trial";
-  src: url("./assets/fonts/tt-neoris/TT-Neoris-Trial-Black.ttf") format("truetype");
+  font-family: "TT Neoris";
+  src: local("TT Neoris"), url("./assets/fonts/TTNeoris/otf/TT-Neoris-ExtraBold.otf") format("opentype"), url("./assets/fonts/TTNeoris/woff/TT-Neoris-ExtraBold.woff") format("woff"), url("./assets/fonts/TTNeoris/ttf/TT-Neoris-ExtraBold.ttf") format("truetype"), url("./assets/fonts/TTNeoris/woff2/TT-Neoris-ExtraBold.woff2") format("woff2");
   font-weight: 900;
   font-style: normal;
 }
@@ -293,7 +293,7 @@ section {
 }
 @media (max-width: 767px) {
   .header__menu {
-    font-family: "TT Neoris Trial", sans-serif;
+    font-family: "TT Neoris", Arial, sans-serif;
     font-weight: 900;
     font-size: 24px;
     line-height: 29px;
@@ -485,7 +485,7 @@ section {
   }
 }
 .banner__title {
-  font-family: "TT Neoris Trial", sans-serif;
+  font-family: "TT Neoris", Arial, sans-serif;
   font-weight: 900;
   font-size: 40px;
   line-height: 48px;
@@ -493,7 +493,7 @@ section {
 }
 @media (max-width: 767px) {
   .banner__title {
-    font-family: "TT Neoris Trial", sans-serif;
+    font-family: "TT Neoris", Arial, sans-serif;
     font-weight: 900;
     font-size: 24px;
     line-height: 29px;
@@ -657,14 +657,14 @@ section {
   }
 }
 .results__title {
-  font-family: "TT Neoris Trial", sans-serif;
+  font-family: "TT Neoris", Arial, sans-serif;
   font-weight: 900;
   font-size: 30px;
   line-height: 36px;
 }
 @media (max-width: 767px) {
   .results__title {
-    font-family: "TT Neoris Trial", sans-serif;
+    font-family: "TT Neoris", Arial, sans-serif;
     font-weight: 900;
     font-size: 24px;
     line-height: 29px;
@@ -799,14 +799,14 @@ section {
   }
 }
 .statistics__box-value {
-  font-family: "TT Neoris Trial", sans-serif;
+  font-family: "TT Neoris", Arial, sans-serif;
   font-weight: 900;
   font-size: 30px;
   line-height: 36px;
 }
 @media (max-width: 767px) {
   .statistics__box-value {
-    font-family: "TT Neoris Trial", sans-serif;
+    font-family: "TT Neoris", Arial, sans-serif;
     font-weight: 900;
     font-size: 25px;
     line-height: 30px;
@@ -822,14 +822,14 @@ section {
   }
 }
 .advantages__title {
-  font-family: "TT Neoris Trial", sans-serif;
+  font-family: "TT Neoris", Arial, sans-serif;
   font-weight: 900;
   font-size: 30px;
   line-height: 36px;
 }
 @media (max-width: 767px) {
   .advantages__title {
-    font-family: "TT Neoris Trial", sans-serif;
+    font-family: "TT Neoris", Arial, sans-serif;
     font-weight: 900;
     font-size: 25px;
     line-height: 30px;
@@ -880,7 +880,7 @@ section {
   }
 }
 .requirements-and-suggestions__header {
-  font-family: "TT Neoris Trial", sans-serif;
+  font-family: "TT Neoris", Arial, sans-serif;
   font-weight: 900;
   font-size: 30px;
   line-height: 36px;
@@ -889,7 +889,7 @@ section {
 }
 @media (max-width: 767px) {
   .requirements-and-suggestions__header {
-    font-family: "TT Neoris Trial", sans-serif;
+    font-family: "TT Neoris", Arial, sans-serif;
     font-weight: 900;
     font-size: 25px;
     line-height: 30px;
@@ -903,7 +903,7 @@ section {
 }
 @media (max-width: 767px) {
   .requirements-and-suggestions__title:nth-child(2) {
-    font-family: "TT Neoris Trial", sans-serif;
+    font-family: "TT Neoris", Arial, sans-serif;
     font-weight: 900;
     font-size: 25px;
     line-height: 30px;
@@ -933,7 +933,7 @@ section {
   }
 }
 .requirements-and-suggestions__wrapper .requirements-and-suggestions__title {
-  font-family: "TT Neoris Trial", sans-serif;
+  font-family: "TT Neoris", Arial, sans-serif;
   font-weight: 900;
   font-size: 25px;
   line-height: 30px;
@@ -1104,7 +1104,7 @@ section {
   z-index: 1;
 }
 .founders__title {
-  font-family: "TT Neoris Trial", sans-serif;
+  font-family: "TT Neoris", Arial, sans-serif;
   font-weight: 900;
   font-size: 30px;
   line-height: 36px;
@@ -1138,7 +1138,7 @@ section {
   text-align: center;
 }
 .card__name {
-  font-family: "TT Neoris Trial", sans-serif;
+  font-family: "TT Neoris", Arial, sans-serif;
   font-weight: 900;
   font-size: 30px;
   line-height: 36px;
@@ -1148,7 +1148,7 @@ section {
 }
 @media (max-width: 767px) {
   .card__name {
-    font-family: "TT Neoris Trial", sans-serif;
+    font-family: "TT Neoris", Arial, sans-serif;
     font-weight: 900;
     font-size: 25px;
     line-height: 30px;
@@ -1179,14 +1179,14 @@ section {
   }
 }
 .card--small .card__name {
-  font-family: "TT Neoris Trial", sans-serif;
+  font-family: "TT Neoris", Arial, sans-serif;
   font-weight: 900;
   font-size: 16px;
   line-height: 20px;
 }
 @media (max-width: 767px) {
   .card--small .card__name {
-    font-family: "TT Neoris Trial", sans-serif;
+    font-family: "TT Neoris", Arial, sans-serif;
     font-weight: 900;
     font-size: 13px;
     line-height: 16px;
@@ -1349,7 +1349,7 @@ section {
   }
 }
 .staff__title {
-  font-family: "TT Neoris Trial", sans-serif;
+  font-family: "TT Neoris", Arial, sans-serif;
   font-weight: 900;
   font-size: 30px;
   line-height: 36px;
@@ -1358,7 +1358,7 @@ section {
 }
 @media (max-width: 767px) {
   .staff__title {
-    font-family: "TT Neoris Trial", sans-serif;
+    font-family: "TT Neoris", Arial, sans-serif;
     font-weight: 900;
     font-size: 25px;
     line-height: 30px;
@@ -1408,7 +1408,7 @@ section {
   }
 }
 .videos__title {
-  font-family: "TT Neoris Trial", sans-serif;
+  font-family: "TT Neoris", Arial, sans-serif;
   font-weight: 900;
   font-size: 30px;
   line-height: 36px;
@@ -1417,7 +1417,7 @@ section {
 }
 @media (max-width: 767px) {
   .videos__title {
-    font-family: "TT Neoris Trial", sans-serif;
+    font-family: "TT Neoris", Arial, sans-serif;
     font-weight: 900;
     font-size: 25px;
     line-height: 30px;
@@ -1470,7 +1470,7 @@ section {
   overflow: hidden;
 }
 .videos__item-title {
-  font-family: "TT Neoris Trial", sans-serif;
+  font-family: "TT Neoris", Arial, sans-serif;
   font-weight: 900;
   font-size: 16px;
   line-height: 20px;
@@ -1479,7 +1479,7 @@ section {
 }
 @media (max-width: 767px) {
   .videos__item-title {
-    font-family: "TT Neoris Trial", sans-serif;
+    font-family: "TT Neoris", Arial, sans-serif;
     font-weight: 900;
     font-size: 13px;
     line-height: 16px;
@@ -1498,7 +1498,7 @@ section {
   }
 }
 .reviews__title {
-  font-family: "TT Neoris Trial", sans-serif;
+  font-family: "TT Neoris", Arial, sans-serif;
   font-weight: 900;
   font-size: 30px;
   line-height: 36px;
@@ -1507,7 +1507,7 @@ section {
 }
 @media (max-width: 767px) {
   .reviews__title {
-    font-family: "TT Neoris Trial", sans-serif;
+    font-family: "TT Neoris", Arial, sans-serif;
     font-weight: 900;
     font-size: 25px;
     line-height: 30px;
@@ -1739,7 +1739,7 @@ section {
   }
 }
 .quote__name {
-  font-family: "TT Neoris Trial", sans-serif;
+  font-family: "TT Neoris", Arial, sans-serif;
   font-weight: 900;
   font-size: 16px;
   line-height: 20px;
@@ -1837,7 +1837,7 @@ section {
   }
 }
 .footer__title {
-  font-family: "TT Neoris Trial", sans-serif;
+  font-family: "TT Neoris", Arial, sans-serif;
   font-weight: 900;
   font-size: 30px;
   line-height: 36px;
@@ -1988,14 +1988,14 @@ section {
   }
 }
 .callback__text {
-  font-family: "TT Neoris Trial", sans-serif;
+  font-family: "TT Neoris", Arial, sans-serif;
   font-weight: 900;
   font-size: 30px;
   line-height: 36px;
 }
 @media (max-width: 767px) {
   .callback__text {
-    font-family: "TT Neoris Trial", sans-serif;
+    font-family: "TT Neoris", Arial, sans-serif;
     font-weight: 900;
     font-size: 25px;
     line-height: 30px;
@@ -2294,7 +2294,7 @@ section {
   padding-bottom: 34px;
 }
 .popup-overlay .popup__title {
-  font-family: "TT Neoris Trial", sans-serif;
+  font-family: "TT Neoris", Arial, sans-serif;
   font-weight: 900;
   font-size: 30px;
   line-height: 36px;
@@ -2474,7 +2474,7 @@ section {
   border-radius: 30px;
 }
 .popup-overlay .popup-policy__top-title {
-  font-family: "TT Neoris Trial", sans-serif;
+  font-family: "TT Neoris", Arial, sans-serif;
   font-weight: 900;
   font-size: 30px;
   line-height: 36px;
@@ -2482,7 +2482,7 @@ section {
 }
 @media (max-width: 767px) {
   .popup-overlay .popup-policy__top-title {
-    font-family: "TT Neoris Trial", sans-serif;
+    font-family: "TT Neoris", Arial, sans-serif;
     font-weight: 900;
     font-size: 20px;
     line-height: 25px;
@@ -2493,7 +2493,7 @@ section {
   align-items: center;
 }
 .popup-overlay .popup-policy__title {
-  font-family: "TT Neoris Trial", sans-serif;
+  font-family: "TT Neoris", Arial, sans-serif;
   font-weight: 900;
   font-size: 25px;
   line-height: 30px;
@@ -2501,7 +2501,7 @@ section {
 }
 @media (max-width: 767px) {
   .popup-overlay .popup-policy__title {
-    font-family: "TT Neoris Trial", sans-serif;
+    font-family: "TT Neoris", Arial, sans-serif;
     font-weight: 900;
     font-size: 20px;
     line-height: 25px;
@@ -2588,7 +2588,7 @@ section {
   border-radius: 30px;
 }
 .popup-overlay .popup-personal__top-title {
-  font-family: "TT Neoris Trial", sans-serif;
+  font-family: "TT Neoris", Arial, sans-serif;
   font-weight: 900;
   font-size: 30px;
   line-height: 36px;
@@ -2596,7 +2596,7 @@ section {
 }
 @media (max-width: 767px) {
   .popup-overlay .popup-personal__top-title {
-    font-family: "TT Neoris Trial", sans-serif;
+    font-family: "TT Neoris", Arial, sans-serif;
     font-weight: 900;
     font-size: 20px;
     line-height: 25px;
@@ -2608,7 +2608,7 @@ section {
   align-items: center;
 }
 .popup-overlay .popup-personal__title {
-  font-family: "TT Neoris Trial", sans-serif;
+  font-family: "TT Neoris", Arial, sans-serif;
   font-weight: 900;
   font-size: 25px;
   line-height: 30px;
@@ -2721,14 +2721,14 @@ section {
   }
 }
 .privilege__title {
-  font-family: "TT Neoris Trial", sans-serif;
+  font-family: "TT Neoris", Arial, sans-serif;
   font-weight: 900;
   font-size: 30px;
   line-height: 36px;
 }
 @media (max-width: 767px) {
   .privilege__title {
-    font-family: "TT Neoris Trial", sans-serif;
+    font-family: "TT Neoris", Arial, sans-serif;
     font-weight: 900;
     font-size: 25px;
     line-height: 30px;
@@ -2789,7 +2789,7 @@ section {
   }
 }
 .privilege__headline {
-  font-family: "TT Neoris Trial", sans-serif;
+  font-family: "TT Neoris", Arial, sans-serif;
   font-weight: 900;
   font-size: 30px;
   line-height: 36px;
@@ -2797,7 +2797,7 @@ section {
 }
 @media (max-width: 767px) {
   .privilege__headline {
-    font-family: "TT Neoris Trial", sans-serif;
+    font-family: "TT Neoris", Arial, sans-serif;
     font-weight: 900;
     font-size: 25px;
     line-height: 30px;
